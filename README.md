@@ -1,13 +1,13 @@
 # Cataclysm-Dao-of-The-Grinder
-Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted to vomit blood and not miss Mt. Tai? And put your character into unnecessary ammounts of danger?
+Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted to vomit blood and not miss Mt. Tai? And put your character into unnecessary amounts of danger?
 ### Well, look no further!
 ### With this mod, you too, can almost die for fractions of power!
 
-##### The mod is not at all finished and is lacking of many features.
+##### The mod is not at all finished and is lacking many features.
 
 ## Current features (and spoilers, but you can't play the game blind as is):
 
-### A cultivation route, the scaled fist, that makes your fists more durable and deal more damage.
+### A cultivation route, the scaled fist, that makes your fists more durable and deal more damage. You can find it in the practice crafting recipes after you reach unarmed 4.
 ### 'Boss' monster drops, currently only the triffid heart, melded task force and shadow.
 
 ## To be added:
