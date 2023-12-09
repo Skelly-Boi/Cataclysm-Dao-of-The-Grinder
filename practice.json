@@ -1,0 +1,34 @@
+[
+  {
+    "id": "prac_sfist1",
+    "type": "practice",
+    "activity_level": "BRISK_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_MELEE",
+    "name": "scaled Fist",
+    "description": "Hit a material with decent toughness to adapt your fist to impacts.",
+    "skill_used": "unarmed",
+    "time": "2 h",
+    "practice_data": { "min_difficulty": 4, "max_difficulty": 10, "skill_limit": 7 },
+    "autolearn": [ [ "unarmed", 4 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_g_armor_arm_phy_1", "time_multiplier": 1, "skill_penalty": 0 },
+      { "proficiency": "prof_g_armor_arm_phy_2", "time_multiplier": 1, "skill_penalty": 0 },
+      { "proficiency": "prof_g_armor_arm_phy_3", "time_multiplier": 1, "skill_penalty": 0 },
+      { "proficiency": "prof_g_armor_arm_phy_4", "time_multiplier": 1, "skill_penalty": 0 },
+      { "proficiency": "prof_g_armor_arm_phy_5", "time_multiplier": 1, "skill_penalty": 0 },
+      { "proficiency": "prof_g_armor_arm_phy_6", "time_multiplier": 1, "skill_penalty": 0 }
+    ],
+    "components": [
+      [
+        [ "2x4", 1 ],
+        [ "wood_beam", 1 ],
+        [ "wood_sheet", 1 ],
+        [ "wooden_post", 1 ],
+        [ "box_large_wood", 1 ],
+        [ "material_sand", 1000 ],
+        [ "wood_panel", 1 ]
+      ]
+    ]
+  }
+]

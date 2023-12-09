@@ -1,0 +1,85 @@
+[
+  {
+    "type": "proficiency_category",
+    "id": "prof_g_armor_arm",
+    "name": "Steel Fist",
+    "description": "The art of training your fists' physical defenses."
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_g_armor_arm_phy_1",
+    "category": "prof_g_armor_arm",
+    "name": { "str": "Steel Serpent - Scaled Fist: Barkless tree - I ring" },
+    "description": "The outer skin of your arms has thoughtened a little.  You can barely feel a difference, but you took the first step.",
+    "can_learn": true,
+    "default_time_multiplier": 1,
+    "default_skill_penalty": 1,
+    "ignore_focus": true,
+    "time_to_learn": "8 h"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_g_armor_arm_phy_2",
+    "category": "prof_g_armor_arm",
+    "name": { "str": "Steel Serpent - Scaled Fist: Barkless tree - II ring" },
+    "description": "The second step on the path has been made.",
+    "can_learn": true,
+    "default_time_multiplier": 1,
+    "default_skill_penalty": 1,
+    "ignore_focus": true,
+    "time_to_learn": "10 h",
+    "required_proficiencies": [ "prof_g_armor_arm_phy_1" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_g_armor_arm_phy_3",
+    "category": "prof_g_armor_arm",
+    "name": { "str": "Steel Serpent - Scaled Fist: Barkless tree - III ring" },
+    "description": "The second step on the path has been made.",
+    "can_learn": true,
+    "default_time_multiplier": 1,
+    "default_skill_penalty": 1,
+    "ignore_focus": true,
+    "time_to_learn": "12 h",
+    "required_proficiencies": [ "prof_g_armor_arm_phy_2" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_g_armor_arm_phy_4",
+    "category": "prof_g_armor_arm",
+    "name": { "str": "Steel Serpent - Scaled Fist: Barkless tree - IV ring" },
+    "description": "The second step on the path has been made.",
+    "can_learn": true,
+    "default_time_multiplier": 1,
+    "default_skill_penalty": 1,
+    "ignore_focus": true,
+    "time_to_learn": "14 h",
+    "required_proficiencies": [ "prof_g_armor_arm_phy_3" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_g_armor_arm_phy_5",
+    "category": "prof_g_armor_arm",
+    "name": { "str": "Steel Serpent - Scaled Fist: Barkless tree - V ring" },
+    "description": "The second step on the path has been made.",
+    "can_learn": true,
+    "default_time_multiplier": 1,
+    "default_skill_penalty": 1,
+    "ignore_focus": true,
+    "time_to_learn": "16 h",
+    "required_proficiencies": [ "prof_g_armor_arm_phy_4" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_g_armor_arm_phy_6",
+    "category": "prof_g_armor_arm",
+    "name": { "str": "Steel Serpent - Scaled Fist: Formation - I" },
+    "description": "The wall has been broken.",
+    "can_learn": true,
+    "default_time_multiplier": 1,
+    "default_skill_penalty": 1,
+    "ignore_focus": true,
+    "time_to_learn": "32 h",
+    "required_proficiencies": [ "prof_g_armor_arm_phy_5" ]
+  }
+]

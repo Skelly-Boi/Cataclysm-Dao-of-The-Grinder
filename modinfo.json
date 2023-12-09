@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "grind",
+    "name": "Cataclysm: Dao of The Grinder",
+    "authors": [ "Seklly-Boi" ],
+    "maintainers": [ "Skelly-Boi" ],
+    "description": "Cataclysm, but now you get very small bonuses after a lot of effort spent.",
+    "category": "magical",
+    "dependencies": [ "dda" ]
+  }
+]

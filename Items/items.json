@@ -1,0 +1,21 @@
+[
+  {
+    "id": "martial_shard",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": { "str_sp": "martial shard" },
+    "description": "This crystaline shard while seeming ethereal has an actual physical form, and a lot of energy.  Consuming this shard induces a breakthrough in one's mentality and dao, letting them quickly advance in their techniques.  Despite originating from a living creature, the detection and extraction of this shard is trivial to any martially gifted individual, the shard being drawn towards them and exiting the previous host on its own.",
+    "material": [ "water" ],
+    "weight": "2500 g",
+    "volume": "200 ml",
+    "price": 50,
+    "price_postapoc": 1,
+    "symbol": "*",
+    "color": "green",
+    "quench": 10,
+    "calories": 1000,
+    "fun": 5,
+    "flags": [ "EDIBLE_FROZEN", "NO_AUTO_CONSUME" ],
+    "consumption_effect_on_conditions": [ "EOC_Shard_Absorb" ]
+  }
+]

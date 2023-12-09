@@ -1,0 +1,59 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Shard_Absorb",
+    "effect": [
+      {
+        "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_1', 'format: percent')", ">=", "100" ] },
+        "then": [
+          {
+            "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_2', 'format: percent')", ">=", "100" ] },
+            "then": [
+              {
+                "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_3', 'format: percent')", ">=", "100" ] },
+                "then": [
+                  {
+                    "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_4', 'format: percent')", ">=", "100" ] },
+                    "then": [
+                      {
+                        "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_5', 'format: percent')", ">=", "100" ] },
+                        "then": [
+                          { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_6', 'format: percent')", "+=", "rand(8)+4" ] }
+                        ],
+                        "else": [
+                          {
+                            "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_5', 'format: percent')", "+=", "rand(6)+rand(6)+6" ]
+                          }
+                        ]
+                      }
+                    ],
+                    "else": [
+                      {
+                        "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_4', 'format: percent')", "+=", "rand(6)+rand(7)+7" ]
+                      }
+                    ]
+                  }
+                ],
+                "else": [
+                  {
+                    "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_3', 'format: percent')", "+=", "rand(7)+rand(7)+7" ]
+                  }
+                ]
+              }
+            ],
+            "else": [
+              {
+                "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_2', 'format: percent')", "+=", "rand(8)+rand(7)+8" ]
+              }
+            ]
+          }
+        ],
+        "else": [
+          {
+            "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_1', 'format: percent')", "+=", "rand(8)+rand(8)+8" ]
+          }
+        ]
+      }
+    ]
+  }
+]
