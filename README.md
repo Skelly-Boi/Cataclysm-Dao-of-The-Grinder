@@ -12,11 +12,11 @@ Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted
 
 ## To be added:
 
-### Many more cultivation routes, non-exclusive so you can dabble in all of them, with a few conditions and exceptions.
-### Monsters and bosses. Much more powerful than anything vanilla has to offer.
-### Unique custom locations, such as clan headquarters and Mt. Tai.
-### Item and mutation descriptions, filled with lore!
-### Cultivator weapons.
-### Spells, and transformations to increase your power for a short duration.
-### Cultivation pills.
+#### Many more cultivation routes, non-exclusive so you can dabble in all of them, with a few conditions and exceptions.
+#### Monsters and bosses. Much more powerful than anything vanilla has to offer.
+#### Unique custom locations, such as clan headquarters... and Mt. Tai.
+#### Item and mutation descriptions, filled with lore!
+#### Cultivator weapons.
+#### Spells, and transformations to increase your power for a short duration.
+#### Cultivation pills.
 
