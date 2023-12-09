@@ -1,5 +1,5 @@
 # Cataclysm-Dao-of-The-Grinder
-Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted to vomit blood and not miss Mt. Tai? And put your character into unnecessary amounts of danger?
+Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted to vomit blood and **not** miss Mt. Tai? And put your character into unnecessary amounts of danger?
 ### Well, look no further!
 ### With this mod, you too, can almost die for fractions of power!
 
