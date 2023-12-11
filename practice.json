@@ -11,7 +11,7 @@
     "time": "2 h",
     "practice_data": { "min_difficulty": 1, "max_difficulty": 1, "skill_limit": 10 },
     "autolearn": [ [ "unarmed", 6 ] ],
-    "book_learn": [ [ "body_cultivation_sf_low", 1 ] ],
+    "book_learn": [ [ "body_cultivation_sf", 1 ] ],
     "proficiencies": [ { "proficiency": "prof_g_armor_arm_phy_1", "time_multiplier": 1, "skill_penalty": 0 } ],
     "components": [
       [
