@@ -4,35 +4,35 @@
     "id": "EOC_Mutate_Scaled_Fist1",
     "condition": { "u_has_proficiency": "prof_g_armor_arm_phy_1" },
     "recurrence": 1,
-    "effect": [ { "u_add_trait": "Scaled_Fist1" } ]
+    "effect": [ { "u_add_trait": "Scaled_Fist1" }, { "u_learn_recipe": "prac_sfist2" }, { "u_forget_recipe": "prac_sfist1" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_Mutate_Scaled_Fist2",
     "condition": { "u_has_proficiency": "prof_g_armor_arm_phy_2" },
     "recurrence": 1,
-    "effect": [ { "u_add_trait": "Scaled_Fist2" } ]
+    "effect": [ { "u_add_trait": "Scaled_Fist2" }, { "u_learn_recipe": "prac_sfist3" }, { "u_forget_recipe": "prac_sfist2" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_Mutate_Scaled_Fist3",
     "condition": { "u_has_proficiency": "prof_g_armor_arm_phy_3" },
     "recurrence": 1,
-    "effect": [ { "u_add_trait": "Scaled_Fist3" } ]
+    "effect": [ { "u_add_trait": "Scaled_Fist3" }, { "u_learn_recipe": "prac_sfist4" }, { "u_forget_recipe": "prac_sfist3" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_Mutate_Scaled_Fist4",
     "condition": { "u_has_proficiency": "prof_g_armor_arm_phy_4" },
     "recurrence": 1,
-    "effect": [ { "u_add_trait": "Scaled_Fist4" } ]
+    "effect": [ { "u_add_trait": "Scaled_Fist4" }, { "u_learn_recipe": "prac_sfist5" }, { "u_forget_recipe": "prac_sfist4" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_Mutate_Scaled_Fist5",
     "condition": { "u_has_proficiency": "prof_g_armor_arm_phy_5" },
     "recurrence": 1,
-    "effect": [ { "u_add_trait": "Scaled_Fist5" } ]
+    "effect": [ { "u_add_trait": "Scaled_Fist5" }, { "u_learn_recipe": "prac_sfist6" }, { "u_forget_recipe": "prac_sfist5" } ]
   },
   {
     "type": "effect_on_condition",
