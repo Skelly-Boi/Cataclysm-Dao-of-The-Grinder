@@ -1,10 +1,10 @@
 [
   {
-    "id": "body_cultivation_sf_low",
+    "id": "body_cultivation_sf",
     "type": "BOOK",
     "category": "manuals",
     "name": { "str": "Body Cultivation: Scaled Fist" },
-    "description": "This scroll seems to describe a complex proces under which the fists' and arms' structure gets strengthened.  Despite the small ammount of text and easy to read words, this scroll is very hard to comprehend.",
+    "description": "This scroll seems to describe a complex process under which the fists' and arms' structure gets strengthened.  Despite the small amount of text and easy-to-read words, this scroll is very hard to comprehend.",
     "weight": "2750 g",
     "volume": "1500 ml",
     "price": 5000,
