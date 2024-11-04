@@ -20,12 +20,12 @@
           "then": [
             { "math": [ "u_gamb_kistage", "=", "3" ] },
             { "u_message": "Your ki reserves have filled up to a quarter.", "type": "good" },
-            { "math": [ "u_gamb_kiweak", "=", "min(2,u_gamb_kiweak" ] }
+            { "math": [ "u_gamb_kiweak", "=", "min(2,u_gamb_kiweak)+u_gamb_kiweakbase" ] }
           ],
           "else": {
             "if": { "and": [ { "math": [ "u_gamb_ki > ( u_gamb_kicap / 10 )" ] }, { "math": [ "u_gamb_kistage", "<", "2" ] } ] },
             "then": [
-              { "math": [ "u_gamb_kiweak", "=", "min(10,u_gamb_kiweak)" ] },
+              { "math": [ "u_gamb_kiweak", "=", "min(9,u_gamb_kiweak)+u_gamb_kiweakbase" ] },
               { "math": [ "u_gamb_kistage", "=", "2" ] },
               {
                 "u_message": "Your inner ki has begun filling. You will slowly recover more and more of your powers back.",
@@ -39,21 +39,25 @@
                   "u_message": "Your inner ki has dropped dangerously low. Your body and soul have been severly damaged.",
                   "type": "bad"
                 },
-                { "math": [ "u_gamb_kiweak", "=", "max(u_gamb_kiweak,40)" ] },
+                { "math": [ "u_gamb_kiweak", "=", "max(u_gamb_kiweak,39)+u_gamb_kiweakbase" ] },
                 { "math": [ "u_gamb_kistage", "=", "1" ] }
               ],
               "else": {
                 "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 7.5 )" ] }, { "math": [ "u_gamb_kistage > 2" ] } ] },
                 "then": [
                   { "u_message": "Your inner ki has dropped too far. Your body and soul have been damaged.", "type": "bad" },
-                  { "math": [ "u_gamb_kiweak", "=", "max(u_gamb_kiweak,10)" ] }
+                  { "math": [ "u_gamb_kiweak", "=", "max(u_gamb_kiweak,10)+u_gamb_kiweakbase" ] }
                 ]
               }
             }
           }
         }
       },
-      { "if": { "math": [ "u_gamb_kiweak > 1" ] }, "then": { "math": [ "u_gamb_kiweak", "-=", "0.01" ] } }
+      {
+        "if": { "math": [ "u_gamb_kiweak > u_gamb_kiweakbase" ] },
+        "then": { "math": [ "u_gamb_kiweak", "-=", "0.01" ] },
+        "else": { "math": [ "u_gamb_kiweak", "+=", "0.01" ] }
+      }
     ]
   },
   {
@@ -65,6 +69,7 @@
       { "math": [ "u_gamb_kireg", "=", "0.1" ] },
       { "math": [ "u_gamb_ki", "=", "0.9" ] },
       { "math": [ "u_gamb_kiweak", "=", "1" ] },
+      { "math": [ "u_gamb_kiweakbase", "=", "1" ] },
       {
         "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling.",
         "type": "good"
