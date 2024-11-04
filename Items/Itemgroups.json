@@ -3,6 +3,6 @@
     "type": "item_group",
     "id": "elite_weak_martial",
     "subtype": "collection",
-    "entries": [ { "item": "martial_shard", "prob": 100 } ]
+    "entries": [ { "item": "martial_shard_def", "prob": 100 } ]
   }
 ]

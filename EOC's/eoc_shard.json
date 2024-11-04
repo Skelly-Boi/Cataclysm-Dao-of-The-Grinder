@@ -1,62 +1,17 @@
 [
   {
     "type": "effect_on_condition",
-    "id": "EOC_Shard_Absorb",
+    "id": "EOC_Shard_Defense_Low",
     "effect": [
       {
-        "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_1', 'format: percent')", ">=", "100" ] },
-        "then": [
-          {
-            "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_2', 'format: percent')", ">=", "100" ] },
-            "then": [
-              {
-                "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_3', 'format: percent')", ">=", "100" ] },
-                "then": [
-                  {
-                    "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_4', 'format: percent')", ">=", "100" ] },
-                    "then": [
-                      {
-                        "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_5', 'format: percent')", ">=", "100" ] },
-                        "then": [
-                          { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_6', 'format: percent')", "+=", "rand(10)+6" ] }
-                        ],
-                        "else": [
-                          {
-                            "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_5', 'format: percent')", "+=", "rand(12)+rand(12)+8" ]
-                          }
-                        ]
-                      }
-                    ],
-                    "else": [
-                      {
-                        "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_4', 'format: percent')", "+=", "rand(14)+rand(14)+9" ]
-                      }
-                    ]
-                  }
-                ],
-                "else": [
-                  {
-                    "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_3', 'format: percent')", "+=", "rand(16)+rand(16)+9" ]
-                  }
-                ]
-              }
-            ],
-            "else": [
-              {
-                "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_2', 'format: percent')", "+=", "rand(18)+rand(18)+10" ]
-              }
-            ]
-          }
-        ],
+        "if": { "not": { "u_has_trait": "Iron_Body" } },
+        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken" ] } ],
         "else": [
-          {
-            "if": { "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_1', 'format: percent')", ">", "0" ] },
-            "then": [
-              {
-                "math": [ "u_val('proficiency', 'proficiency_id: prof_g_armor_arm_phy_1', 'format: percent')", "+=", "rand(20)+rand(20)+10" ]
-              }
-            ]
-          }
+          { "math": [ "u_gamb_bashd", "+=", "max(0, rand(10)-9)" ] },
+          { "math": [ "u_gamb_cardiom", "+=", "0.0001" ] },
+          { "math": [ "u_gamb_hpreg", "+=", "1" ] },
+          { "math": [ "u_gamb_hpregaw", "+=", "1" ] },
+          { "math": [ "u_gamb_mendmod", "+=", "1" ] }
         ]
       }
     ]
