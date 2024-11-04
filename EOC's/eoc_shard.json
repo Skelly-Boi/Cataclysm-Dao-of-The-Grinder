@@ -7,8 +7,8 @@
         "if": { "not": { "u_has_trait": "Iron_Body" } },
         "then": [ { "run_eocs": [ "EOC_Gamb_Awaken" ] } ],
         "else": [
-          { "math": [ "u_gamb_bashd", "+=", "max(0, rand(10)-9)" ] },
-          { "math": [ "u_gamb_cardiom", "+=", "0.0001" ] },
+          { "math": [ "u_gamb_bashd", "+=", "max(0, 1-rand(10+u_gamb_bashd^2)" ] },
+          { "math": [ "u_gamb_cardiom", "+=", "0.0001 * max(0, 3-rand(10+u_gamb_cardiom^2)" ] },
           { "math": [ "u_gamb_hpreg", "+=", "1" ] },
           { "math": [ "u_gamb_hpregaw", "+=", "1" ] },
           { "math": [ "u_gamb_mendmod", "+=", "1" ] }
