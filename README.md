@@ -7,16 +7,16 @@ Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted
 
 ## Current features (and spoilers, but you can't play the game blind as is):
 
-### A cultivation route, the scaled fist, that makes your fists more durable and deal more damage. You can find it in the practice crafting recipes after you reach unarmed 4.
-### 'Boss' monster drops, currently only the triffid heart, melded task force and shadow.
+### 'Boss' monster drops, that awaken you on the path of cultivation, and strengthen your body.
+### Spell. Singular.
 
 ## To be added:
 
-#### Many more cultivation routes, non-exclusive so you can dabble in all of them, with a few conditions and exceptions.
+#### Many more cultivation routes, non-exclusive so you can dabble in all of them, with a few conditions and exceptions. Elemental KI types that interact with each other, which you can develop further. (ex. fire ki grows on its own by burning ki and melts ice ki, and turns water ki into steam)
 #### Monsters and bosses. Much more powerful than anything vanilla has to offer.
 #### Unique custom locations, such as clan headquarters... and Mt. Tai.
 #### Item and mutation descriptions, filled with lore!
-#### Cultivator weapons.
-#### Spells, and transformations to increase your power for a short duration.
+#### Cultivator weapons and items. Storage rings, runes, etc.
+#### Spells, and transformations to increase your power for a short duration, or summon powerful elemental attacks.
 #### Cultivation pills.
 
