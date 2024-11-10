@@ -1,0 +1,57 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Breinforce",
+    "effect": [
+      {
+        "if": { "math": [ "u_gamb_breinforce", "==", "0" ] },
+        "then": {
+          "if": { "math": [ "u_gamb_ki", ">", "1" ] },
+          "then": [
+            { "math": [ "u_gamb_kidrain", "+=", ".1" ] },
+            { "math": [ "u_gamb_ki", "-=", "1" ] },
+            { "math": [ "u_gamb_breinforce", "=", "1" ] },
+            { "math": [ "u_gambtemp_speed", "+=", "10" ] },
+            { "math": [ "u_gambtemp_atkspd", "+=", "10" ] },
+            { "math": [ "u_gambtemp_bashd", "+=", "7" ] },
+            { "math": [ "u_gambtemp_painres", "+=", "5" ] },
+            { "math": [ "u_gambtemp_basha", "+=", "5" ] }
+          ],
+          "else": { "u_message": "You don't have enough ki.", "type": "bad" }
+        },
+        "else": [
+          { "math": [ "u_gamb_breinforce", "=", "0" ] },
+          { "math": [ "u_gamb_kidrain", "-=", ".1" ] },
+          { "math": [ "u_gambtemp_speed", "-=", "10" ] },
+          { "math": [ "u_gambtemp_atkspd", "-=", "10" ] },
+          { "math": [ "u_gambtemp_bashd", "-=", "7" ] },
+          { "math": [ "u_gambtemp_painres", "-=", "5" ] },
+          { "math": [ "u_gambtemp_basha", "-=", "5" ] },
+          { "u_message": "You turn off you Body Reinforcement" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_BreinforceA",
+    "recurrence": [ "1 s", "1 s" ],
+    "condition": { "math": [ "u_gamb_kidrain > 0" ] },
+    "effect": [
+      { "math": [ "u_gamb_ki", "-=", "u_gamb_kidrain " ] },
+      {
+        "if": { "math": [ "u_gamb_ki < 1" ] },
+        "then": [
+          { "u_message": "You run out of ki to sustain your spell.", "type": "bad" },
+          { "math": [ "u_gamb_breinforce", "=", "0" ] },
+          { "math": [ "u_gamb_kidrain", "-=", ".1" ] },
+          { "math": [ "u_gambtemp_speed", "-=", "10" ] },
+          { "math": [ "u_gambtemp_atkspd", "-=", "10" ] },
+          { "math": [ "u_gambtemp_bashd", "-=", "7" ] },
+          { "math": [ "u_gambtemp_painres", "-=", "5" ] },
+          { "math": [ "u_gambtemp_basha", "-=", "5" ] }
+        ]
+      }
+    ]
+  }
+]
