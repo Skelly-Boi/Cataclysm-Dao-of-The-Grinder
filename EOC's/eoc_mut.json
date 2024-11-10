@@ -70,6 +70,8 @@
       { "math": [ "u_gamb_ki", "=", "0.9" ] },
       { "math": [ "u_gamb_kiweak", "=", "1" ] },
       { "math": [ "u_gamb_kiweakbase", "=", "1" ] },
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "++" ] },
+      { "math": [ "u_gamb_kidrain", "=", "0" ] },
       {
         "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling.",
         "type": "good"

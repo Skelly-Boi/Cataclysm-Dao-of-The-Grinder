@@ -1,0 +1,13 @@
+[
+  {
+    "type": "SPELL",
+    "id": "gamb_breinforce",
+    "name": "Basic Reinforcement",
+    "description": "An instinctual use of ki. You are capable of infusing your body with ki, enhancing your physical stats. This will cause a constant drain on your reserves. Cast again to cancel it.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_Breinforce"
+  }
+]

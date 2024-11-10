@@ -15,7 +15,7 @@
     "quench": 10,
     "calories": 100,
     "fun": 5,
-    "flags": [ "EDIBLE_FROZEN", "NO_AUTO_CONSUME" ],
+    "flags": [ "EDIBLE_FROZEN", "NO_AUTO_CONSUME", "TRADER_AVOID" ],
     "consumption_effect_on_conditions": [ "EOC_Shard_Defense_Low" ]
   }
 ]
