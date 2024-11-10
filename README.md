@@ -19,4 +19,5 @@ Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted
 #### Cultivator weapons and items. Storage rings, runes, etc.
 #### Spells, and transformations to increase your power for a short duration, or summon powerful elemental attacks.
 #### Cultivation pills.
+#### Tribulations, great dangers that result in great rewards. The higher your ki capacity when doing them, the stronger they are, and the stronger the reward as you are further refined.
 
