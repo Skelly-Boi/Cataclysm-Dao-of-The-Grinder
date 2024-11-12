@@ -7,7 +7,13 @@
     "effect": [
       {
         "if": { "math": [ "u_gamb_ki < u_gamb_kicap" ] },
-        "then": [ { "math": [ "u_gamb_ki", "+=", "u_gamb_kireg / u_gamb_kiweak" ] } ]
+        "then": [ { "math": [ "u_gamb_ki", "+=", "u_gamb_kireg / u_gamb_kiweak" ] } ],
+        "else": [
+          {
+            "if": { "math": [ "u_gamb_ki >= u_gamb_ki" ] },
+            "then": { "u_message": "Your inner ki has reached its limit.", "type": "good" }
+          }
+        ]
       },
       {
         "if": { "and": [ { "math": [ "u_gamb_ki > ( u_gamb_kicap / 2 )" ] }, { "math": [ "u_gamb_kistage < 4" ] } ] },
