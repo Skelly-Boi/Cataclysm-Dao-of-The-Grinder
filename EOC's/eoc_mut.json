@@ -10,8 +10,8 @@
         "then": [ { "math": [ "u_gamb_ki", "+=", "u_gamb_kireg / u_gamb_kiweak" ] } ],
         "else": [
           {
-            "if": { "math": [ "u_gamb_ki >= u_gamb_ki" ] },
-            "then": { "u_message": "Your inner ki has reached its limit.", "type": "good" }
+            "if": { "and": [ { "math": [ "u_gamb_ki >= u_gamb_ki" ] }, { "math": [ "u_gamb_kistage < 5" ] } ] },
+            "then": [ { "u_message": "Your inner ki has reached its limit.", "type": "good" }, { "math": [ "u_gamb_kistage", "=", "5" ] } ]
           }
         ]
       },
