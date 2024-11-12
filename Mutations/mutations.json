@@ -11,13 +11,21 @@
     "flags": [ "MEND_ALL" ],
     "enchantments": [
       {
+        "melee_damage_bonus": [
+          { "type": "bash", "add": { "math": [ "u_gamb_bashd * 1" ] } },
+          { "type": "cut", "add": { "math": [ "u_gamb_cutd * 1" ] } },
+          { "type": "stab", "add": { "math": [ "u_gamb_stbd * 1" ] } },
+          { "type": "bullet", "add": { "math": [ "u_gamb_bulld * 1" ] } },
+          { "type": "bash", "add": { "math": [ "u_gambtemp_bashd * 1" ] } },
+          { "type": "cut", "add": { "math": [ "u_gambtemp_cutd * 1" ] } },
+          { "type": "stab", "add": { "math": [ "u_gambtemp_stbd * 1" ] } },
+          { "type": "bullet", "add": { "math": [ "u_gambtemp_bulld * 1" ] } }
+        ]
+      },
+      {
         "values": [
           { "value": "STRENGTH", "add": { "math": [ "u_gamb_str + 1" ] } },
           { "value": "DEXTERITY", "add": { "math": [ "u_gamb_dex * 1" ] } },
-          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "u_gamb_bashd * 1" ] } },
-          { "value": "ITEM_DAMAGE_CUT", "add": { "math": [ "u_gamb_cutd * 1" ] } },
-          { "value": "ITEM_DAMAGE_STAB", "add": { "math": [ "u_gamb_stbd * 1" ] } },
-          { "value": "ITEM_DAMAGE_BULLET", "add": { "math": [ "u_gamb_bulld * 1" ] } },
           { "value": "ARMOR_BASH", "add": { "math": [ "u_gamb_basha * -1" ] } },
           { "value": "ARMOR_CUT", "add": { "math": [ "u_gamb_cuta * -1" ] } },
           { "value": "ARMOR_STAB", "add": { "math": [ "u_gamb_staba * -1" ] } },
@@ -55,10 +63,6 @@
         "values": [
           { "value": "STRENGTH", "add": { "math": [ "u_gambtemp_str * 1" ] } },
           { "value": "DEXTERITY", "add": { "math": [ "u_gambtemp_dex * 1" ] } },
-          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "u_gambtemp_bashd * 1" ] } },
-          { "value": "ITEM_DAMAGE_CUT", "add": { "math": [ "u_gambtemp_cutd * 1" ] } },
-          { "value": "ITEM_DAMAGE_STAB", "add": { "math": [ "u_gambtemp_stbd * 1" ] } },
-          { "value": "ITEM_DAMAGE_BULLET", "add": { "math": [ "u_gambtemp_bulld * 1" ] } },
           { "value": "ARMOR_BASH", "add": { "math": [ "u_gambtemp_basha * -1" ] } },
           { "value": "ARMOR_CUT", "add": { "math": [ "u_gambtemp_cuta * -1" ] } },
           { "value": "ARMOR_STAB", "add": { "math": [ "u_gambtemp_staba * -1" ] } },

@@ -36,7 +36,7 @@
           { "math": [ "u_gamb_hpreg", "+=", "0.001 * max(0, 4-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
           { "math": [ "u_gamb_hpregaw", "+=", "0.001 * max(0, 10-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
           { "math": [ "u_gamb_mendmod", "+=", "0.001 * max(0, 6-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
-          { "math": [ "u_gamb_kicap", "+=", "0.1 * max(0, 10-rand(sqrt(u_gamb_kicap)*5))" ] },
+          { "math": [ "u_gamb_kicap", "+=", "0.1 * max(0, 6-rand(sqrt(u_gamb_kicap)*5))" ] },
           {
             "u_message": "The shard's ki enters your body and fuses with your being. You feel stronger.",
             "type": "good"
