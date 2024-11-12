@@ -40,7 +40,7 @@
     "effect": [
       { "math": [ "u_gamb_ki", "-=", "u_gamb_kidrain " ] },
       {
-        "if": { "math": [ "u_gamb_ki < 1" ] },
+        "if": { "math": [ "u_gamb_ki < .5" ] },
         "then": [
           { "u_message": "You run out of ki to sustain your spells.", "type": "bad" },
           { "math": [ "u_gamb_breinforce", "=", "0" ] },

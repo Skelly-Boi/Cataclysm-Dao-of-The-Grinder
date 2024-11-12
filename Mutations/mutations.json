@@ -12,14 +12,10 @@
     "enchantments": [
       {
         "melee_damage_bonus": [
-          { "type": "bash", "add": { "math": [ "u_gamb_bashd * 1" ] } },
-          { "type": "cut", "add": { "math": [ "u_gamb_cutd * 1" ] } },
-          { "type": "stab", "add": { "math": [ "u_gamb_stbd * 1" ] } },
-          { "type": "bullet", "add": { "math": [ "u_gamb_bulld * 1" ] } },
-          { "type": "bash", "add": { "math": [ "u_gambtemp_bashd * 1" ] } },
-          { "type": "cut", "add": { "math": [ "u_gambtemp_cutd * 1" ] } },
-          { "type": "stab", "add": { "math": [ "u_gambtemp_stbd * 1" ] } },
-          { "type": "bullet", "add": { "math": [ "u_gambtemp_bulld * 1" ] } }
+          { "type": "bash", "add": { "math": [ "u_gamb_bashd + u_gambtemp_bashd * 1" ] } },
+          { "type": "cut", "add": { "math": [ "u_gamb_cutd + u_gambtemp_cutd * 1" ] } },
+          { "type": "stab", "add": { "math": [ "u_gamb_stbd + u_gambtemp_stbd * 1" ] } },
+          { "type": "bullet", "add": { "math": [ "u_gamb_bulld+u_gambtemp_bulld * 1" ] } }
         ]
       },
       {
