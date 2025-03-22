@@ -11,22 +11,63 @@
             { "math": [ "u_gamb_kidrain", "+=", ".1" ] },
             { "math": [ "u_gamb_ki", "-=", "1" ] },
             { "math": [ "u_gamb_breinforce", "=", "1" ] },
-            { "math": [ "u_gambtemp_speed", "+=", "10" ] },
-            { "math": [ "u_gambtemp_atkspd", "+=", "10" ] },
-            { "math": [ "u_gambtemp_bashd", "+=", "7" ] },
-            { "math": [ "u_gambtemp_painres", "+=", "5" ] },
-            { "math": [ "u_gambtemp_basha", "+=", "5" ] }
+            { "math": [ "u_gambtemp_speed", "+=", "10+(u_gamb_phytoken^.3)" ] },
+            { "math": [ "u_gambtemp_atkspd", "+=", "10+(u_gamb_phytoken^.3)" ] },
+            { "math": [ "u_gambtemp_bashd", "+=", "7+(u_gamb_phytoken^.25)" ] },
+            { "math": [ "u_gambtemp_painres", "+=", "5+(u_gamb_phytoken^.2)" ] },
+            { "math": [ "u_gambtemp_basha", "+=", "5+(u_gamb_phytoken^.2)" ] },
+            { "math": [ "u_gamb_phyxpg", "+=", "0.1" ] }
           ],
           "else": { "u_message": "You don't have enough ki.", "type": "bad" }
         },
         "else": [
           { "math": [ "u_gamb_breinforce", "=", "0" ] },
           { "math": [ "u_gamb_kidrain", "-=", ".1" ] },
-          { "math": [ "u_gambtemp_speed", "-=", "10" ] },
-          { "math": [ "u_gambtemp_atkspd", "-=", "10" ] },
-          { "math": [ "u_gambtemp_bashd", "-=", "7" ] },
-          { "math": [ "u_gambtemp_painres", "-=", "5" ] },
-          { "math": [ "u_gambtemp_basha", "-=", "5" ] },
+          { "math": [ "u_gambtemp_speed", "-=", "10+(u_gamb_phytoken^.3)" ] },
+          { "math": [ "u_gambtemp_atkspd", "-=", "10+(u_gamb_phytoken^.3)" ] },
+          { "math": [ "u_gambtemp_bashd", "-=", "7+(u_gamb_phytoken^.25)" ] },
+          { "math": [ "u_gambtemp_painres", "-=", "5+(u_gamb_phytoken^.2)" ] },
+          { "math": [ "u_gambtemp_basha", "-=", "5+(u_gamb_phytoken^.2)" ] },
+          { "math": [ "u_gamb_phyxpg", "-=", "0.1" ] },
+          { "u_message": "You turn off you Body Reinforcement" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Ironscale",
+    "effect": [
+      {
+        "if": { "math": [ "u_gamb_ironscale", "==", "0" ] },
+        "then": {
+          "if": { "math": [ "u_gamb_ki", ">", "0.5" ] },
+          "then": [
+            { "math": [ "u_gamb_kidrain", "+=", ".07" ] },
+            { "math": [ "u_gamb_ki", "-=", "0.5" ] },
+            { "math": [ "u_gamb_ironscale", "=", "1" ] },
+            { "math": [ "u_gambtemp_bashd", "+=", "2+(u_gamb_phytoken^.1)" ] },
+            { "math": [ "u_gambtemp_painres", "+=", "10+(u_gamb_phytoken^.4)" ] },
+            { "math": [ "u_gambtemp_basha", "+=", "12+(u_gamb_phytoken^.6)" ] },
+            { "math": [ "u_gambtemp_cuta", "+=", "7+(u_gamb_phytoken^.55)" ] },
+            { "math": [ "u_gambtemp_staba", "+=", "5+(u_gamb_phytoken^.5)" ] },
+            { "math": [ "u_gambtemp_bulla", "+=", "3+(u_gamb_phytoken^.4)" ] },
+            { "math": [ "u_gambtemp_eleca", "+=", "2+(u_gamb_phytoken^.35)" ] },
+            { "math": [ "u_gamb_phyxpg", "+=", "0.15" ] }
+          ],
+          "else": { "u_message": "You don't have enough ki.", "type": "bad" }
+        },
+        "else": [
+          { "math": [ "u_gamb_ironscale", "=", "0" ] },
+          { "math": [ "u_gamb_kidrain", "-=", ".1" ] },
+          { "math": [ "u_gambtemp_bashd", "-=", "2+(u_gamb_phytoken^.1)" ] },
+          { "math": [ "u_gambtemp_painres", "-=", "10+(u_gamb_phytoken^.4)" ] },
+          { "math": [ "u_gambtemp_basha", "-=", "12+(u_gamb_phytoken^.6)" ] },
+          { "math": [ "u_gambtemp_cuta", "-=", "7+(u_gamb_phytoken^.55)" ] },
+          { "math": [ "u_gambtemp_staba", "-=", "5+(u_gamb_phytoken^.5)" ] },
+          { "math": [ "u_gambtemp_bulla", "-=", "3+(u_gamb_phytoken^.4)" ] },
+          { "math": [ "u_gambtemp_eleca", "-=", "2+(u_gamb_phytoken^.35)" ] },
+          { "math": [ "u_gamb_phyxpg", "-=", "0.15" ] },
           { "u_message": "You turn off you Body Reinforcement" }
         ]
       }
@@ -39,17 +80,82 @@
     "condition": { "math": [ "u_gamb_kidrain > 0" ] },
     "effect": [
       { "math": [ "u_gamb_ki", "-=", "u_gamb_kidrain " ] },
+      { "math": [ "u_gamb_phyxp", "+=", "u_gamb_phyxpg" ] },
+      { "math": [ "u_gamb_kicap", "+=", "u_gamb_phyxpg*0.05" ] },
+      { "math": [ "u_gamb_kireg", "+=", "u_gamb_phyxpg*0.001" ] },
       {
-        "if": { "math": [ "u_gamb_ki < .5" ] },
+        "if": { "math": [ "u_gamb_ki", "<", "u_gamb_kidrain" ] },
         "then": [
           { "u_message": "You run out of ki to sustain your spells.", "type": "bad" },
           { "math": [ "u_gamb_breinforce", "=", "0" ] },
+          { "math": [ "u_gamb_ironscale", "=", "0" ] },
           { "math": [ "u_gamb_kidrain", "=", "0" ] },
           { "math": [ "u_gambtemp_speed", "=", "0" ] },
           { "math": [ "u_gambtemp_atkspd", "=", "0" ] },
           { "math": [ "u_gambtemp_bashd", "=", "0" ] },
           { "math": [ "u_gambtemp_painres", "=", "0" ] },
-          { "math": [ "u_gambtemp_basha", "=", "0" ] }
+          { "math": [ "u_gambtemp_basha", "=", "0" ] },
+          { "math": [ "u_gambtemp_cuta", "=", "0" ] },
+          { "math": [ "u_gambtemp_staba", "=", "0" ] },
+          { "math": [ "u_gambtemp_bulla", "=", "0" ] },
+          { "math": [ "u_gambtemp_eleca", "=", "0" ] },
+          { "math": [ "u_gamb_phyxpg", "=", "0" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Meditate",
+    "effect": [
+      { "u_message": "You turn off all of your spells.", "type": "bad" },
+      { "math": [ "u_gamb_breinforce", "=", "0" ] },
+      { "math": [ "u_gamb_ironscale", "=", "0" ] },
+      { "math": [ "u_gamb_kidrain", "=", "0" ] },
+      { "math": [ "u_gambtemp_speed", "=", "0" ] },
+      { "math": [ "u_gambtemp_atkspd", "=", "0" ] },
+      { "math": [ "u_gambtemp_bashd", "=", "0" ] },
+      { "math": [ "u_gambtemp_painres", "=", "0" ] },
+      { "math": [ "u_gambtemp_basha", "=", "0" ] },
+      { "math": [ "u_gambtemp_cuta", "=", "0" ] },
+      { "math": [ "u_gambtemp_staba", "=", "0" ] },
+      { "math": [ "u_gambtemp_bulla", "=", "0" ] },
+      { "math": [ "u_gambtemp_eleca", "=", "0" ] },
+      { "math": [ "u_gamb_phyxpg", "=", "0" ] },
+      { "math": [ "u_gamb_phytoken", "+=", "(u_gamb_phyxp/10)" ] },
+      { "math": [ "u_gamb_phytokentemp", "+=", "(u_gamb_phyxp/10)" ] },
+      { "math": [ "u_gamb_phyxp", "=", "0" ] },
+      {
+        "if": { "math": [ "u_gamb_phytokentemp", ">=", "1" ] },
+        "then": [
+          {
+            "switch": { "math": [ "rand(100)+u_gamb_phytokentemp+(u_gamb_phytoken*0.1)" ] },
+            "cases": [
+              { "case": 0, "effect": [ { "math": [ "u_gamb_phytoken", "+=", "(rand(3)*0.1)*u_gamb_phytokentemp" ] } ] },
+              {
+                "case": 20,
+                "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(7)*0.1)+0.1)*u_gamb_phytokentemp" ] } ]
+              },
+              {
+                "case": 60,
+                "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(8)*0.2)+0.5)*u_gamb_phytokentemp" ] } ]
+              },
+              {
+                "case": 90,
+                "effect": [
+                  {
+                    "if": { "math": [ "(u_spell_level('gamb_ironscale'))", ">", "0" ] },
+                    "then": [
+                      { "math": [ "(u_spell_level('gamb_ironscale'))", "++" ] },
+                      { "u_message": "You gain a new understanding of your ki use.", "type": "good" }
+                    ],
+                    "else": { "math": [ "u_gamb_phytoken", "+=", "((rand(12)*0.2)+0.7)*u_gamb_phytokentemp" ] }
+                  }
+                ]
+              }
+            ]
+          },
+          { "math": [ "u_gamb_phytokentemp", "=", "0" ] }
         ]
       }
     ]
