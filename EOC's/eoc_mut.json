@@ -78,6 +78,8 @@
       { "math": [ "u_gamb_kiweakbase", "=", "1" ] },
       { "math": [ "(u_spell_level('gamb_breinforce'))", "++" ] },
       { "math": [ "u_gamb_kidrain", "=", "0" ] },
+      { "math": [ "u_gamb_phytoken", "=", "0" ] },
+      { "math": [ "u_gamb_phytokentemp", "=", "0" ] },
       {
         "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling.",
         "type": "good"
@@ -94,6 +96,21 @@
     "id": "Gamb_Ki_Display",
     "recurrence": [ "1 minute", "1 minute" ],
     "condition": { "u_has_trait": "Gamb_Iron_Body" },
-    "effect": [ { "u_message": "<u_val:gamb_ki>  <u_val:gamb_kiweak>", "type": "good" } ]
+    "effect": [
+      {
+        "u_message": "ki:<u_val:gamb_ki>  kiweak:<u_val:gamb_kiweak>  pxp:<u_val:gamb_phyxp> ptoken:<u_val:gamb_phytoken>",
+        "type": "good"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_phytokenplus",
+    "effect": [ { "math": [ "u_gamb_phytoken", "+=", "1" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_phytokenminus",
+    "effect": [ { "math": [ "u_gamb_phytoken", "-=", "1" ] } ]
   }
 ]
