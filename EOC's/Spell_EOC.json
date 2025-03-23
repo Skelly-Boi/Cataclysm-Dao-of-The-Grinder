@@ -131,14 +131,14 @@
           {
             "switch": { "math": [ "rand(100)+u_gamb_phytokentemp+(u_gamb_phytoken*0.1)" ] },
             "cases": [
-              { "case": 0, "effect": [ { "math": [ "u_gamb_phytoken", "+=", "(rand(3)*0.1)*u_gamb_phytokentemp" ] } ] },
+              { "case": 0, "effect": [ { "math": [ "u_gamb_phytoken", "+=", "(rand(3)*0.01)*u_gamb_phytokentemp" ] } ] },
               {
                 "case": 20,
-                "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(7)*0.1)+0.1)*u_gamb_phytokentemp" ] } ]
+                "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(7)*0.01)+0.01)*u_gamb_phytokentemp" ] } ]
               },
               {
                 "case": 60,
-                "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(8)*0.2)+0.5)*u_gamb_phytokentemp" ] } ]
+                "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(8)*0.02)+0.05)*u_gamb_phytokentemp" ] } ]
               },
               {
                 "case": 90,
@@ -149,7 +149,7 @@
                       { "math": [ "(u_spell_level('gamb_ironscale'))", "++" ] },
                       { "u_message": "You gain a new understanding of your ki use.", "type": "good" }
                     ],
-                    "else": { "math": [ "u_gamb_phytoken", "+=", "((rand(12)*0.2)+0.7)*u_gamb_phytokentemp" ] }
+                    "else": { "math": [ "u_gamb_phytoken", "+=", "((rand(12)*0.02)+0.07)*u_gamb_phytokentemp" ] }
                   }
                 ]
               }
