@@ -4,5 +4,11 @@
     "id": "elite_weak_martial",
     "subtype": "collection",
     "entries": [ { "item": "martial_shard_def", "prob": 100 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "elite_weak_wood",
+    "subtype": "distribution",
+    "entries": [ { "item": "martial_shard_def", "prob": 20 }, { "item": "martial_shard_wood", "prob": 80 } ]
   }
 ]

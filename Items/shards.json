@@ -4,7 +4,7 @@
     "type": "COMESTIBLE",
     "comestible_type": "FOOD",
     "name": { "str_sp": "iron martial shard" },
-    "description": "This crystaline shard while seeming ethereal has an actual physical form, and a lot of energy.  Consuming this shard induces a breakthrough in one's body and dao, letting them quickly advance in their body cultivation.  Despite originating from a living creature, the detection and extraction of this shard is trivial to any martially gifted individual, the shard being drawn towards them and exiting the previous host on its own.  \n  The Ki of this shard is specialized in enhancing the raw physical properties of the body.",
+    "description": "This crystaline shard, while seeming ethereal, has an actual physical form, and a lot of energy.  Consuming this shard induces a breakthrough in one's body and dao, letting them quickly advance in their body cultivation.  Despite originating from a living creature, the detection and extraction of this shard is trivial to any martially gifted individual, the shard being drawn towards them and exiting the previous host on its own.  \n  The Ki of this shard is specialized in enhancing the raw physical properties of the body.",
     "material": [ "water" ],
     "weight": "2500 g",
     "volume": "500 ml",
@@ -17,5 +17,24 @@
     "fun": 5,
     "flags": [ "EDIBLE_FROZEN", "NO_AUTO_CONSUME", "TRADER_AVOID" ],
     "consumption_effect_on_conditions": [ "EOC_Shard_Defense_Low" ]
+  },
+  {
+    "id": "martial_shard_wood",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": { "str_sp": "jade plant shard" },
+    "description": "This crystaline shard while seeming ethereal has an actual physical form, and a lot of energy.  Consuming this shard induces a breakthrough in one's body and dao, letting them quickly advance in their body cultivation.  Despite originating from a living creature, the detection and extraction of this shard is trivial to any martially gifted individual, the shard being drawn towards them and exiting the previous host on its own.  \n  The Ki of this shard is specialized in enhancing the recovery and endurance of the body.",
+    "material": [ "water" ],
+    "weight": "3000 g",
+    "volume": "700 ml",
+    "price": 50,
+    "price_postapoc": 1,
+    "symbol": "*",
+    "color": "green",
+    "quench": 20,
+    "calories": 300,
+    "fun": 8,
+    "flags": [ "EDIBLE_FROZEN", "NO_AUTO_CONSUME", "TRADER_AVOID" ],
+    "consumption_effect_on_conditions": [ "EOC_Shard_Wood_Low" ]
   }
 ]

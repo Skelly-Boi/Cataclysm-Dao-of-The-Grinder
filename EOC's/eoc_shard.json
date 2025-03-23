@@ -37,7 +37,49 @@
           { "math": [ "u_gamb_hpregaw", "+=", "0.001 * max(0, 10-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
           { "math": [ "u_gamb_mendmod", "+=", "0.001 * max(0, 6-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
           { "math": [ "u_gamb_kicap", "+=", "0.1 * max(0, 6-rand(sqrt(u_gamb_kicap)*5))" ] },
-          { "math": [ "u_gamb_ki", "+=", "0.01 * max(1, rand(10))" ] },
+          { "math": [ "u_gamb_ki", "+=", "0.1 * max(1, rand(10))" ] },
+          {
+            "u_message": "The shard's ki enters your body and fuses with your being. You feel stronger.",
+            "type": "good"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Shard_Wood_Low",
+    "effect": [
+      {
+        "if": { "not": { "u_has_trait": "Gamb_Iron_Body" } },
+        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken" ] } ],
+        "else": [
+          { "math": [ "u_gamb_cardiom", "+=", "0.0001 * max(0, 8-rand(1+((u_gamb_cardiom*10000)^.3)))" ] },
+          { "math": [ "u_gamb_basha", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_basha)*11)))" ] },
+          { "math": [ "u_gamb_cuta", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_cuta)*14)))" ] },
+          { "math": [ "u_gamb_staba", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_staba)*18)))" ] },
+          { "math": [ "u_gamb_bulla", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_bulla)*20)))" ] },
+          { "math": [ "u_gamb_acida", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_acida)*18)))" ] },
+          { "math": [ "u_gamb_eleca", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_eleca)*14)))" ] },
+          { "math": [ "u_gamb_heata", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_heata)*12)))" ] },
+          { "math": [ "u_gamb_colda", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_colda)*12)))" ] },
+          { "math": [ "u_gamb_nvis", "+=", "max(0, 1-rand(25+((u_gamb_nvis)^3)))" ] },
+          { "math": [ "u_gamb_speed", "+=", "max(0, 1-rand(1+((u_gamb_speed)^4)))" ] },
+          { "math": [ "u_gamb_painres", "+=", "max(0, 1-rand(50+((u_gamb_painres)^3)))" ] },
+          { "math": [ "u_gamb_painrem", "+=", "max(0, 1-rand(5+((u_gamb_painrems)^3)))" ] },
+          { "math": [ "u_gamb_climate", "+=", "max(0, 1-rand(1+((u_gamb_climate)^1.5)))" ] },
+          { "math": [ "u_gamb_staminareg", "+=", "0.1 * max(0, 1-rand(2+((u_gamb_staminareg*10)^2)))" ] },
+          { "math": [ "u_gamb_stomach", "+=", "max(0, 10-rand(1+((u_gamb_stomach)^.2)*2))" ] },
+          { "math": [ "u_gamb_consume", "+=", "max(0, 1-rand(1+((u_gamb_consume)^2.5)))" ] },
+          { "math": [ "u_gamb_carry", "+=", "max(0, 10-rand(1+((u_gamb_carry)^.4)))" ] },
+          { "math": [ "u_gamb_knkres", "+=", "max(0, 1-rand(1+((u_gamb_knkres)^2)))" ] },
+          { "math": [ "u_gamb_maxhp", "+=", "max(0, 3-rand(1+(sqrt(maxhp)*2)))" ] },
+          { "math": [ "u_gamb_hpreg", "+=", "0.001 * max(0, 12-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
+          { "math": [ "u_gamb_hpregaw", "+=", "0.001 * max(0, 20-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
+          { "math": [ "u_gamb_mendmod", "+=", "0.001 * max(0, 16-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
+          { "math": [ "u_gamb_kicap", "+=", "0.1 * max(0, 8-rand(sqrt(u_gamb_kicap)*4))" ] },
+          { "math": [ "u_gamb_kireg", "+=", "0.01 * max(0, 8-rand(u_gamb_kireg*10))" ] },
+          { "math": [ "u_gamb_ki", "+=", "0.1 * max(5, rand(20))" ] },
           {
             "u_message": "The shard's ki enters your body and fuses with your being. You feel stronger.",
             "type": "good"

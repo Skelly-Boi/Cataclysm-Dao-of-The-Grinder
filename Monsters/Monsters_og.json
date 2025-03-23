@@ -3,7 +3,7 @@
     "type": "MONSTER",
     "id": "mon_triffid_heart",
     "copy-from": "mon_triffid_heart",
-    "death_drops": "elite_weak_martial"
+    "death_drops": "elite_weak_wood"
   },
   {
     "type": "MONSTER",
