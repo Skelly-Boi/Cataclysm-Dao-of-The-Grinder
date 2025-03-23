@@ -1,0 +1,25 @@
+[
+  {
+    "type": "profession",
+    "id": "survivor_shard",
+    "name": "Lucky Survivor",
+    "description": "Some would say the heavens favor you, for you have stumbled upon the first step to immortality by sheer luck. Yet, will that be enough to face the coming apocalypse?",
+    "points": 3,
+    "items": {
+      "both": {
+        "entries": [
+          { "item": "jeans" },
+          { "item": "longshirt" },
+          { "item": "socks" },
+          { "item": "sneakers" },
+          { "item": "water_clean" },
+          { "item": "martial_shard_def" },
+          { "group": "charged_smart_phone" },
+          { "group": "starter_wallet_full" }
+        ]
+      },
+      "male": { "entries": [ { "item": "boxer_shorts" } ] },
+      "female": { "entries": [ { "item": "bra" }, { "item": "panties" } ] }
+    }
+  }
+]
