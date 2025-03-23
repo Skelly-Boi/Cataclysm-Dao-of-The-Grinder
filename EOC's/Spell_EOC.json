@@ -82,7 +82,7 @@
       { "math": [ "u_gamb_ki", "-=", "u_gamb_kidrain " ] },
       { "math": [ "u_gamb_phyxp", "+=", "u_gamb_phyxpg" ] },
       { "math": [ "u_gamb_kicap", "+=", "u_gamb_phyxpg*0.05" ] },
-      { "math": [ "u_gamb_kireg", "+=", "u_gamb_phyxpg*0.001" ] },
+      { "math": [ "u_gamb_kireg", "+=", "u_gamb_phyxpg*0.0001" ] },
       {
         "if": { "math": [ "u_gamb_ki", "<", "u_gamb_kidrain" ] },
         "then": [
