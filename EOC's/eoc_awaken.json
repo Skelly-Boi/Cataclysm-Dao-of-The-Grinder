@@ -44,8 +44,8 @@
       { "math": [ "u_gamb_maxhp", "+=", "1" ] },
       { "math": [ "u_gamb_hpreg", "+=", "0.01" ] },
       { "math": [ "u_gamb_hpregaw", "+=", "0.1" ] },
-      { "math": [ "(u_spell_level('gamb_breinforce'))", "++" ] },
-      { "math": [ "(u_spell_level('gamb_woodenshed'))", "++" ] },
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "1" ] },
+      { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "1" ] },
       {
         "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling. A pleasant feeling of nature is making its way inside of you.",
         "type": "good"
@@ -76,5 +76,14 @@
     "type": "effect_on_condition",
     "id": "Gamb_Ki_phytokenminus",
     "effect": [ { "math": [ "u_gamb_phytoken", "-=", "1" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_spells",
+    "effect": [
+      { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "1" ] },
+      { "math": [ "(u_spell_level('gamb_overload'))", "=", "1" ] },
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "1" ] }
+    ]
   }
 ]

@@ -1,0 +1,93 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Meditate",
+    "effect": [
+      { "u_message": "You turn off all of your spells.", "type": "bad" },
+      { "run_eocs": [ "EOC_Gamb_KiOff" ] },
+      { "math": [ "u_gamb_phyxpg", "=", "0" ] },
+      { "math": [ "u_gamb_phytoken", "+=", "(u_gamb_phyxp/10)" ] },
+      { "math": [ "u_gamb_phytokentemp", "+=", "(u_gamb_phyxp/10)" ] },
+      { "math": [ "u_gamb_phyxp", "=", "0" ] },
+      { "math": [ "u_gamb_woodtoken", "+=", "(u_gamb_woodxp/10)" ] },
+      { "math": [ "u_gamb_woodtokentemp", "+=", "(u_gamb_woodxp/10)" ] },
+      { "math": [ "u_gamb_woodxp", "=", "0" ] },
+      {
+        "if": { "math": [ "u_gamb_phytokentemp", ">=", "1" ] },
+        "then": [
+          {
+            "switch": { "math": [ "rand(100)+u_gamb_phytokentemp+(u_gamb_phytoken*0.1)" ] },
+            "cases": [
+              { "case": 0, "effect": [ { "math": [ "u_gamb_phytoken", "+=", "(rand(3)*0.01)*u_gamb_phytokentemp" ] } ] },
+              {
+                "case": 20,
+                "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(7)*0.01)+0.01)*u_gamb_phytokentemp" ] } ]
+              },
+              {
+                "case": 60,
+                "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(8)*0.02)+0.05)*u_gamb_phytokentemp" ] } ]
+              },
+              {
+                "case": 90,
+                "effect": [
+                  {
+                    "if": { "math": [ "(u_spell_level('gamb_ironscale'))", "==", "0" ] },
+                    "then": [
+                      { "math": [ "(u_spell_level('gamb_ironscale'))", "++" ] },
+                      { "u_message": "You gain a new understanding of your ki use.", "type": "good" }
+                    ],
+                    "else": { "math": [ "u_gamb_phytoken", "+=", "((rand(12)*0.02)+0.07)*u_gamb_phytokentemp" ] }
+                  }
+                ]
+              }
+            ]
+          },
+          { "math": [ "u_gamb_phytokentemp", "=", "0" ] }
+        ]
+      },
+      {
+        "if": { "math": [ "u_gamb_woodtokentemp", ">=", "1" ] },
+        "then": [
+          {
+            "switch": { "math": [ "rand(100)+u_gamb_woodtokentemp+(u_gamb_woodtoken*0.1)" ] },
+            "cases": [
+              { "case": 0, "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "(rand(3)*0.01)*u_gamb_woodtokentemp" ] } ] },
+              {
+                "case": 20,
+                "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "((rand(7)*0.01)+0.01)*u_gamb_woodtokentemp" ] } ]
+              },
+              {
+                "case": 60,
+                "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "((rand(8)*0.02)+0.05)*u_gamb_woodtokentemp" ] } ]
+              },
+              {
+                "case": 90,
+                "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "((rand(12)*0.02)+0.07)*u_gamb_woodtokentemp" ] } ]
+              }
+            ]
+          },
+          { "math": [ "u_gamb_woodtokentemp", "=", "0" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_KiOff",
+    "effect": [
+      { "math": [ "u_gamb_breinforce", "=", "0" ] },
+      { "math": [ "u_gamb_ironscale", "=", "0" ] },
+      { "math": [ "u_gamb_kidrain", "=", "0" ] },
+      { "math": [ "u_gambtemp_speed", "=", "0" ] },
+      { "math": [ "u_gambtemp_atkspd", "=", "0" ] },
+      { "math": [ "u_gambtemp_bashd", "=", "0" ] },
+      { "math": [ "u_gambtemp_painres", "=", "0" ] },
+      { "math": [ "u_gambtemp_basha", "=", "0" ] },
+      { "math": [ "u_gambtemp_cuta", "=", "0" ] },
+      { "math": [ "u_gambtemp_staba", "=", "0" ] },
+      { "math": [ "u_gambtemp_bulla", "=", "0" ] },
+      { "math": [ "u_gambtemp_eleca", "=", "0" ] },
+      { "math": [ "u_gamb_phyxpg", "=", "0" ] }
+    ]
+  }
+]
