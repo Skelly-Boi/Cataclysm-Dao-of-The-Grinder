@@ -60,8 +60,6 @@
   {
     "type": "effect_on_condition",
     "id": "Gamb_Ki_Display",
-    "recurrence": [ "1 minute", "1 minute" ],
-    "condition": { "u_has_trait": "Gamb_Iron_Body" },
     "effect": [
       {
         "u_message": "ki:<u_val:gamb_ki>  kiweak:<u_val:gamb_kiweak>  pxp:<u_val:gamb_phyxp> ptoken:<u_val:gamb_phytoken> woodki:<u_val:gamb_kiwood>",
