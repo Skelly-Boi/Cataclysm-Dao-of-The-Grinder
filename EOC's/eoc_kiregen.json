@@ -10,54 +10,61 @@
         "then": [ { "math": [ "u_gamb_ki", "+=", "u_gamb_kireg / u_gamb_kiweak" ] } ],
         "else": [
           {
-            "if": { "and": [ { "math": [ "u_gamb_ki >= u_gamb_kicap" ] }, { "math": [ "u_gamb_kistage < 5" ] } ] },
-            "then": [ { "u_message": "Your inner ki has reached its limit.", "type": "good" }, { "math": [ "u_gamb_kistage", "=", "5" ] } ]
+            "if": { "and": [ { "math": [ "u_gamb_ki >= u_gamb_kicap" ] }, { "math": [ "u_gamb_kistage < 6" ] } ] },
+            "then": [ { "u_message": "Your inner ki has reached its limit.", "type": "good" }, { "math": [ "u_gamb_kistage", "=", "6" ] } ]
           }
         ]
       },
       {
-        "if": { "and": [ { "math": [ "u_gamb_ki > ( u_gamb_kicap / 2 )" ] }, { "math": [ "u_gamb_kistage < 4" ] } ] },
+        "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap *0.9 )" ] }, { "math": [ "u_gamb_kistage > 5" ] } ] },
         "then": [
           { "u_message": "Your ki reserves have filled to the halfway point.", "type": "good" },
-          { "math": [ "u_gamb_kistage", "=", "4" ] }
+          { "math": [ "u_gamb_kistage", "=", "5" ] }
         ],
         "else": {
-          "if": { "and": [ { "math": [ "u_gamb_ki > ( u_gamb_kicap / 7.5 )" ] }, { "math": [ "u_gamb_kistage", "<", "3" ] } ] },
+          "if": { "and": [ { "math": [ "u_gamb_ki > ( u_gamb_kicap / 2 )" ] }, { "math": [ "u_gamb_kistage < 4" ] } ] },
           "then": [
-            { "math": [ "u_gamb_kistage", "=", "3" ] },
-            { "u_message": "Your ki reserves have filled up to a quarter.", "type": "good" },
-            { "math": [ "u_gamb_kiweak", "=", "min(2,u_gamb_kiweak)+u_gamb_kiweakbase" ] }
+            { "u_message": "Your ki reserves have filled to the halfway point.", "type": "good" },
+            { "math": [ "u_gamb_kistage", "=", "4" ] }
           ],
           "else": {
-            "if": { "and": [ { "math": [ "u_gamb_ki > ( u_gamb_kicap / 10 )" ] }, { "math": [ "u_gamb_kistage", "<", "2" ] } ] },
+            "if": { "and": [ { "math": [ "u_gamb_ki > ( u_gamb_kicap / 7.5 )" ] }, { "math": [ "u_gamb_kistage", "<", "3" ] } ] },
             "then": [
-              { "math": [ "u_gamb_kiweak", "=", "min(9,u_gamb_kiweak)+u_gamb_kiweakbase" ] },
-              { "math": [ "u_gamb_kistage", "=", "2" ] },
-              {
-                "u_message": "Your inner ki has begun filling. You will slowly recover more and more of your powers back.",
-                "type": "good"
-              }
+              { "math": [ "u_gamb_kistage", "=", "3" ] },
+              { "u_message": "Your ki reserves have filled up to a quarter.", "type": "good" },
+              { "math": [ "u_gamb_kiweak", "=", "min(2,u_gamb_kiweak)+u_gamb_kiweakbase" ] }
             ],
             "else": {
-              "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 10 )" ] }, { "math": [ "u_gamb_kistage > 1" ] } ] },
+              "if": { "and": [ { "math": [ "u_gamb_ki > ( u_gamb_kicap / 10 )" ] }, { "math": [ "u_gamb_kistage", "<", "2" ] } ] },
               "then": [
+                { "math": [ "u_gamb_kiweak", "=", "min(9,u_gamb_kiweak)+u_gamb_kiweakbase" ] },
+                { "math": [ "u_gamb_kistage", "=", "2" ] },
                 {
-                  "u_message": "Your inner ki has dropped dangerously low. Your body and soul have been severly damaged.",
-                  "type": "bad"
-                },
-                { "math": [ "u_gamb_kiweak", "=", "max(u_gamb_kiweak,39)+u_gamb_kiweakbase" ] },
-                { "math": [ "u_gamb_kistage", "=", "1" ] }
+                  "u_message": "Your inner ki has begun filling. You will slowly recover more and more of your powers back.",
+                  "type": "good"
+                }
               ],
               "else": {
-                "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 7.5 )" ] }, { "math": [ "u_gamb_kistage > 2" ] } ] },
+                "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 10 )" ] }, { "math": [ "u_gamb_kistage > 1" ] } ] },
                 "then": [
-                  { "math": [ "u_gamb_kistage", "=", "2" ] },
                   {
-                    "u_message": "Your inner ki has dropped too far. Your body and soul have been damaged.",
+                    "u_message": "Your inner ki has dropped dangerously low. Your body and soul have been severly damaged.",
                     "type": "bad"
                   },
-                  { "math": [ "u_gamb_kiweak", "=", "max(u_gamb_kiweak,10)+u_gamb_kiweakbase" ] }
-                ]
+                  { "math": [ "u_gamb_kiweak", "=", "max(u_gamb_kiweak,39)+u_gamb_kiweakbase" ] },
+                  { "math": [ "u_gamb_kistage", "=", "1" ] }
+                ],
+                "else": {
+                  "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 7.5 )" ] }, { "math": [ "u_gamb_kistage > 2" ] } ] },
+                  "then": [
+                    { "math": [ "u_gamb_kistage", "=", "2" ] },
+                    {
+                      "u_message": "Your inner ki has dropped too far. Your body and soul have been damaged.",
+                      "type": "bad"
+                    },
+                    { "math": [ "u_gamb_kiweak", "=", "max(u_gamb_kiweak,10)+u_gamb_kiweakbase" ] }
+                  ]
+                }
               }
             }
           }
@@ -124,7 +131,7 @@
             "then": [ { "math": [ "u_gamb_kiwoodstage", "=", "1" ] }, { "u_message": "Your wood ki has almost emptied.", "type": "good" } ],
             "else": {
               "if": {
-                "and": [ { "math": [ "u_gamb_kiwood", "<", "u_gamb_kicap * u_gamb_kiwoodcap" ] }, { "math": [ "u_gamb_kistage > 4" ] } ]
+                "and": [ { "math": [ "u_gamb_kiwood", "<", "u_gamb_kicap * u_gamb_kiwoodcap" ] }, { "math": [ "u_gamb_kiwoodstage > 4" ] } ]
               },
               "then": [
                 { "math": [ "u_gamb_kiwoodstage", "=", "2" ] },
