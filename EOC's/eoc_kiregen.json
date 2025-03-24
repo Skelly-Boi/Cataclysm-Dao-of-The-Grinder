@@ -10,7 +10,7 @@
         "then": [ { "math": [ "u_gamb_ki", "+=", "u_gamb_kireg / u_gamb_kiweak" ] } ],
         "else": [
           {
-            "if": { "and": [ { "math": [ "u_gamb_ki >= u_gamb_ki" ] }, { "math": [ "u_gamb_kistage < 5" ] } ] },
+            "if": { "and": [ { "math": [ "u_gamb_ki >= u_gamb_kicap" ] }, { "math": [ "u_gamb_kistage < 5" ] } ] },
             "then": [ { "u_message": "Your inner ki has reached its limit.", "type": "good" }, { "math": [ "u_gamb_kistage", "=", "5" ] } ]
           }
         ]
@@ -64,57 +64,76 @@
         }
       },
       {
-        "if": { "math": [ "u_gamb_kiweak > u_gamb_kiweakbase" ] },
+        "if": { "math": [ "u_gamb_kiweak > u_gamb_kiweakbase+0.01" ] },
         "then": { "math": [ "u_gamb_kiweak", "-=", "0.01" ] },
-        "else": { "math": [ "u_gamb_kiweak", "+=", "0.01" ] }
+        "else": {
+          "if": { "math": [ "u_gamb_kiweak < u_gamb_kiweakbase-0.01" ] },
+          "then": { "math": [ "u_gamb_kiweak", "+=", "0.01" ] }
+        }
       }
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_Gamb_Awaken",
-    "effect": [
-      { "u_add_trait": "Gamb_Iron_Body" },
-      { "math": [ "u_gamb_kicap", "=", "2" ] },
-      { "math": [ "u_gamb_kireg", "=", "0.1" ] },
-      { "math": [ "u_gamb_ki", "=", "0.9" ] },
-      { "math": [ "u_gamb_kiweak", "=", "1" ] },
-      { "math": [ "u_gamb_kiweakbase", "=", "1" ] },
-      { "math": [ "(u_spell_level('gamb_breinforce'))", "++" ] },
-      { "math": [ "u_gamb_kidrain", "=", "0" ] },
-      { "math": [ "u_gamb_phytoken", "=", "0" ] },
-      { "math": [ "u_gamb_phytokentemp", "=", "0" ] },
-      {
-        "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling.",
-        "type": "good"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "Gamb_Ki_Empty",
-    "effect": [ { "math": [ "u_gamb_ki", "=", "0" ] } ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "Gamb_Ki_Display",
+    "id": "Gamb_KiWood_Regen",
     "recurrence": [ "1 minute", "1 minute" ],
-    "condition": { "u_has_trait": "Gamb_Iron_Body" },
+    "condition": { "and": [ { "u_has_trait": "Gamb_Iron_Body" }, { "math": [ "u_gamb_kiwoodcap", ">", "0" ] } ] },
     "effect": [
       {
-        "u_message": "ki:<u_val:gamb_ki>  kiweak:<u_val:gamb_kiweak>  pxp:<u_val:gamb_phyxp> ptoken:<u_val:gamb_phytoken>",
-        "type": "good"
+        "if": { "math": [ "u_gamb_kiwood", "<", "(u_gamb_kicap * u_gamb_kiwoodcap)*2" ] },
+        "then": [ { "math": [ "u_gamb_kiwood", "+=", "u_gamb_kiwoodreg" ] } ]
+      },
+      {
+        "if": {
+          "and": [ { "math": [ "u_gamb_kiwood", ">=", "u_gamb_kicap * u_gamb_kiwoodcap" ] }, { "math": [ "u_gamb_kiwoodstage < 5" ] } ]
+        },
+        "then": [
+          { "u_message": "Your wood ki has reached its limit, your body can not handle it anymore.", "type": "bad" },
+          { "math": [ "u_gamb_kiwoodstage", "=", "5" ] }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "math": [ "u_gamb_kiwood", ">", "(u_gamb_kicap * u_gamb_kiwoodcap)/2" ] },
+            { "math": [ "u_gamb_kiwoodstage < 4" ] }
+          ]
+        },
+        "then": [
+          { "u_message": "Your wood ki reserves have filled to the halfway point.", "type": "good" },
+          { "math": [ "u_gamb_kiwoodstage", "=", "4" ] }
+        ],
+        "else": {
+          "if": {
+            "and": [
+              { "math": [ "u_gamb_kiwood", ">", "(u_gamb_kicap * u_gamb_kiwoodcap)/7.5" ] },
+              { "math": [ "u_gamb_kiwoodstage", "<", "3" ] }
+            ]
+          },
+          "then": [
+            { "math": [ "u_gamb_kiwoodstage", "=", "3" ] },
+            { "u_message": "Your ki reserves have filled up to a quarter.", "type": "good" }
+          ],
+          "else": {
+            "if": {
+              "and": [
+                { "math": [ "u_gamb_kiwood", "<", "(u_gamb_kicap * u_gamb_kiwoodcap)/10" ] },
+                { "math": [ "u_gamb_kiwoodstage > 1" ] }
+              ]
+            },
+            "then": [ { "math": [ "u_gamb_kiwoodstage", "=", "1" ] }, { "u_message": "Your wood ki has almost emptied.", "type": "good" } ],
+            "else": {
+              "if": {
+                "and": [ { "math": [ "u_gamb_kiwood", "<", "u_gamb_kicap * u_gamb_kiwoodcap" ] }, { "math": [ "u_gamb_kistage > 4" ] } ]
+              },
+              "then": [
+                { "math": [ "u_gamb_kiwoodstage", "=", "2" ] },
+                { "u_message": "Your wood ki has entered the safe limit that your body can handle.", "type": "good" }
+              ]
+            }
+          }
+        }
       }
     ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "Gamb_Ki_phytokenplus",
-    "effect": [ { "math": [ "u_gamb_phytoken", "+=", "1" ] } ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "Gamb_Ki_phytokenminus",
-    "effect": [ { "math": [ "u_gamb_phytoken", "-=", "1" ] } ]
   }
 ]

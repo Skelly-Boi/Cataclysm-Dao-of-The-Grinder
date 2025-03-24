@@ -5,7 +5,7 @@
     "effect": [
       {
         "if": { "not": { "u_has_trait": "Gamb_Iron_Body" } },
-        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken" ] } ],
+        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] } ],
         "else": [
           { "math": [ "u_gamb_bashd", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_bashd)*4)))" ] },
           { "math": [ "u_gamb_str", "+=", "max(0, 1-rand(20+(u_gamb_str^1.5)))" ] },
@@ -36,7 +36,7 @@
           { "math": [ "u_gamb_hpreg", "+=", "0.001 * max(0, 4-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
           { "math": [ "u_gamb_hpregaw", "+=", "0.001 * max(0, 10-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
           { "math": [ "u_gamb_mendmod", "+=", "0.001 * max(0, 6-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
-          { "math": [ "u_gamb_kicap", "+=", "0.1 * max(0, 6-rand(sqrt(u_gamb_kicap)*5))" ] },
+          { "math": [ "u_gamb_kicap", "+=", "0.03 * max(0, 6-rand(sqrt(u_gamb_kicap)*5))" ] },
           { "math": [ "u_gamb_ki", "+=", "0.1 * max(1, rand(10))" ] },
           {
             "u_message": "The shard's ki enters your body and fuses with your being. You feel stronger.",
@@ -52,7 +52,7 @@
     "effect": [
       {
         "if": { "not": { "u_has_trait": "Gamb_Iron_Body" } },
-        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken" ] } ],
+        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken_Wood" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] } ],
         "else": [
           { "math": [ "u_gamb_cardiom", "+=", "0.0001 * max(0, 8-rand(1+((u_gamb_cardiom*10000)^.3)))" ] },
           { "math": [ "u_gamb_basha", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_basha)*11)))" ] },
@@ -77,12 +77,19 @@
           { "math": [ "u_gamb_hpreg", "+=", "0.001 * max(0, 12-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
           { "math": [ "u_gamb_hpregaw", "+=", "0.001 * max(0, 20-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
           { "math": [ "u_gamb_mendmod", "+=", "0.001 * max(0, 16-rand(1+((u_gamb_cardiom*1000)^.3)))" ] },
-          { "math": [ "u_gamb_kicap", "+=", "0.1 * max(0, 8-rand(sqrt(u_gamb_kicap)*4))" ] },
-          { "math": [ "u_gamb_kireg", "+=", "0.01 * max(0, 8-rand(u_gamb_kireg*10))" ] },
+          { "math": [ "u_gamb_kicap", "+=", "0.05 * max(0, 8-rand(sqrt(u_gamb_kicap)*4))" ] },
+          { "math": [ "u_gamb_kireg", "+=", "0.001 * max(0, 8-rand(u_gamb_kireg*10))" ] },
           { "math": [ "u_gamb_ki", "+=", "0.1 * max(5, rand(20))" ] },
+          { "math": [ "u_gamb_kiwood", "+=", "0.1" ] },
+          { "math": [ "u_gamb_kiwoodcap", "+=", "0.01 * rand(3)" ] },
+          { "math": [ "u_gamb_kiwoodreg", "+=", "0.00001 * rand(8)" ] },
           {
             "u_message": "The shard's ki enters your body and fuses with your being. You feel stronger.",
             "type": "good"
+          },
+          {
+            "if": { "math": [ "(u_spell_level('gamb_woodshed'))", "==", "0" ] },
+            "then": { "math": [ "(u_spell_level('gamb_woodshed'))", "++" ] }
           }
         ]
       }
