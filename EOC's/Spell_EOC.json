@@ -53,7 +53,7 @@
             { "math": [ "u_gambtemp_staba", "+=", "5+(u_gamb_phytoken^.5)" ] },
             { "math": [ "u_gambtemp_bulla", "+=", "3+(u_gamb_phytoken^.4)" ] },
             { "math": [ "u_gambtemp_eleca", "+=", "2+(u_gamb_phytoken^.35)" ] },
-            { "math": [ "u_gamb_phyxpg", "+=", "0.15" ] }
+            { "math": [ "u_gamb_phyxpg", "+=", "0.08" ] }
           ],
           "else": { "u_message": "You don't have enough ki.", "type": "bad" }
         },
@@ -67,9 +67,26 @@
           { "math": [ "u_gambtemp_staba", "-=", "5+(u_gamb_phytoken^.5)" ] },
           { "math": [ "u_gambtemp_bulla", "-=", "3+(u_gamb_phytoken^.4)" ] },
           { "math": [ "u_gambtemp_eleca", "-=", "2+(u_gamb_phytoken^.35)" ] },
-          { "math": [ "u_gamb_phyxpg", "-=", "0.15" ] },
+          { "math": [ "u_gamb_phyxpg", "-=", "0.08" ] },
           { "u_message": "You turn off you Body Reinforcement" }
         ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_WoodShed",
+    "effect": [
+      {
+        "if": { "math": [ "u_gamb_kiwood", ">", "0.5" ] },
+        "then": [
+          { "math": [ "u_gamb_kiwood", "-=", "0.4" ] },
+          { "u_add_effect": "effect_woodshedding", "duration": { "math": [ "5 +(u_gamb_woodtoken^0.3)" ] } },
+          { "math": [ "u_gamb_woodxp", "+=", "1" ] },
+          { "math": [ "u_gamb_kiwoodcap", "+=", "0.001" ] },
+          { "math": [ "u_gamb_kiwoodxreg", "+=", "0.000001" ] }
+        ],
+        "else": { "u_message": "You don't have enough wood ki.", "type": "bad" }
       }
     ]
   },
@@ -125,6 +142,9 @@
       { "math": [ "u_gamb_phytoken", "+=", "(u_gamb_phyxp/10)" ] },
       { "math": [ "u_gamb_phytokentemp", "+=", "(u_gamb_phyxp/10)" ] },
       { "math": [ "u_gamb_phyxp", "=", "0" ] },
+      { "math": [ "u_gamb_woodtoken", "+=", "(u_gamb_woodxp/10)" ] },
+      { "math": [ "u_gamb_woodtokentemp", "+=", "(u_gamb_woodxp/10)" ] },
+      { "math": [ "u_gamb_woodxp", "=", "0" ] },
       {
         "if": { "math": [ "u_gamb_phytokentemp", ">=", "1" ] },
         "then": [
@@ -144,7 +164,7 @@
                 "case": 90,
                 "effect": [
                   {
-                    "if": { "math": [ "(u_spell_level('gamb_ironscale'))", ">", "0" ] },
+                    "if": { "math": [ "(u_spell_level('gamb_ironscale'))", "==", "0" ] },
                     "then": [
                       { "math": [ "(u_spell_level('gamb_ironscale'))", "++" ] },
                       { "u_message": "You gain a new understanding of your ki use.", "type": "good" }
@@ -156,6 +176,30 @@
             ]
           },
           { "math": [ "u_gamb_phytokentemp", "=", "0" ] }
+        ]
+      },
+      {
+        "if": { "math": [ "u_gamb_woodtokentemp", ">=", "1" ] },
+        "then": [
+          {
+            "switch": { "math": [ "rand(100)+u_gamb_woodtokentemp+(u_gamb_woodtoken*0.1)" ] },
+            "cases": [
+              { "case": 0, "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "(rand(3)*0.01)*u_gamb_woodtokentemp" ] } ] },
+              {
+                "case": 20,
+                "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "((rand(7)*0.01)+0.01)*u_gamb_woodtokentemp" ] } ]
+              },
+              {
+                "case": 60,
+                "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "((rand(8)*0.02)+0.05)*u_gamb_woodtokentemp" ] } ]
+              },
+              {
+                "case": 90,
+                "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "((rand(12)*0.02)+0.07)*u_gamb_woodtokentemp" ] } ]
+              }
+            ]
+          },
+          { "math": [ "u_gamb_woodtokentemp", "=", "0" ] }
         ]
       }
     ]

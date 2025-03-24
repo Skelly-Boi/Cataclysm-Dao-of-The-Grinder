@@ -1,0 +1,82 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Awaken_Universal",
+    "effect": [
+      { "math": [ "u_gamb_kidrain", "=", "0" ] },
+      { "math": [ "u_gamb_woodtoken", "=", "0" ] },
+      { "math": [ "u_gamb_woodtokentemp", "=", "0" ] },
+      { "math": [ "u_gamb_phytoken", "=", "0" ] },
+      { "math": [ "u_gamb_phytokentemp", "=", "0" ] },
+      { "math": [ "u_gamb_kiweak", "=", "1" ] },
+      { "math": [ "u_gamb_kiweakbase", "=", "1" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Awaken",
+    "effect": [
+      { "u_add_trait": "Gamb_Iron_Body" },
+      { "math": [ "u_gamb_kicap", "=", "2" ] },
+      { "math": [ "u_gamb_kireg", "=", "0.1" ] },
+      { "math": [ "u_gamb_ki", "=", "0.9" ] },
+      { "math": [ "u_gamb_kiwood", "=", "0" ] },
+      { "math": [ "u_gamb_kiwoodcap", "=", "0" ] },
+      { "math": [ "u_gamb_kiwoodreg", "=", "0" ] },
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "++" ] },
+      {
+        "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling.",
+        "type": "good"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Awaken_Wood",
+    "effect": [
+      { "u_add_trait": "Gamb_Iron_Body" },
+      { "math": [ "u_gamb_kicap", "=", "2.4" ] },
+      { "math": [ "u_gamb_kireg", "=", "0.15" ] },
+      { "math": [ "u_gamb_ki", "=", "1.1" ] },
+      { "math": [ "u_gamb_kiwood", "=", "0.1" ] },
+      { "math": [ "u_gamb_kiwoodcap", "=", "0.2" ] },
+      { "math": [ "u_gamb_kiwoodreg", "=", "0.0002" ] },
+      { "math": [ "u_gamb_maxhp", "+=", "1" ] },
+      { "math": [ "u_gamb_hpreg", "+=", "0.01" ] },
+      { "math": [ "u_gamb_hpregaw", "+=", "0.1" ] },
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "++" ] },
+      { "math": [ "(u_spell_level('gamb_woodenshed'))", "++" ] },
+      {
+        "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling. A pleasant feeling of nature is making its way inside of you.",
+        "type": "good"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_Empty",
+    "effect": [ { "math": [ "u_gamb_ki", "=", "0" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_Display",
+    "recurrence": [ "1 minute", "1 minute" ],
+    "condition": { "u_has_trait": "Gamb_Iron_Body" },
+    "effect": [
+      {
+        "u_message": "ki:<u_val:gamb_ki>  kiweak:<u_val:gamb_kiweak>  pxp:<u_val:gamb_phyxp> ptoken:<u_val:gamb_phytoken> woodki:<u_val:gamb_kiwood>",
+        "type": "good"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_phytokenplus",
+    "effect": [ { "math": [ "u_gamb_phytoken", "+=", "1" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_phytokenminus",
+    "effect": [ { "math": [ "u_gamb_phytoken", "-=", "1" ] } ]
+  }
+]

@@ -34,5 +34,19 @@
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_Gamb_Meditate"
+  },
+  {
+    "type": "SPELL",
+    "id": "gamb_woodenshed",
+    "name": "Wood Shedding",
+    "description": "Shed the outer layer of skin by turning it into a healing bark.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "base_casting_time": 500,
+    "base_energy_cost": 1000,
+    "energy_source": "STAMINA",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_WoodShed"
   }
 ]
