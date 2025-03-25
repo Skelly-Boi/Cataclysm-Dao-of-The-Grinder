@@ -8,7 +8,8 @@ Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted
 ## Current features (and spoilers, but you can't play the game blind as is):
 
 ### 'Boss' monster drops, that awaken you on the path of cultivation, and strengthen your body.
-### Spell. Singular.
+### 3 Pure Ki and 1 Wood spell.
+### Spell growth and 'research' system (through meditation)
 
 ## To be added:
 
