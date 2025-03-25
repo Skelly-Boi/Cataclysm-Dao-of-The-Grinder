@@ -70,12 +70,17 @@
   {
     "type": "effect_on_condition",
     "id": "Gamb_Ki_phytokenplus",
-    "effect": [ { "math": [ "u_gamb_phytoken", "+=", "1" ] } ]
+    "effect": [ { "math": [ "u_gamb_phytoken", "+=", "10" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_phyxpplus",
+    "effect": [ { "math": [ "u_gamb_phyxp", "+=", "100" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "Gamb_Ki_phytokenminus",
-    "effect": [ { "math": [ "u_gamb_phytoken", "-=", "1" ] } ]
+    "effect": [ { "math": [ "u_gamb_phytoken", "-=", "10" ] } ]
   },
   {
     "type": "effect_on_condition",

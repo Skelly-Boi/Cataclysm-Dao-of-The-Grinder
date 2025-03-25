@@ -108,5 +108,24 @@
         "then": [ { "u_message": "You run out of ki to sustain your spells.", "type": "bad" }, { "run_eocs": [ "EOC_Gamb_KiOff" ] } ]
       }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_KiOff",
+    "effect": [
+      { "math": [ "u_gamb_breinforce", "=", "0" ] },
+      { "math": [ "u_gamb_ironscale", "=", "0" ] },
+      { "math": [ "u_gamb_kidrain", "=", "0" ] },
+      { "math": [ "u_gambtemp_speed", "=", "0" ] },
+      { "math": [ "u_gambtemp_atkspd", "=", "0" ] },
+      { "math": [ "u_gambtemp_bashd", "=", "0" ] },
+      { "math": [ "u_gambtemp_painres", "=", "0" ] },
+      { "math": [ "u_gambtemp_basha", "=", "0" ] },
+      { "math": [ "u_gambtemp_cuta", "=", "0" ] },
+      { "math": [ "u_gambtemp_staba", "=", "0" ] },
+      { "math": [ "u_gambtemp_bulla", "=", "0" ] },
+      { "math": [ "u_gambtemp_eleca", "=", "0" ] },
+      { "math": [ "u_gamb_phyxpg", "=", "0" ] }
+    ]
   }
 ]
