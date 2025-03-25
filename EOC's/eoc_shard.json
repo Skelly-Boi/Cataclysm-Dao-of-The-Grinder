@@ -89,7 +89,7 @@
           },
           {
             "if": { "math": [ "(u_spell_level('gamb_woodshed'))", "==", "0" ] },
-            "then": { "math": [ "(u_spell_level('gamb_woodshed'))", "++" ] }
+            "then": { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "1" ] }
           }
         ]
       }

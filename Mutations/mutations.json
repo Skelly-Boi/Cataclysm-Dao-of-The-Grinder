@@ -3,7 +3,7 @@
     "type": "mutation",
     "id": "Gamb_Iron_Body",
     "name": { "str": "Iron Body" },
-    "points": 0,
+    "points": 4,
     "visibility": 0,
     "ugliness": 0,
     "description": "A wall has been passed.",
@@ -55,7 +55,8 @@
           { "value": "REGEN_HP", "multiply": { "math": [ "u_gamb_hpreg * 1" ] } },
           { "value": "REGEN_HP_AWAKE", "multiply": { "math": [ "u_gamb_hpregaw * 1" ] } },
           { "value": "RECOIL_MODIFIER", "add": { "math": [ "u_gamb_recoil * -1" ] } },
-          { "value": "MAX_HP", "add": { "math": [ "u_gamb_maxhp * 1" ] } }
+          { "value": "MAX_HP", "add": { "math": [ "u_gamb_maxhp * 1" ] } },
+          { "value": "MELEE_TO_HIT", "add": { "math": [ "u_gamb_mhit + 1" ] } }
         ]
       },
       {
@@ -83,8 +84,31 @@
           { "value": "REGEN_HP", "multiply": { "math": [ "u_gambtemp_hpreg * 1" ] } },
           { "value": "REGEN_HP_AWAKE", "multiply": { "math": [ "u_gambtemp_hpregaw * 1" ] } },
           { "value": "RECOIL_MODIFIER", "add": { "math": [ "u_gambtemp_recoil * -1" ] } },
-          { "value": "MAX_HP", "add": { "math": [ "u_gambtemp_maxhp * 1" ] } }
+          { "value": "MAX_HP", "add": { "math": [ "u_gambtemp_maxhp * 1" ] } },
+          { "value": "MELEE_TO_HIT", "add": { "math": [ "u_gambtemp_mhit * 1" ] } }
         ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "Gamb_Ki_Capacity",
+    "name": { "str": "Capacity" },
+    "points": 3,
+    "visibility": 0,
+    "ugliness": 0,
+    "description": "Your Ki capacity has been filled.",
+    "purifiable": false,
+    "variants": [
+      { "id": "Gamb_Ki_Full", "name": { "str": "Full Ki" }, "description": "Your Ki capacity has been filled." },
+      { "id": "Gamb_Ki_High", "name": { "str": "High Ki" }, "description": "Your Ki Capacity is close to filling." },
+      { "id": "Gamb_Ki_Half", "name": { "str": "Medium Ki" }, "description": "Your Ki capacity is above half." },
+      { "id": "Gamb_Ki_Quarter", "name": { "str": "Low Ki" }, "description": "Your Ki capacity is below half." },
+      { "id": "Gamb_Ki_Low", "name": { "str": "Very Low Ki" }, "description": "Your Ki is dangerously low." },
+      {
+        "id": "Gamb_Ki_Danger",
+        "name": { "str": "Soul Damaged" },
+        "description": "Your Ki has went too low, your soul has been damaged. Your Ki regeneration is heavily affected"
       }
     ]
   }
