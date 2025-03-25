@@ -9,7 +9,7 @@
     "description": "A wall has been passed.",
     "purifiable": false,
     "flags": [ "MEND_ALL" ],
-    "spells_learned": [ [ "gamb_meditate", 1 ] ],
+    "spells_learned": [ [ "gamb_meditate", 0 ] ],
     "enchantments": [
       {
         "melee_damage_bonus": [
