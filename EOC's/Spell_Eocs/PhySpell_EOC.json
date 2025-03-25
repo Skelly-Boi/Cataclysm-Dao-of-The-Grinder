@@ -53,6 +53,7 @@
             { "math": [ "u_gambtemp_staba", "+=", "5+(u_gamb_phytoken^.5)" ] },
             { "math": [ "u_gambtemp_bulla", "+=", "3+(u_gamb_phytoken^.4)" ] },
             { "math": [ "u_gambtemp_eleca", "+=", "2+(u_gamb_phytoken^.35)" ] },
+            { "math": [ "u_gambtemp_mhit", "+=", "1+(u_gamb_phytoken^.1)" ] },
             { "math": [ "u_gamb_phyxpg", "+=", "0.08" ] }
           ],
           "else": { "u_message": "You don't have enough ki.", "type": "bad" }
@@ -67,6 +68,7 @@
           { "math": [ "u_gambtemp_staba", "-=", "5+(u_gamb_phytoken^.5)" ] },
           { "math": [ "u_gambtemp_bulla", "-=", "3+(u_gamb_phytoken^.4)" ] },
           { "math": [ "u_gambtemp_eleca", "-=", "2+(u_gamb_phytoken^.35)" ] },
+          { "math": [ "u_gambtemp_mhit", "-=", "1+(u_gamb_phytoken^.1)" ] },
           { "math": [ "u_gamb_phyxpg", "-=", "0.08" ] },
           { "u_message": "You turn off you Body Reinforcement" }
         ]

@@ -33,11 +33,15 @@
           },
           {
             "value": "SPEED",
-            "add": { "math": [ "(8+(u_gamb_phytoken^0.5))*(u_effect_intensity('effect_phy_overloadgood')^0.8))" ] }
+            "add": { "math": [ "((8+(u_gamb_phytoken^0.5))*(u_effect_intensity('effect_phy_overloadgood')^0.8))" ] }
+          },
+          {
+            "value": "MELEE_TO_HIT",
+            "add": { "math": [ "((1+(u_gamb_phytoken^0.1))*(u_effect_intensity('effect_phy_overloadgood')^0.1))" ] }
           },
           {
             "value": "ATTACK_SPEED",
-            "add": { "math": [ "(4+(u_gamb_phytoken^0.3))*(u_effect_intensity('effect_phy_overloadgood')^0.8))*-1" ] }
+            "add": { "math": [ "((4+(u_gamb_phytoken^0.3))*(u_effect_intensity('effect_phy_overloadgood')^0.8))*-1" ] }
           }
         ]
       },
@@ -45,7 +49,7 @@
         "melee_damage_bonus": [
           {
             "type": "bash",
-            "add": { "math": [ "(12+(u_gamb_phytoken^0.6))*(u_effect_intensity('effect_phy_overloadgood')^0.8))" ] }
+            "add": { "math": [ "((12+(u_gamb_phytoken^0.6))*(u_effect_intensity('effect_phy_overloadgood')^0.8))" ] }
           }
         ]
       }

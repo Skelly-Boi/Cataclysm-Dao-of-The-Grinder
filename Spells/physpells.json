@@ -12,7 +12,7 @@
   },
   {
     "type": "SPELL",
-    "id": " gamb_ironscale",
+    "id": "gamb_ironscale",
     "name": "Iron Scale",
     "description": "By shaping the ki into a tough, physical membrane around you, you can mimic the scales of a snake, increasing the defense of your body.",
     "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],

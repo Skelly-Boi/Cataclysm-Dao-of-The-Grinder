@@ -83,7 +83,8 @@
     "effect": [
       { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "1" ] },
       { "math": [ "(u_spell_level('gamb_overload'))", "=", "1" ] },
-      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "1" ] }
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "1" ] },
+      { "math": [ "(u_spell_level('gamb_ironscale'))", "=", "1" ] }
     ]
   }
 ]

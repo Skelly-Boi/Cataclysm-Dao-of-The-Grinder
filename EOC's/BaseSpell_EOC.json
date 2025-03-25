@@ -33,10 +33,17 @@
                   {
                     "if": { "math": [ "(u_spell_level('gamb_ironscale'))", "==", "0" ] },
                     "then": [
-                      { "math": [ "(u_spell_level('gamb_ironscale'))", "++" ] },
+                      { "math": [ "(u_spell_level('gamb_ironscale'))", "=", "1" ] },
                       { "u_message": "You gain a new understanding of your ki use.", "type": "good" }
                     ],
-                    "else": { "math": [ "u_gamb_phytoken", "+=", "((rand(12)*0.02)+0.07)*u_gamb_phytokentemp" ] }
+                    "else": {
+                      "if": { "math": [ "(u_spell_level('gamb_ironscale'))", "==", "0" ] },
+                      "then": [
+                        { "math": [ "(u_spell_level('gamb_overload'))", "=", "1" ] },
+                        { "u_message": "You gain a new understanding of your ki use.", "type": "good" }
+                      ],
+                      "else": { "math": [ "u_gamb_phytoken", "+=", "((rand(12)*0.02)+0.07)*u_gamb_phytokentemp" ] }
+                    }
                   }
                 ]
               }
