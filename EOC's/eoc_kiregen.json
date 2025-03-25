@@ -69,7 +69,7 @@
                   { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Danger" }
                 ],
                 "else": {
-                  "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 7.5 )" ] }, { "math": [ "u_gamb_kistage > 2" ] } ] },
+                  "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 10 )" ] }, { "math": [ "u_gamb_kistage > 3" ] } ] },
                   "then": [
                     { "math": [ "u_gamb_kistage", "=", "2" ] },
                     {
