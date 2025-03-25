@@ -82,10 +82,7 @@
               "else": {
                 "if": { "math": [ "u_gamb_ki > ( u_gamb_kicap * 0.1 )" ] },
                 "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Low" } ],
-                "else": {
-                  "if": { "math": [ "u_gamb_ki < ( u_gamb_kicap / 15 )" ] },
-                  "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Danger" } ]
-                }
+                "else": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Danger" } ]
               }
             }
           }
