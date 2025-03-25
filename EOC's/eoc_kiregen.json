@@ -57,7 +57,7 @@
                 { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Low" }
               ],
               "else": {
-                "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 10 )" ] }, { "math": [ "u_gamb_kistage > 1" ] } ] },
+                "if": { "and": [ { "math": [ "u_gamb_ki < ( u_gamb_kicap / 15 )" ] }, { "math": [ "u_gamb_kistage > 1" ] } ] },
                 "then": [
                   {
                     "u_message": "Your inner ki has dropped dangerously low. Your body and soul have been severly damaged.",
