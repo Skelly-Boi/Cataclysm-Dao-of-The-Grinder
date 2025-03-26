@@ -40,6 +40,10 @@
             "add": { "math": [ "((1+(u_gamb_phytoken^0.1))*(u_effect_intensity('effect_phy_overloadgood')^0.1))" ] }
           },
           {
+            "value": "STRENGTH",
+            "add": { "math": [ "((1+(u_gamb_phytoken^0.1))*(u_effect_intensity('effect_phy_overloadgood')^0.1))" ] }
+          },
+          {
             "value": "ATTACK_SPEED",
             "add": { "math": [ "((4+(u_gamb_phytoken^0.3))*(u_effect_intensity('effect_phy_overloadgood')^0.8))*-1" ] }
           }
