@@ -89,27 +89,5 @@
         ]
       }
     ]
-  },
-  {
-    "type": "mutation",
-    "id": "Gamb_Ki_Capacity",
-    "name": { "str": "Capacity" },
-    "points": 3,
-    "visibility": 0,
-    "ugliness": 0,
-    "description": "Your Ki capacity has been filled.",
-    "purifiable": false,
-    "variants": [
-      { "id": "Gamb_Ki_Full", "name": { "str": "Full Ki" }, "description": "Your Ki capacity has been filled." },
-      { "id": "Gamb_Ki_High", "name": { "str": "High Ki" }, "description": "Your Ki Capacity is close to filling." },
-      { "id": "Gamb_Ki_Half", "name": { "str": "Medium Ki" }, "description": "Your Ki capacity is above half." },
-      { "id": "Gamb_Ki_Quarter", "name": { "str": "Low Ki" }, "description": "Your Ki capacity is below half." },
-      { "id": "Gamb_Ki_Low", "name": { "str": "Very Low Ki" }, "description": "Your Ki is dangerously low." },
-      {
-        "id": "Gamb_Ki_Danger",
-        "name": { "str": "Soul Damaged" },
-        "description": "Your Ki has went too low, your soul has been damaged. Your Ki regeneration is heavily affected"
-      }
-    ]
   }
 ]
