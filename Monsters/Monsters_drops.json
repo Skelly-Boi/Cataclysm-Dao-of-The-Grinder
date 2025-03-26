@@ -1,0 +1,28 @@
+[
+  {
+    "type": "item_group",
+    "id": "mon_devourer_lab_sec_death_drops",
+    "copy-from": "mon_devourer_lab_sec_death_drops",
+    "subtype": "collection",
+    "extend": { "entries": [ { "group": "elite_weak_martial", "prob": 100 } ] }
+  },
+  {
+    "type": "item_group",
+    "id": "mon_zombie_hulk_death_drops",
+    "copy-from": "mon_zombie_hulk_death_drops",
+    "subtype": "collection",
+    "extend": { "entries": [ { "group": "elite_weak_martial", "prob": 10 } ] }
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_lieutenant_shadow",
+    "copy-from": "mon_lieutenant_shadow",
+    "death_drops": "elite_weak_martial"
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_triffid_heart",
+    "copy-from": "mon_triffid_heart",
+    "death_drops": "elite_weak_wood"
+  }
+]
