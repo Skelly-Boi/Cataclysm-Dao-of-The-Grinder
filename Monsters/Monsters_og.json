@@ -16,5 +16,11 @@
     "id": "mon_lieutenant_shadow",
     "copy-from": "mon_lieutenant_shadow",
     "death_drops": "elite_weak_martial"
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_zombie_nemesis",
+    "copy-from": "mon_zombie_nemesis",
+    "death_drops": "elite_weak_martial"
   }
 ]
