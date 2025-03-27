@@ -2,7 +2,7 @@
   {
     "type": "effect_type",
     "id": "effect_phy_overload",
-    "rating": "bad",
+    "rating": "good",
     "name": [ "Overload" ],
     "desc": [ "Your body is breaking from the inner energy." ],
     "main_parts_only": true,
@@ -17,7 +17,7 @@
     "type": "effect_type",
     "id": "effect_phy_overloadgood",
     "rating": "good",
-    "name": [ "Overload" ],
+    "name": [ "Overloadgood" ],
     "desc": [ "Your body is booming with energy." ],
     "main_parts_only": true,
     "part_descs": true,

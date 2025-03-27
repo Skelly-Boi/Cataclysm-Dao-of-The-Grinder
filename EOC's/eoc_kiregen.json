@@ -69,20 +69,20 @@
       },
       {
         "if": { "math": [ "u_gamb_ki >= u_gamb_kicap" ] },
-        "then": [ { "u_add_effect": "Ki_Capacity_Eff", "intensity": "6", "duration": "PERMANENT" } ],
+        "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Full" } ],
         "else": {
           "if": { "math": [ "u_gamb_ki > ( u_gamb_kicap *0.9 )" ] },
-          "then": [ { "u_add_effect": "Ki_Capacity_Eff", "intensity": "5", "duration": "PERMANENT" } ],
+          "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_High" } ],
           "else": {
             "if": { "math": [ "u_gamb_ki > ( u_gamb_kicap * 0.5 )" ] },
-            "then": [ { "u_add_effect": "Ki_Capacity_Eff", "intensity": "4", "duration": "PERMANENT" } ],
+            "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Half" } ],
             "else": {
               "if": { "math": [ "u_gamb_ki > ( u_gamb_kicap * 0.25 )" ] },
-              "then": [ { "u_add_effect": "Ki_Capacity_Eff", "intensity": "3", "duration": "PERMANENT" } ],
+              "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Quarter" } ],
               "else": {
                 "if": { "math": [ "u_gamb_ki > ( u_gamb_kicap * 0.1 )" ] },
-                "then": [ { "u_add_effect": "Ki_Capacity_Eff", "intensity": "2", "duration": "PERMANENT" } ],
-                "else": [ { "u_add_effect": "Ki_Capacity_Eff", "intensity": "1", "duration": "PERMANENT" } ]
+                "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Low" } ],
+                "else": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_Ki_Danger" } ]
               }
             }
           }
