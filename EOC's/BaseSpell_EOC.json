@@ -23,7 +23,7 @@
         ]
       },
       {
-        "if": { "math": [ "u_gamb_phytokentemp", ">=", "1" ] },
+        "if": { "math": [ "u_gamb_phytokentemp", ">=", "1*u_gamb_talent" ] },
         "then": [
           {
             "switch": { "math": [ "rand(100)+u_gamb_phytokentemp+(u_gamb_phytoken*0.1)" ] },
@@ -65,7 +65,7 @@
         ]
       },
       {
-        "if": { "math": [ "u_gamb_woodtokentemp", ">=", "1" ] },
+        "if": { "math": [ "u_gamb_woodtokentemp", ">=", "1*u_gamb_talent" ] },
         "then": [
           {
             "switch": { "math": [ "rand(100)+u_gamb_woodtokentemp+(u_gamb_woodtoken*0.1)" ] },

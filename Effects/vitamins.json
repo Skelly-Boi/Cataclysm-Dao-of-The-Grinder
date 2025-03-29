@@ -4,34 +4,21 @@
     "type": "vitamin",
     "vit_type": "counter",
     "name": "Ki Digestion",
-    "excess": "gamb_kifood_eff",
     "min": 0,
     "max": 13600,
     "weight_per_unit": "1 mg",
-    "rate": "15 m",
-    "flags": [ "FOO" ],
-    "disease_excess": [ [ 10, 19 ], [ 20, 29 ], [ 30, 49 ], [ 50, 79 ], [ 80, 129 ], [ 130, 179 ], [ 180, 290 ] ]
-  },
-  {
-    "type": "effect_type",
-    "id": "gamb_kifood_eff",
-    "rating": "good",
-    "name": [ "Ki Digestion" ],
-    "desc": [ "Your body is currently digesting the ki in its system." ],
-    "main_parts_only": true,
-    "part_descs": true,
-    "enchantments": [
-      { "values": [ { "value": "u_gamb_kireg", "add": { "math": [ "(u_effect_intensity('gamb_kifood_eff')*0.01)" ] } } ] },
-      {
-        "values": [ { "value": "u_gamb_talentg", "add": { "math": [ "(u_effect_intensity('gamb_kifood_eff')*0.000001)" ] } } ]
-      }
-    ]
+    "rate": "15 m"
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_Gamb_FoodTalent",
-    "recurrence": [ "1 s", "1 s" ],
-    "condition": { "math": [ "u_gamb_talentg > 0" ] },
-    "effect": [ { "math": [ "u_gamb_talent", "+=", "u_gamb_talentg " ] } ]
+    "recurrence": [ "15 m", "15 m" ],
+    "condition": { "or": [ { "math": [ "u_gamb_talentg > 0" ] }, { "math": [ "u_vitamin('gamb_kifood')", ">", "0" ] } ] },
+    "effect": [
+      { "math": [ "u_gamb_talent", "+=", "u_gamb_talentg" ] },
+      { "math": [ "u_gamb_ki", "+=", "u_vitamin('gamb_kifood')*0.0001" ] },
+      { "math": [ "u_gamb_talent", "+=", "u_vitamin('gamb_kifood')*0.000001" ] },
+      { "u_message": "talent:<u_val:gamb_talent>", "type": "good" }
+    ]
   }
 ]
