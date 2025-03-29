@@ -99,14 +99,14 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_Gamb_BreinforceA",
+    "id": "EOC_Gamb_PureDrain",
     "recurrence": [ "1 s", "1 s" ],
     "condition": { "math": [ "u_gamb_kidrain > 0" ] },
     "effect": [
       { "math": [ "u_gamb_ki", "-=", "u_gamb_kidrain " ] },
-      { "math": [ "u_gamb_phyxp", "+=", "u_gamb_phyxpg" ] },
-      { "math": [ "u_gamb_kicap", "+=", "u_gamb_phyxpg*0.025" ] },
-      { "math": [ "u_gamb_kireg", "+=", "u_gamb_phyxpg*0.00005" ] },
+      { "math": [ "u_gamb_phyxp", "+=", "u_gamb_phyxpg*u_gamb_talent" ] },
+      { "math": [ "u_gamb_kicap", "+=", "(u_gamb_phyxpg*0.025)*u_gamb_talent" ] },
+      { "math": [ "u_gamb_kireg", "+=", "(u_gamb_phyxpg*0.00005)*u_gamb_talent" ] },
       {
         "if": { "math": [ "u_gamb_ki", "<", "u_gamb_kidrain" ] },
         "then": [ { "u_message": "You run out of ki to sustain your spells.", "type": "bad" }, { "run_eocs": [ "EOC_Gamb_KiOff" ] } ]

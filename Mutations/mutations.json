@@ -48,7 +48,7 @@
           { "value": "KNOCKBACK_RESIST", "add": { "math": [ "u_gamb_knkres * 1" ] } },
           { "value": "CLIMATE_CONTROL_HEAT", "add": { "math": [ "u_gamb_climate * 1" ] } },
           { "value": "CLIMATE_CONTROL_CHILL", "add": { "math": [ "u_gamb_climate * 1" ] } },
-          { "value": "CONSUME_TIME_MOD", "add": { "math": [ "u_gamb_consume * -1" ] } },
+          { "value": "CONSUME_TIME_MOD", "multiply": { "math": [ "max(-0.50,(u_gamb_consume * -0.01))" ] } },
           { "value": "CARRY_WEIGHT", "add": { "math": [ "u_gamb_carry * 1" ] } },
           { "value": "STOMACH_SIZE_MULTIPLIER", "add": { "math": [ "u_gamb_stomach * 1" ] } },
           { "value": "STAMINA_REGEN_MOD", "add": { "math": [ "u_gamb_staminareg * 1" ] } },
@@ -77,7 +77,7 @@
           { "value": "KNOCKBACK_RESIST", "add": { "math": [ "u_gambtemp_knkres * 1" ] } },
           { "value": "CLIMATE_CONTROL_HEAT", "add": { "math": [ "u_gambtemp_climate * 1" ] } },
           { "value": "CLIMATE_CONTROL_CHILL", "add": { "math": [ "u_gambtemp_climate * 1" ] } },
-          { "value": "CONSUME_TIME_MOD", "add": { "math": [ "u_gambtemp_consume * -1" ] } },
+          { "value": "CONSUME_TIME_MOD", "multiply": { "math": [ "max(-0.20,(u_gambtemp_consume * -0.20))" ] } },
           { "value": "CARRY_WEIGHT", "add": { "math": [ "u_gambtemp_carry * 1" ] } },
           { "value": "STOMACH_SIZE_MULTIPLIER", "add": { "math": [ "u_gambtemp_stomach * 1" ] } },
           { "value": "STAMINA_REGEN_MOD", "add": { "math": [ "u_gambtemp_staminareg * 1" ] } },
@@ -100,14 +100,14 @@
     "description": "Your Ki capacity has been filled.",
     "purifiable": false,
     "variants": [
-      { "id": "Gamb_Ki_Full", "name": { "str": "Full Ki" }, "description": "Your Ki capacity has been filled." },
-      { "id": "Gamb_Ki_High", "name": { "str": "High Ki" }, "description": "Your Ki Capacity is close to filling." },
-      { "id": "Gamb_Ki_Half", "name": { "str": "Medium Ki" }, "description": "Your Ki capacity is above half." },
-      { "id": "Gamb_Ki_Quarter", "name": { "str": "Low Ki" }, "description": "Your Ki capacity is below half." },
-      { "id": "Gamb_Ki_Low", "name": { "str": "Very Low Ki" }, "description": "Your Ki is dangerously low." },
+      { "id": "Gamb_Ki_Full", "name": { "str": "*Full Ki" }, "description": "Your Ki capacity has been filled." },
+      { "id": "Gamb_Ki_High", "name": { "str": "*High Ki" }, "description": "Your Ki Capacity is close to filling." },
+      { "id": "Gamb_Ki_Half", "name": { "str": "*Medium Ki" }, "description": "Your Ki capacity is above half." },
+      { "id": "Gamb_Ki_Quarter", "name": { "str": "*Low Ki" }, "description": "Your Ki capacity is below half." },
+      { "id": "Gamb_Ki_Low", "name": { "str": "*Very Low Ki" }, "description": "Your Ki is dangerously low." },
       {
         "id": "Gamb_Ki_Danger",
-        "name": { "str": "Soul Damaged" },
+        "name": { "str": "*Soul Damaged" },
         "description": "Your Ki has went too low, your soul has been damaged. Your Ki regeneration is heavily affected"
       }
     ]
