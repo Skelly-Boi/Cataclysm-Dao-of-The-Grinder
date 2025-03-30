@@ -160,20 +160,12 @@
         }
       },
       {
-        "if": { "math": [ "u_gamb_kiwodd >= u_gamb_kicap" ] },
-        "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_KiWood_Full" } ],
+        "if": { "math": [ "u_gamb_kiwodd", ">=", "u_gamb_kicap * u_gamb_kiwoodcap" ] },
+        "then": [ { "u_lose_trait": "Gamb_KiWood_Capacity" }, { "u_add_trait": "Gamb_KiWood_Capacity", "variant": "Gamb_KiWood_Full" } ],
         "else": {
-          "if": { "math": [ "u_gamb_ki > ( u_gamb_kicap *0.9 )" ] },
-          "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_KiWood_High" } ],
-          "else": {
-            "if": { "math": [ "u_gamb_ki > ( u_gamb_kicap * 0.5 )" ] },
-            "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_KiWood_Half" } ],
-            "else": {
-              "if": { "math": [ "u_gamb_ki > ( u_gamb_kicap * 0.25 )" ] },
-              "then": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_KiWood_Low" } ],
-              "else": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_KiWood_Danger" } ]
-            }
-          }
+          "if": { "math": [ "u_gamb_ki", ">", "(u_gamb_kicap * u_gamb_kiwoodcap)/2" ] },
+          "then": [ { "u_lose_trait": "Gamb_KiWood_Capacity" }, { "u_add_trait": "Gamb_KiWood_Capacity", "variant": "Gamb_KiWood_High" } ],
+          "else": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_KiWood_Half" } ]
         }
       }
     ]

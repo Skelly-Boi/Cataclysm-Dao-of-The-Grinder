@@ -111,5 +111,32 @@
         "description": "Your Ki has went too low, your soul has been damaged. Your Ki regeneration is heavily affected"
       }
     ]
+  },
+  {
+    "type": "mutation",
+    "id": "Gamb_KiWood_Capacity",
+    "name": { "str": "Wood Capacity" },
+    "points": 3,
+    "visibility": 0,
+    "ugliness": 0,
+    "description": "Your Wood Ki capacity has been filled.",
+    "purifiable": false,
+    "variants": [
+      {
+        "id": "Gamb_KiWood_Full",
+        "name": { "str": "*Dangerous Wood Ki" },
+        "description": "Your Wood Ki is dangerously high. Lower it or face adverse effects."
+      },
+      {
+        "id": "Gamb_KiWood_High",
+        "name": { "str": "*High Wood Ki" },
+        "description": "Your Wood Ki Capacity is close to the limit."
+      },
+      {
+        "id": "Gamb_KiWood_Half",
+        "name": { "str": "*Safe Wood Ki" },
+        "description": "Your Wood Ki capacity is bellow half of the safe limit."
+      }
+    ]
   }
 ]
