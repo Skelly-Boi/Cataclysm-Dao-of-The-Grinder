@@ -10,7 +10,8 @@
       { "math": [ "u_gamb_phytokentemp", "=", "0" ] },
       { "math": [ "u_gamb_kiweak", "=", "1" ] },
       { "math": [ "u_gamb_kiweakbase", "=", "1" ] },
-      { "math": [ "u_gamb_talent", "=", "1" ] }
+      { "math": [ "u_gamb_talent", "=", "1" ] },
+      { "math": [ "u_gamb_woodkicaptrue", "=", "0" ] }
     ]
   },
   {

@@ -165,7 +165,7 @@
         "else": {
           "if": { "math": [ "u_gamb_ki", ">", "(u_gamb_kicap * u_gamb_kiwoodcap)/2" ] },
           "then": [ { "u_lose_trait": "Gamb_KiWood_Capacity" }, { "u_add_trait": "Gamb_KiWood_Capacity", "variant": "Gamb_KiWood_High" } ],
-          "else": [ { "u_lose_trait": "Gamb_Ki_Capacity" }, { "u_add_trait": "Gamb_Ki_Capacity", "variant": "Gamb_KiWood_Half" } ]
+          "else": [ { "u_lose_trait": "Gamb_KiWood_Capacity" }, { "u_add_trait": "Gamb_KiWood_Capacity", "variant": "Gamb_KiWood_Half" } ]
         }
       }
     ]
