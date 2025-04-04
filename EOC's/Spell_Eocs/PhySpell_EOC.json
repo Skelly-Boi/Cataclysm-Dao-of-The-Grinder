@@ -64,7 +64,7 @@
         },
         "else": [
           { "math": [ "u_gamb_ironscale", "=", "0" ] },
-          { "math": [ "u_gamb_kidrain", "-=", ".1" ] },
+          { "math": [ "u_gamb_kidrain", "-=", ".07" ] },
           { "math": [ "u_gambtemp_bashd", "-=", "2+(u_gamb_phytoken^.1)" ] },
           { "math": [ "u_gambtemp_painres", "-=", "10+(u_gamb_phytoken^.4)" ] },
           { "math": [ "u_gambtemp_basha", "-=", "12+(u_gamb_phytoken^.6)" ] },
