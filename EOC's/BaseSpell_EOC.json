@@ -16,9 +16,9 @@
       {
         "if": { "math": [ "u_gamb_kiwoodcap", ">", "0" ] },
         "then": [
-          { "math": [ "u_gamb_woodkicaptrue", "=", "u_gamb_kicap/u_gamb_woodkicap" ] },
+          { "math": [ "u_gamb_kiwoodcaptrue", "=", "u_gamb_kicap*u_gamb_kiwoodcap" ] },
           {
-            "u_message": "Wood Ki:<u_val:gamb_kiwood>  Wood Ki Capacity:<u_val:gamb_woodkicaptrue> \n",
+            "u_message": "Wood Ki:<u_val:gamb_kiwood>  Wood Ki Capacity:<u_val:gamb_kiwoodcaptrue> \n",
             "type": "good"
           }
         ]
