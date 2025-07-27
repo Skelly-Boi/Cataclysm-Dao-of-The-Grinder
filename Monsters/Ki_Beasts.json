@@ -1,0 +1,111 @@
+[
+  {
+    "type": "MONSTER",
+    "id": "thunder_bird_chick",
+    "name": { "str": "thunder bird chick" },
+    "description": "A big yellow chick, its eyes sharp and deep, holding itself like an animal 10 times the size. You see tiny wisps of electricity spark from its feathers as it moves.",
+    "default_faction": "ki_beast",
+    "species": [ "BIRD" ],
+    "bodytype": "bird",
+    "symbol": "T",
+    "color": "yellow",
+    "volume": "2300 ml",
+    "weight": "5 kg",
+    "hp": 600,
+    "speed": 240,
+    "attack_cost": 100,
+    "looks_like": "mon_generic_chick",
+    "vision_day": 40,
+    "vision_night": 8,
+    "dodge": 6,
+    "melee_skill": 5,
+    "morale": 80,
+    "aggression": 7,
+    "diff": 500,
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_flying", "prof_wp_basic_bird" ],
+    "weakpoint_sets": [ "wps_bird_body" ],
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "electric", "amount": 30 }, { "damage_type": "cut", "amount": 8 } ],
+    "regen_morale": true,
+    "regenerates": 3,
+    "luminance": 4,
+    "armor": { "bash": 18, "cut": 10, "acid": 6, "bullet": 12, "electric": 50, "heat": 10, "cold": 15, "biological": 6 },
+    "attack_effs": [ { "id": "eff_gamb_lightningl", "duration": [ 3, 8 ], "chance": 10 } ],
+    "emit_fields": [ { "emit_id": "emit_gamb_lightningl", "delay": "1 s" } ],
+    "anger_triggers": [ "HURT", "PLAYER_CLOSE", "FRIEND_ATTACKED", "PLAYER_NEAR_BABY" ]
+  },
+  {
+    "id": "emit_gamb_lightningl",
+    "type": "emit",
+    "field": "gamb_lightning_field_l",
+    "intensity": 1,
+    "chance": 60,
+    "qty": 3
+  },
+  {
+    "id": "gamb_lightning_field_l",
+    "type": "field_type",
+    "looks_like": "emit_shock_cloud",
+    "intensity_levels": [
+      {
+        "name": "lightning wisps",
+        "sym": "Z",
+        "color": "yellow",
+        "dangerous": true,
+        "light_emitted": 1,
+        "effects": [
+          {
+            "effect_id": "eff_gamb_lightningl",
+            "intensity": 1,
+            "min_duration": "4 seconds",
+            "max_duration": "40 seconds",
+            "is_environmental": false
+          }
+        ]
+      },
+      {
+        "name": "lightning tendrils",
+        "sym": "Z",
+        "color": "yellow",
+        "light_emitted": 1.7,
+        "effects": [
+          {
+            "effect_id": "eff_gamb_lightningl",
+            "intensity": 2,
+            "min_duration": "6 seconds",
+            "max_duration": "50 seconds",
+            "is_environmental": false
+          }
+        ]
+      },
+      {
+        "name": "lightning torrents",
+        "sym": "Z",
+        "color": "yellow",
+        "light_emitted": 3,
+        "effects": [
+          {
+            "effect_id": "eff_gamb_lightningl",
+            "intensity": 3,
+            "min_duration": "8 seconds",
+            "max_duration": "60 seconds",
+            "is_environmental": false
+          }
+        ]
+      }
+    ],
+    "decay_amount_factor": 5,
+    "gas_absorption_factor": "1100 h",
+    "dirty_transparency_cache": true,
+    "percent_spread": 10,
+    "outdoor_age_speedup": "0 turns",
+    "priority": 8,
+    "half_life": "5 seconds",
+    "phase": "gas",
+    "accelerated_decay": true,
+    "display_field": true,
+    "decrease_intensity_on_contact": true,
+    "indestructible": true
+  }
+]

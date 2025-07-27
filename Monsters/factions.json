@@ -1,0 +1,7 @@
+[
+  {
+    "type": "MONSTER_FACTION",
+    "name": "ki_beast",
+    "base_faction": "animal"
+  }
+]

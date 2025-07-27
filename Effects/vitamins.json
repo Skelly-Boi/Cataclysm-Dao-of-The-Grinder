@@ -1,0 +1,24 @@
+[
+  {
+    "id": "gamb_kifood",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": "Ki Digestion",
+    "min": 0,
+    "max": 13600,
+    "weight_per_unit": "1 mg",
+    "rate": "15 m"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_FoodTalent",
+    "recurrence": [ "15 m", "15 m" ],
+    "condition": { "or": [ { "math": [ "u_gamb_talentg > 0" ] }, { "math": [ "u_vitamin('gamb_kifood')", ">", "0" ] } ] },
+    "effect": [
+      { "math": [ "u_gamb_talent", "+=", "u_gamb_talentg" ] },
+      { "math": [ "u_gamb_ki", "+=", "u_vitamin('gamb_kifood')*0.0001" ] },
+      { "math": [ "u_gamb_talent", "+=", "u_vitamin('gamb_kifood')*0.000001" ] },
+      { "u_message": "talent:<u_val:gamb_talent>", "type": "good" }
+    ]
+  }
+]
