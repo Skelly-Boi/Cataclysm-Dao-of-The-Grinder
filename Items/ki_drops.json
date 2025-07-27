@@ -1,7 +1,8 @@
 [
   {
     "abstract": "gamb_ki_fleshweak",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "comestible_type": "FOOD",
     "name": { "str_sp": "meat/fish", "//~": "NO_I18N" },
     "material": [ "gamb_ki_fleshweak" ],
@@ -14,7 +15,9 @@
   {
     "id": "gamb_ki_meatweak",
     "copy-from": "gamb_ki_fleshweak",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "FOOD",
     "name": { "str": "chunk of weak ki meat", "str_pl": "chunks of weak ki meat" },
     "description": "A chunk of raw meat with weak traces of ki in it.  You could eat it as-is, but cooking it is better.",
     "weight": "275 g",
