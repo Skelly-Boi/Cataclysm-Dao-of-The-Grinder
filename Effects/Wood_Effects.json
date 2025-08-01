@@ -5,10 +5,15 @@
     "rating": "good",
     "name": [ "WoodShed" ],
     "desc": [ "Your skin is slowly peeling off." ],
-    "main_parts_only": true,
     "part_descs": true,
-    "int_dur_factor": 10,
-    "base_mods": { "hurt_amount": [ -1 ], "hurt_chance": [ 2 ], "hurt_chance_bot": [ 20 ] },
-    "scaling_mods": { "hurt_chance": [ 1 ], "hurt_amount": [ -1 ] }
+    "main_parts_only": true,
+    "max_intensity": 20,
+    "int_dur_factor": 400,
+    "enchantments": [
+      {
+        "values": [ { "value": "REGEN_HP", "multiply": { "math": [ "15", "+", "(u_effect_intensity('effect_woodshed')*2)" ] } } ]
+      },
+      { "values": [ { "value": "REGEN_HP_AWAKE", "multiply": { "math": [ "1" ] } } ] }
+    ]
   }
 ]

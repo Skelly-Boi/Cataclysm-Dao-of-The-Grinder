@@ -7,7 +7,7 @@
         "if": { "math": [ "u_gamb_kiwood", ">", "0.4" ] },
         "then": [
           { "math": [ "u_gamb_kiwood", "-=", "0.4" ] },
-          { "u_add_effect": "effect_woodshed", "duration": { "math": [ "5 +(u_gamb_woodtoken^0.4)" ] } },
+          { "u_add_effect": "effect_woodshed", "duration": { "math": [ "300 +((u_gamb_woodtoken^0.2)*100)" ] } },
           { "math": [ "u_gamb_woodxp", "+=", "1" ] },
           { "math": [ "u_gamb_kiwoodcap", "+=", "0.001" ] },
           { "math": [ "u_gamb_kiwoodxreg", "+=", "0.000001" ] }
@@ -15,5 +15,28 @@
         "else": { "u_message": "You don't have enough wood ki.", "type": "bad" }
       }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_WoodDrain",
+    "recurrence": [ "1 s", "1 s" ],
+    "condition": { "math": [ "u_gamb_kiwooddrain > 0" ] },
+    "effect": [
+      { "math": [ "u_gamb_kiwood", "-=", "u_gamb_kiwooddrain " ] },
+      { "math": [ "u_gamb_woodxp", "+=", "u_gamb_woodxpg" ] },
+      { "math": [ "u_gamb_kiwoodcap", "+=", "u_gamb_woodxpg*0.025" ] },
+      { "math": [ "u_gamb_kiwoodreg", "+=", "u_gamb_woodxpg*0.00005" ] },
+      {
+        "if": { "math": [ "u_gamb_kiwood", "<", "u_gamb_kiwooddrain" ] },
+        "then": [
+          { "u_message": "You run out of ki to sustain your wood spells.", "type": "bad" },
+          { "run_eocs": [ "EOC_Gamb_KiWoodOff" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_KiWoodOff"
   }
 ]

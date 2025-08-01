@@ -2,16 +2,16 @@
   {
     "type": "effect_type",
     "id": "effect_phy_overload",
-    "rating": "good",
+    "rating": "bad",
     "name": [ "Overload" ],
     "desc": [ "Your body is breaking from the inner energy." ],
-    "main_parts_only": true,
     "part_descs": true,
+    "main_parts_only": true,
     "apply_message": "Your body is breaking from the inner energy.",
-    "max_intensity": 4,
+    "max_intensity": 10,
     "int_dur_factor": 10,
-    "base_mods": { "hurt_amount": [ 5 ], "hurt_chance": [ 50 ], "hurt_chance_bot": [ 100 ], "hurt_tick": [ 5 ] },
-    "scaling_mods": { "hurt_amount": [ 2 ], "hurt_chance": [ 10 ], "hurt_tick": [ -1 ] }
+    "base_mods": { "hurt_min": [ 5 ], "hurt_chance": [ 50 ], "hurt_chance_bot": [ 100 ], "hurt_tick": [ 5 ] },
+    "scaling_mods": { "hurt_min": [ 2 ], "hurt_chance": [ 10 ], "hurt_tick": [ -1 ] }
   },
   {
     "type": "effect_type",
@@ -19,8 +19,9 @@
     "rating": "good",
     "name": [ "Overloadgood" ],
     "desc": [ "Your body is booming with energy." ],
-    "main_parts_only": true,
     "part_descs": true,
+    "main_parts_only": true,
+    "max_intensity": 20,
     "int_dur_factor": 10,
     "apply_message": "Your body is booming with energy from the wild ki.",
     "remove_message": "The wild ki settles.",
@@ -29,7 +30,7 @@
         "values": [
           {
             "value": "ARMOR_ALL",
-            "add": { "math": [ "3", "+", "u_gamb_phytoken^0.2", "*", "(u_effect_intensity('effect_phy_overloadgood')^0.8)" ] }
+            "add": { "math": [ "3", "+", "u_gamb_phytoken^0.2", "*", "(u_effect_intensity('effect_phy_overloadgood')^0.6)" ] }
           },
           {
             "value": "SPEED",
@@ -55,6 +56,62 @@
             "type": "bash",
             "add": { "math": [ "((12+(u_gamb_phytoken^0.6))*(u_effect_intensity('effect_phy_overloadgood')^0.8))" ] }
           }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_ironscale",
+    "rating": "good",
+    "name": [ "Ironscalegood" ],
+    "desc": [ "Your body is covered in a steel-like layer of ki." ],
+    "part_descs": true,
+    "main_parts_only": true,
+    "apply_message": "Your body is reinforced with ki.",
+    "enchantments": [
+      {
+        "values": [
+          { "value": "PAIN", "add": { "math": [ "(10+(u_gamb_phytoken^.4))*-1" ] } },
+          { "value": "MELEE_TO_HIT", "add": { "math": [ "1+(u_gamb_phytoken^.1)" ] } }
+        ]
+      },
+      {
+        "melee_damage_bonus": [ { "type": "bash", "add": { "math": [ "2+(u_gamb_phytoken^.1)" ] } } ],
+        "incoming_damage_mod": [
+          { "type": "bash", "add": { "math": [ "(12+(u_gamb_phytoken^.6))*-1" ] } },
+          { "type": "cut", "add": { "math": [ "(7+(u_gamb_phytoken^.55))*-1" ] } },
+          { "type": "stab", "add": { "math": [ "(5+(u_gamb_phytoken^.5))*-1" ] } },
+          { "type": "bullet", "add": { "math": [ "(3+(u_gamb_phytoken^.4))*-1" ] } },
+          { "type": "electric", "add": { "math": [ "(2+(u_gamb_phytoken^.35))*-1" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_breinforce",
+    "rating": "good",
+    "name": [ "Breinforcegood" ],
+    "desc": [ "Your body is enhanced with ki." ],
+    "part_descs": true,
+    "main_parts_only": true,
+    "apply_message": "Your body is enhanced with ki.",
+    "enchantments": [
+      {
+        "values": [
+          { "value": "PAIN", "add": { "math": [ "(5+(u_gamb_phytoken^.2))*-1" ] } },
+          { "value": "MELEE_TO_HIT", "add": { "math": [ "1+(u_gamb_phytoken^.3)" ] } },
+          { "value": "STRENGTH", "add": { "math": [ "max(0,((u_gamb_phytoken^.2)-2))" ] } },
+          { "value": "ATTACK_SPEED", "add": { "math": [ "(3+(u_gamb_phytoken^.3)) * -1" ] } },
+          { "value": "SPEED", "add": { "math": [ "10+(u_gamb_phytoken^.3)" ] } }
+        ]
+      },
+      {
+        "melee_damage_bonus": [ { "type": "bash", "add": { "math": [ "7+(u_gamb_phytoken^.25)" ] } } ],
+        "incoming_damage_mod": [
+          { "type": "bash", "add": { "math": [ "(3+(u_gamb_phytoken^.2))*-1" ] } },
+          { "type": "cut", "add": { "math": [ "(2+(u_gamb_phytoken^.1))*-1" ] } }
         ]
       }
     ]
