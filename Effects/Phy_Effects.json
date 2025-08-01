@@ -54,7 +54,7 @@
         "melee_damage_bonus": [
           {
             "type": "bash",
-            "add": { "math": [ "((12+(u_gamb_phytoken^0.6))*(u_effect_intensity('effect_phy_overloadgood')^0.8))" ] }
+            "add": { "math": [ "((12+(u_gamb_phytoken^0.4))*(u_effect_intensity('effect_phy_overloadgood')^0.6))" ] }
           }
         ]
       }
