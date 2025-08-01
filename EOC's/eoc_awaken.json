@@ -75,7 +75,12 @@
   {
     "type": "effect_on_condition",
     "id": "Gamb_Ki_phytokenplus",
-    "effect": [ { "math": [ "u_gamb_phytoken", "+=", "10" ] } ]
+    "effect": [ { "math": [ "u_gamb_phytoken", "+=", "100" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_Maxed",
+    "effect": [ { "math": [ "u_gamb_kiwood", "+=", "100" ] }, { "math": [ "u_gamb_ki", "+=", "100" ] } ]
   },
   {
     "type": "effect_on_condition",
@@ -85,7 +90,7 @@
   {
     "type": "effect_on_condition",
     "id": "Gamb_Ki_phytokenminus",
-    "effect": [ { "math": [ "u_gamb_phytoken", "-=", "10" ] } ]
+    "effect": [ { "math": [ "u_gamb_phytoken", "-=", "100" ] } ]
   },
   {
     "type": "effect_on_condition",
