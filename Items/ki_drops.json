@@ -27,7 +27,6 @@
     "spoils_in": "1 day",
     "calories": 452,
     "fun": -8,
-    "cooks_like": "meat_cooked",
     "vitamins": [ [ "calcium", 2 ], [ "iron", 12 ], [ "meat_allergen", 1 ], [ "gamb_kifood", 2 ] ],
     "flags": [ "SMOKABLE", "RAW", "PREDATOR_FUN" ]
   }
