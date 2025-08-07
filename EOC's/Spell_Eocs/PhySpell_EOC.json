@@ -34,7 +34,7 @@
           "if": { "math": [ "u_gamb_ki", ">", "0.5" ] },
           "then": [
             { "math": [ "u_gamb_ki", "-=", "0.5" ] },
-            { "math": [ "u_gamb_phyxpg", "+=", "0.08" ] },
+            { "math": [ "u_gamb_phyxpg", "+=", "0.09" ] },
             { "math": [ "u_gamb_kidrain", "+=", "0.07" ] },
             { "u_add_effect": "effect_ironscale", "duration": "PERMANENT" }
           ],
@@ -79,13 +79,13 @@
       { "math": [ "u_gamb_kireg", "+=", "u_gamb_phyxpg*0.00005" ] },
       {
         "if": { "math": [ "u_gamb_ki", "<", "u_gamb_kidrain" ] },
-        "then": [ { "u_message": "You run out of ki to sustain your spells.", "type": "bad" }, { "run_eocs": [ "EOC_Gamb_KiOff" ] } ]
+        "then": [ { "u_message": "You run out of ki to sustain your spells.", "type": "bad" }, { "run_eocs": [ "EOC_Gamb_KiPhyOff" ] } ]
       }
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_Gamb_KiOff",
+    "id": "EOC_Gamb_KiPhyOff",
     "effect": [
       { "u_lose_effect": "effect_breinforce" },
       { "u_lose_effect": "effect_ironscale" },

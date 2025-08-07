@@ -3,8 +3,7 @@
     "type": "SPELL",
     "id": "gamb_woodshed",
     "name": "Wood Shedding",
-    "max_level": 1,
-    "description": "Shed the outer layer of skin by turning it into a healing bark.",
+    "description": "Shed the outer layer of skin by turning it into a healing bark, slightly boosting your regeneration and defense for a few minutes",
     "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
     "valid_targets": [ "self" ],
     "base_casting_time": 500,
@@ -13,5 +12,17 @@
     "shape": "blast",
     "effect": "effect_on_condition",
     "effect_str": "EOC_Gamb_WoodShed"
+  },
+  {
+    "type": "SPELL",
+    "id": "gamb_woodarms1",
+    "name": "Wooden Arms",
+    "description": "Cover your arms with wooden ki, healing them quickly and slightly empowering yourself as your entire body is influenced by wooden attributes.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "base_casting_time": 100,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_WoodArms1"
   }
 ]

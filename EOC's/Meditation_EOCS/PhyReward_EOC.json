@@ -13,21 +13,21 @@
           {
             "id": "Gamb_learn_ironscale",
             "effect": [
-              { "math": [ "(u_spell_level('gamb_ironscale'))", "=", "1" ] },
-              { "u_message": "You gain a new understanding of your ki use. (iron)", "type": "good" }
+              { "math": [ "(u_spell_level('gamb_ironscale'))", "=", "0" ] },
+              { "u_message": "You gain a new understanding of your ki use. (ironscale)", "type": "good" }
             ]
           },
-          { "math": [ "1 - u_spell_level('gamb_ironscale')" ] }
+          { "math": [ "u_spell_level('gamb_ironscale') * -1 " ] }
         ],
         [
           {
             "id": "Gamb_learn_overload",
             "effect": [
-              { "math": [ "(u_spell_level('gamb_overload'))", "=", "1" ] },
-              { "u_message": "You gain a new understanding of your ki use. (over)", "type": "good" }
+              { "math": [ "(u_spell_level('gamb_overload'))", "=", "0" ] },
+              { "u_message": "You gain a new understanding of your ki use. (overload)", "type": "good" }
             ]
           },
-          { "math": [ "1 - u_spell_level('gamb_overload')" ] }
+          { "math": [ "u_spell_level('gamb_overload') * -1" ] }
         ],
         [
           {

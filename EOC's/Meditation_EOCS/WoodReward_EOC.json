@@ -3,5 +3,61 @@
     "type": "effect_on_condition",
     "id": "EOC_Gamb_WoodReward1",
     "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "((rand(8)*0.02)+0.05)*u_gamb_woodtokentemp" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_WoodReward2",
+    "effect": {
+      "weighted_list_eocs": [
+        [
+          {
+            "id": "Gamb_learn_woodshed",
+            "effect": [
+              { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "0" ] },
+              { "u_message": "You gain a new understanding of your ki use. (woodshed)", "type": "good" }
+            ]
+          },
+          { "math": [ "u_spell_level('gamb_woodshed') * -1 * (1 + u_spell_level('gamb_woodarms1'))" ] }
+        ],
+        [
+          {
+            "id": "Gamb_learn_woodarms1",
+            "effect": [
+              { "math": [ "(u_spell_level('gamb_woodarms1'))", "=", "0" ] },
+              { "u_message": "You gain a new understanding of your ki use. (Wooden Arms)", "type": "good" }
+            ]
+          },
+          { "math": [ "u_spell_level('gamb_woodarms1') * -1" ] }
+        ],
+        [
+          {
+            "id": "Gamb_WoodReward2_Fallback",
+            "effect": [
+              { "math": [ "u_gamb_woodtoken", "+=", "(rand(10)*0.01)*u_gamb_woodtokentemp" ] },
+              { "run_eocs": [ "EOC_Gamb_WoodReward1" ] }
+            ]
+          },
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_WoodReward3",
+    "effect": {
+      "weighted_list_eocs": [
+        [
+          {
+            "id": "Gamb_WoodReward3_Fallback",
+            "effect": [
+              { "math": [ "u_gamb_woodtoken", "+=", "((rand(14)*0.02)+0.8)*u_gamb_woodtokentemp" ] },
+              { "run_eocs": [ "EOC_Gamb_WoodReward1" ] }
+            ]
+          },
+          1
+        ]
+      ]
+    }
   }
 ]

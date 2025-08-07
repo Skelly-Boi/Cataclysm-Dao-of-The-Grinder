@@ -52,5 +52,10 @@
         ]
       }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_KiOff",
+    "effect": [ { "run_eocs": [ "EOC_Gamb_KiPhyOff" ] }, { "run_eocs": [ "EOC_Gamb_KiWoodOff" ] } ]
   }
 ]

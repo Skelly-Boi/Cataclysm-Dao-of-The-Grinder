@@ -29,7 +29,7 @@
       { "math": [ "u_gamb_kiwood", "=", "0" ] },
       { "math": [ "u_gamb_kiwoodcap", "=", "0" ] },
       { "math": [ "u_gamb_kiwoodreg", "=", "0" ] },
-      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "1" ] },
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "0" ] },
       {
         "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling.",
         "type": "good"
@@ -50,8 +50,8 @@
       { "math": [ "u_gamb_maxhp", "+=", "3" ] },
       { "math": [ "u_gamb_hpreg", "+=", "0.03" ] },
       { "math": [ "u_gamb_hpregaw", "+=", "0.1" ] },
-      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "1" ] },
-      { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "1" ] },
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "0" ] },
+      { "math": [ "(u_spell_level('gamb_woodarms1'))", "=", "0" ] },
       {
         "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling. A pleasant feeling of nature is making its way inside of you.",
         "type": "good"
@@ -97,10 +97,11 @@
     "type": "effect_on_condition",
     "id": "Gamb_spells",
     "effect": [
-      { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "1" ] },
-      { "math": [ "(u_spell_level('gamb_overload'))", "=", "1" ] },
-      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "1" ] },
-      { "math": [ "(u_spell_level('gamb_ironscale'))", "=", "1" ] }
+      { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "0" ] },
+      { "math": [ "(u_spell_level('gamb_overload'))", "=", "0" ] },
+      { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "0" ] },
+      { "math": [ "(u_spell_level('gamb_ironscale'))", "=", "0" ] },
+      { "math": [ "(u_spell_level('gamb_woodarms1'))", "=", "0" ] }
     ]
   }
 ]

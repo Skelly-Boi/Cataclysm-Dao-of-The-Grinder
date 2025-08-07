@@ -88,8 +88,8 @@
             "type": "good"
           },
           {
-            "if": { "math": [ "(u_spell_level('gamb_woodshed'))", "!=", "0" ] },
-            "then": { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "0" ] }
+            "if": { "math": [ "(u_spell_level('gamb_woodarms1'))", "!=", "0" ] },
+            "then": { "math": [ "(u_spell_level('gamb_woodarms1'))", "=", "0" ] }
           }
         ]
       }
