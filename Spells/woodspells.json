@@ -3,6 +3,7 @@
     "type": "SPELL",
     "id": "gamb_woodshed",
     "name": "Wood Shedding",
+    "max_level": 1,
     "description": "Shed the outer layer of skin by turning it into a healing bark.",
     "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
     "valid_targets": [ "self" ],

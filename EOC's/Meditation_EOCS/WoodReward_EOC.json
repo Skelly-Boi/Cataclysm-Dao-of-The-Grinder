@@ -1,0 +1,7 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_WoodReward1",
+    "effect": [ { "math": [ "u_gamb_woodtoken", "+=", "((rand(8)*0.02)+0.05)*u_gamb_woodtokentemp" ] } ]
+  }
+]
