@@ -1,0 +1,61 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Meditate",
+    "effect": [
+      { "u_message": "You turn off all of your spells.", "type": "bad" },
+      { "run_eocs": [ "EOC_Gamb_KiOff" ] },
+      { "math": [ "u_gamb_phyxpg", "=", "0" ] },
+      { "math": [ "u_gamb_phytoken", "+=", "(u_gamb_phyxp/10)*u_gamb_talent" ] },
+      { "math": [ "u_gamb_phytokentemp", "+=", "(u_gamb_phyxp/10)" ] },
+      { "math": [ "u_gamb_phyxp", "=", "0" ] },
+      { "math": [ "u_gamb_woodtoken", "+=", "(u_gamb_woodxp/10)*u_gamb_talent" ] },
+      { "math": [ "u_gamb_woodtokentemp", "+=", "(u_gamb_woodxp/10)" ] },
+      { "math": [ "u_gamb_woodxp", "=", "0" ] },
+      { "u_message": "Ki:<u_val:gamb_ki>  Ki Capacity:<u_val:gamb_kicap> \n", "type": "good" },
+      {
+        "if": { "math": [ "u_gamb_kiwoodcap", ">", "0" ] },
+        "then": [
+          { "math": [ "u_gamb_kiwoodcaptrue", "=", "u_gamb_kicap*u_gamb_kiwoodcap" ] },
+          {
+            "u_message": "Wood Ki:<u_val:gamb_kiwood>  Wood Ki Capacity:<u_val:gamb_kiwoodcaptrue> \n",
+            "type": "good"
+          }
+        ]
+      },
+      {
+        "if": { "math": [ "u_gamb_phytokentemp", ">=", "1" ] },
+        "then": [
+          {
+            "switch": { "math": [ "rand(100)+u_gamb_phytokentemp+(u_gamb_phytoken^0.3)+(u_gamb_stage*10)" ] },
+            "cases": [
+              { "case": 0, "effect": [ { "run_eocs": [ "EOC_Gamb_PhyReward1" ] } ] },
+              { "case": 60, "effect": [ { "run_eocs": [ "EOC_Gamb_PhyReward2" ] } ] },
+              { "case": 100, "effect": [ { "run_eocs": [ "EOC_Gamb_PhyReward3" ] } ] }
+            ]
+          },
+          { "math": [ "u_gamb_phytokentemp", "=", "0" ] }
+        ]
+      },
+      {
+        "if": { "math": [ "u_gamb_woodtokentemp", ">=", "1" ] },
+        "then": [
+          {
+            "switch": { "math": [ "rand(100)+u_gamb_woodtokentemp+(u_gamb_woodtoken^0.3)+(u_gamb_stage*10)" ] },
+            "cases": [
+              { "case": 0, "effect": [ { "run_eocs": [ "EOC_Gamb_WoodReward1" ] } ] },
+              { "case": 60, "effect": [ { "run_eocs": [ "EOC_Gamb_WoodReward2" ] } ] },
+              { "case": 100, "effect": [ { "run_eocs": [ "EOC_Gamb_WoodReward3" ] } ] }
+            ]
+          },
+          { "math": [ "u_gamb_woodtokentemp", "=", "0" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_KiOff",
+    "effect": [ { "run_eocs": [ "EOC_Gamb_KiPhyOff" ] }, { "run_eocs": [ "EOC_Gamb_KiWoodOff" ] } ]
+  }
+]

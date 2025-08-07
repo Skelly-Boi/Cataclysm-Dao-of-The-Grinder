@@ -1,19 +1,57 @@
 [
   {
     "type": "effect_type",
+    "id": "effect_woodarms1",
+    "rating": "good",
+    "name": [ "Wooden arm" ],
+    "desc": [ "The skin on your arms is covered in wooden ki and slowly healing." ],
+    "part_descs": true,
+    "main_parts_only": true,
+    "base_mods": { "hurt_min": [ -1 ], "hurt_chance": [ 8 ], "hurt_chance_bot": [ 20 ] },
+    "enchantments": [
+      {
+        "melee_damage_bonus": [ { "type": "bash", "add": { "math": [ "1+(u_gamb_woodtoken^.1)+(u_gamb_phytoken^0.2)" ] } } ],
+        "incoming_damage_mod": [
+          { "type": "bash", "add": { "math": [ "(2+(u_gamb_woodtoken^.30))*-1" ] } },
+          { "type": "cut", "add": { "math": [ "(1+(u_gamb_woodtoken^.25))*-1" ] } }
+        ]
+      }
+    ],
+    "effect_dur_scaling": [
+      { "effect_id": "bleed", "modifier": 0.8, "same_bp": true },
+      { "effect_id": "bite", "modifier": 0.4, "same_bp": false }
+    ]
+  },
+  {
+    "type": "effect_type",
     "id": "effect_woodshed",
     "rating": "good",
     "name": [ "WoodShed" ],
-    "desc": [ "Your skin is slowly peeling off." ],
+    "desc": [ "Your skin is slowly peeling off, revealing fresh one." ],
     "part_descs": true,
     "main_parts_only": true,
     "max_intensity": 20,
     "int_dur_factor": 400,
     "enchantments": [
       {
-        "values": [ { "value": "REGEN_HP", "multiply": { "math": [ "15", "+", "(u_effect_intensity('effect_woodshed')*2)" ] } } ]
+        "values": [
+          {
+            "value": "REGEN_HP",
+            "multiply": { "math": [ "15", "+", "(u_effect_intensity('effect_woodshed')*2)", "+", "(u_gamb_woodtoken^0.4)" ] }
+          }
+        ]
       },
-      { "values": [ { "value": "REGEN_HP_AWAKE", "multiply": { "math": [ "1" ] } } ] }
+      { "values": [ { "value": "REGEN_HP_AWAKE", "multiply": { "math": [ "1" ] } } ] },
+      {
+        "incoming_damage_mod": [
+          { "type": "bash", "add": { "math": [ "(2+(u_gamb_woodtoken^.20))*-1" ] } },
+          { "type": "cut", "add": { "math": [ "(1+(u_gamb_woodtoken^.15))*-1" ] } }
+        ]
+      }
+    ],
+    "effect_dur_scaling": [
+      { "effect_id": "bleed", "modifier": 0.95, "same_bp": true },
+      { "effect_id": "bite", "modifier": 0.9, "same_bp": false }
     ]
   }
 ]
