@@ -51,7 +51,7 @@
     "effect": [
       { "math": [ "u_gamb_kiwood", "-=", "u_gamb_kiwooddrain " ] },
       { "math": [ "u_gamb_woodxp", "+=", "u_gamb_woodxpg" ] },
-      { "math": [ "u_gamb_kiwoodcap", "+=", "u_gamb_woodxpg*0.015" ] },
+      { "math": [ "u_gamb_kiwoodcap", "+=", "u_gamb_woodxpg*0.0015" ] },
       { "math": [ "u_gamb_kiwoodreg", "+=", "u_gamb_woodxpg*0.00003" ] },
       {
         "if": { "math": [ "u_gamb_kiwood", "<", "u_gamb_kiwooddrain" ] },
