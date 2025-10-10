@@ -1,0 +1,63 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_PhyReward1",
+    "effect": [ { "math": [ "u_gamb_phytoken", "+=", "((rand(8)*0.02)+0.05)*u_gamb_phytokentemp" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_PhyReward2",
+    "effect": {
+      "weighted_list_eocs": [
+        [
+          {
+            "id": "Gamb_learn_ironscale",
+            "effect": [
+              { "math": [ "(u_spell_level('gamb_ironscale'))", "=", "0" ] },
+              { "u_message": "You gain a new understanding of your ki use. (ironscale)", "type": "good" }
+            ]
+          },
+          { "math": [ "u_spell_level('gamb_ironscale') * -1 " ] }
+        ],
+        [
+          {
+            "id": "Gamb_learn_overload",
+            "effect": [
+              { "math": [ "(u_spell_level('gamb_overload'))", "=", "0" ] },
+              { "u_message": "You gain a new understanding of your ki use. (overload)", "type": "good" }
+            ]
+          },
+          { "math": [ "u_spell_level('gamb_overload') * -1" ] }
+        ],
+        [
+          {
+            "id": "Gamb_PhyReward2_Fallback",
+            "effect": [
+              { "math": [ "u_gamb_phytoken", "+=", "(rand(10)*0.01)*u_gamb_phytokentemp" ] },
+              { "run_eocs": [ "EOC_Gamb_PhyReward1" ] }
+            ]
+          },
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_PhyReward3",
+    "effect": {
+      "weighted_list_eocs": [
+        [
+          {
+            "id": "Gamb_PhyReward3_Fallback",
+            "effect": [
+              { "math": [ "u_gamb_phytoken", "+=", "((rand(14)*0.02)+0.8)*u_gamb_phytokentemp" ] },
+              { "run_eocs": [ "EOC_Gamb_PhyReward1" ] }
+            ]
+          },
+          1
+        ]
+      ]
+    }
+  }
+]

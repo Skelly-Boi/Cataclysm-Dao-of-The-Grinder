@@ -13,21 +13,21 @@
     "enchantments": [
       {
         "melee_damage_bonus": [
-          { "type": "bash", "add": { "math": [ "u_gamb_bashd + u_gambtemp_bashd * 1" ] } },
-          { "type": "cut", "add": { "math": [ "u_gamb_cutd + u_gambtemp_cutd * 1" ] } },
-          { "type": "stab", "add": { "math": [ "u_gamb_stbd + u_gambtemp_stbd * 1" ] } },
-          { "type": "bullet", "add": { "math": [ "u_gamb_bulld+u_gambtemp_bulld * 1" ] } }
+          { "type": "bash", "add": { "math": [ "u_gamb_bashd * 1" ] } },
+          { "type": "cut", "add": { "math": [ "u_gamb_cutd * 1" ] } },
+          { "type": "stab", "add": { "math": [ "u_gamb_stbd * 1" ] } },
+          { "type": "bullet", "add": { "math": [ "u_gamb_bulld * 1" ] } }
         ],
         "incoming_damage_mod": [
-          { "type": "bash", "add": { "math": [ "(u_gamb_basha + u_gambtemp_basha) * -1" ] } },
-          { "type": "cut", "add": { "math": [ "(u_gamb_cuta + u_gambtemp_cuta) * -1" ] } },
-          { "type": "stab", "add": { "math": [ "(u_gamb_staba + u_gambtemp_staba) * -1" ] } },
-          { "type": "bullet", "add": { "math": [ "(u_gamb_bulla + u_gambtemp_bulla) * -1" ] } },
-          { "type": "cold", "add": { "math": [ "(u_gamb_colda + u_gambtemp_colda) * -1" ] } },
-          { "type": "heat", "add": { "math": [ "(u_gamb_heata + u_gambtemp_heata) * -1" ] } },
-          { "type": "electric", "add": { "math": [ "(u_gamb_eleca + u_gambtemp_eleca) * -1" ] } },
-          { "type": "acid", "add": { "math": [ "(u_gamb_acida + u_gambtemp_acida) * -1" ] } },
-          { "type": "biologicl", "add": { "math": [ "(u_gamb_bioa + u_gambtemp_bioa) * -1" ] } }
+          { "type": "bash", "add": { "math": [ "u_gamb_basha * -1" ] } },
+          { "type": "cut", "add": { "math": [ "u_gamb_cuta  * -1" ] } },
+          { "type": "stab", "add": { "math": [ "u_gamb_staba  * -1" ] } },
+          { "type": "bullet", "add": { "math": [ "u_gamb_bulla  * -1" ] } },
+          { "type": "cold", "add": { "math": [ "u_gamb_colda  * -1" ] } },
+          { "type": "heat", "add": { "math": [ "u_gamb_heata  * -1" ] } },
+          { "type": "electric", "add": { "math": [ "u_gamb_eleca  * -1" ] } },
+          { "type": "acid", "add": { "math": [ "u_gamb_acida  * -1" ] } },
+          { "type": "biologicl", "add": { "math": [ "u_gamb_bioa  * -1" ] } }
         ]
       },
       {
@@ -57,35 +57,6 @@
           { "value": "RECOIL_MODIFIER", "add": { "math": [ "u_gamb_recoil * -1" ] } },
           { "value": "MAX_HP", "add": { "math": [ "u_gamb_maxhp * 1" ] } },
           { "value": "MELEE_TO_HIT", "add": { "math": [ "u_gamb_mhit + 1" ] } }
-        ]
-      },
-      {
-        "values": [
-          { "value": "STRENGTH", "add": { "math": [ "u_gambtemp_str * 1" ] } },
-          { "value": "DEXTERITY", "add": { "math": [ "u_gambtemp_dex * 1" ] } },
-          { "value": "ATTACK_SPEED", "add": { "math": [ "u_gambtemp_atkspd * -1" ] } },
-          { "value": "NIGHT_VIS", "add": { "math": [ "u_gambtemp_nvis * 1" ] } },
-          { "value": "PAIN", "add": { "math": [ "u_gambtemp_painres * -1" ] } },
-          { "value": "PAIN_REMOVE", "add": { "math": [ "u_gambtemp_painrem * 1" ] } },
-          { "value": "CARDIO_MULTIPLIER", "multiply": { "math": [ "u_gambtemp_cardiom * 1" ] } },
-          { "value": "BONUS_BLOCK", "add": { "math": [ "u_gambtemp_blckamm * 1" ] } },
-          { "value": "BONUS_DODGE", "add": { "math": [ "u_gambtemp_dogamm * 1" ] } },
-          { "value": "CRAFTING_SPEED_MULTIPLIER", "multiply": { "math": [ "u_gambtemp_crftspd * 1" ] } },
-          { "value": "SPEED", "add": { "math": [ "u_gambtemp_speed * 1" ] } },
-          { "value": "MENDING_MODIFIER", "multiply": { "math": [ "u_gambtemp_mendmod * 1" ] } },
-          { "value": "MELEE_STAMINA_CONSUMPTION", "add": { "math": [ "u_gambtemp_meleestam * 1" ] } },
-          { "value": "KNOCKBACK_RESIST", "add": { "math": [ "u_gambtemp_knkres * 1" ] } },
-          { "value": "CLIMATE_CONTROL_HEAT", "add": { "math": [ "u_gambtemp_climate * 1" ] } },
-          { "value": "CLIMATE_CONTROL_CHILL", "add": { "math": [ "u_gambtemp_climate * 1" ] } },
-          { "value": "CONSUME_TIME_MOD", "multiply": { "math": [ "max(-0.20,(u_gambtemp_consume * -0.20))" ] } },
-          { "value": "CARRY_WEIGHT", "add": { "math": [ "u_gambtemp_carry * 1" ] } },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "add": { "math": [ "u_gambtemp_stomach * 1" ] } },
-          { "value": "STAMINA_REGEN_MOD", "add": { "math": [ "u_gambtemp_staminareg * 1" ] } },
-          { "value": "REGEN_HP", "multiply": { "math": [ "u_gambtemp_hpreg * 1" ] } },
-          { "value": "REGEN_HP_AWAKE", "multiply": { "math": [ "u_gambtemp_hpregaw * 1" ] } },
-          { "value": "RECOIL_MODIFIER", "add": { "math": [ "u_gambtemp_recoil * -1" ] } },
-          { "value": "MAX_HP", "add": { "math": [ "u_gambtemp_maxhp * 1" ] } },
-          { "value": "MELEE_TO_HIT", "add": { "math": [ "u_gambtemp_mhit * 1" ] } }
         ]
       }
     ]

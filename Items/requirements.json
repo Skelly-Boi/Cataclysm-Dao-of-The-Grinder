@@ -1,0 +1,7 @@
+[
+  {
+    "id": "meat_red_raw",
+    "type": "requirement",
+    "extend": { "components": [ [ [ "gamb_ki_meatweak", 1 ] ] ] }
+  }
+]

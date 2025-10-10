@@ -1,7 +1,8 @@
 [
   {
     "id": "martial_shard_def",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "comestible_type": "FOOD",
     "name": { "str_sp": "iron martial shard" },
     "description": "This crystaline shard, while seeming ethereal, has an actual physical form, and a lot of energy.  Consuming this shard induces a breakthrough in one's body and dao, letting them quickly advance in their body cultivation.  Despite originating from a living creature, the detection and extraction of this shard is trivial to any martially gifted individual, the shard being drawn towards them and exiting the previous host on its own.  \n  The Ki of this shard is specialized in enhancing the raw physical properties of the body.",
@@ -20,7 +21,8 @@
   },
   {
     "id": "martial_shard_wood",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "comestible_type": "FOOD",
     "name": { "str_sp": "jade plant shard" },
     "description": "This crystaline shard while seeming ethereal has an actual physical form, and a lot of energy.  Consuming this shard induces a breakthrough in one's body and dao, letting them quickly advance in their body cultivation.  Despite originating from a living creature, the detection and extraction of this shard is trivial to any martially gifted individual, the shard being drawn towards them and exiting the previous host on its own.  \n  The Ki of this shard is specialized in enhancing the recovery and endurance of the body.",

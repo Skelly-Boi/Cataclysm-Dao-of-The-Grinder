@@ -160,7 +160,7 @@
         }
       },
       {
-        "if": { "math": [ "u_gamb_kiwodd", ">=", "u_gamb_kicap * u_gamb_kiwoodcap" ] },
+        "if": { "math": [ "u_gamb_kiwood", ">=", "u_gamb_kicap * u_gamb_kiwoodcap" ] },
         "then": [ { "u_lose_trait": "Gamb_KiWood_Capacity" }, { "u_add_trait": "Gamb_KiWood_Capacity", "variant": "Gamb_KiWood_Full" } ],
         "else": {
           "if": { "math": [ "u_gamb_ki", ">", "(u_gamb_kicap * u_gamb_kiwoodcap)/2" ] },
