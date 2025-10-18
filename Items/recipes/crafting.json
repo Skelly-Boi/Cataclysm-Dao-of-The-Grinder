@@ -1,0 +1,7 @@
+[
+  {
+    "type": "recipe_category",
+    "id": "CC_CULTIVATION",
+    "recipe_subcategories": [ "CSC_CULTIVATION_ALL", "CSC_CULTIVATION_WEAPONS", "CSC_CULTIVATION_PILLS", "CSC_CULTIVATION_TRAINING" ]
+  }
+]
