@@ -17,6 +17,7 @@
     "effect": [
       { "math": [ "u_gamb_talent", "+=", "u_gamb_talentg" ] },
       { "math": [ "u_gamb_ki", "+=", "u_vitamin('gamb_kifood')*0.0001" ] },
+      { "math": [ "u_gamb_bodyxp", "+=", "u_vitamin('gamb_kifood')*0.0001" ] },
       { "math": [ "u_gamb_talent", "+=", "u_vitamin('gamb_kifood')*0.000001" ] },
       { "u_message": "talent:<u_val:gamb_talent>", "type": "good" }
     ]

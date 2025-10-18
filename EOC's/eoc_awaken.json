@@ -3,14 +3,17 @@
     "type": "effect_on_condition",
     "id": "EOC_Gamb_Awaken_Universal",
     "effect": [
+      { "u_add_trait": "Gamb_Iron_Body" },
       { "math": [ "u_gamb_kidrain", "=", "0" ] },
       { "math": [ "u_gamb_woodtoken", "=", "0" ] },
-      { "math": [ "u_gamb_woodtokentemp", "=", "0" ] },
       { "math": [ "u_gamb_phytoken", "=", "0" ] },
-      { "math": [ "u_gamb_phytokentemp", "=", "0" ] },
+      { "math": [ "u_gamb_bodytoken", "=", "0" ] },
       { "math": [ "u_gamb_kiweak", "=", "1" ] },
       { "math": [ "u_gamb_kiweakbase", "=", "1" ] },
       { "math": [ "u_gamb_talent", "+=", "1" ] },
+      { "math": [ "u_gamb_phytalent", "+=", "1" ] },
+      { "math": [ "u_gamb_woodtalent", "+=", "1" ] },
+      { "math": [ "u_gamb_bodytalent", "+=", "1" ] },
       { "math": [ "u_gamb_woodkicaptrue", "=", "0" ] },
       { "math": [ "u_gamb_stage", "=", "0" ] }
     ]
@@ -19,16 +22,13 @@
     "type": "effect_on_condition",
     "id": "EOC_Gamb_Awaken",
     "effect": [
-      { "u_add_trait": "Gamb_Iron_Body" },
       { "math": [ "u_gamb_kicap", "=", "3" ] },
       { "math": [ "u_gamb_kireg", "=", "0.01" ] },
       { "math": [ "u_gamb_ki", "=", "1.9" ] },
+      { "math": [ "u_gamb_phytalent", "+=", "0.2" ] },
       { "math": [ "u_gamb_basha", "+=", "2" ] },
       { "math": [ "u_gamb_speed", "+=", "1" ] },
-      { "math": [ "u_gamb_carry", "=", "100" ] },
-      { "math": [ "u_gamb_kiwood", "=", "0" ] },
-      { "math": [ "u_gamb_kiwoodcap", "=", "0" ] },
-      { "math": [ "u_gamb_kiwoodreg", "=", "0" ] },
+      { "math": [ "u_gamb_carry", "+=", "100" ] },
       { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "0" ] },
       {
         "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling.",
@@ -40,10 +40,10 @@
     "type": "effect_on_condition",
     "id": "EOC_Gamb_Awaken_Wood",
     "effect": [
-      { "u_add_trait": "Gamb_Iron_Body" },
       { "math": [ "u_gamb_kicap", "=", "2.2" ] },
       { "math": [ "u_gamb_kireg", "=", "0.06" ] },
       { "math": [ "u_gamb_ki", "=", "1.1" ] },
+      { "math": [ "u_gamb_woodtalent", "+=", "0.4" ] },
       { "math": [ "u_gamb_kiwood", "=", "0.1" ] },
       { "math": [ "u_gamb_kiwoodcap", "=", "0.25" ] },
       { "math": [ "u_gamb_kiwoodreg", "=", "0.001" ] },
@@ -54,6 +54,32 @@
       { "math": [ "(u_spell_level('gamb_woodarms1'))", "=", "0" ] },
       {
         "u_message": "You feel your body and soul drastically change. You are weak, lacking ki, yet... slowly filling. A pleasant feeling of nature is making its way inside of you.",
+        "type": "good"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Awaken_Body",
+    "effect": [
+      { "math": [ "u_gamb_kicap", "=", "1.2" ] },
+      { "math": [ "u_gamb_kireg", "=", "0.02" ] },
+      { "math": [ "u_gamb_ki", "=", ".8" ] },
+      { "math": [ "u_gamb_bodytalent", "+=", "1" ] },
+      { "math": [ "u_gamb_talent", "+=", ".1" ] },
+      { "math": [ "u_gamb_maxhp", "+=", "5" ] },
+      { "math": [ "u_gamb_hpreg", "+=", "0.01" ] },
+      { "math": [ "u_gamb_hpregaw", "+=", "0.02" ] },
+      { "math": [ "u_gamb_mendmod", "+=", "0.02" ] },
+      { "math": [ "u_gamb_basha", "+=", "4" ] },
+      { "math": [ "u_gamb_painrem", "+=", "1" ] },
+      { "math": [ "u_gamb_atkspd", "+=", "2" ] },
+      { "math": [ "u_gamb_climate", "+=", "2" ] },
+      { "math": [ "u_gamb_bashd", "+=", "2" ] },
+      { "math": [ "u_gamb_speed", "+=", "3" ] },
+      { "math": [ "u_gamb_carry", "+=", "200" ] },
+      {
+        "u_message": "You feel your body and soul drastically change. Your body has been refined, and your soul has touched a new type of energy.",
         "type": "good"
       }
     ]
@@ -87,6 +113,11 @@
     "type": "effect_on_condition",
     "id": "Gamb_Ki_phyxpplus",
     "effect": [ { "math": [ "u_gamb_phyxp", "+=", "100" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_bodyxpplus",
+    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "99.9" ] } ]
   },
   {
     "type": "effect_on_condition",

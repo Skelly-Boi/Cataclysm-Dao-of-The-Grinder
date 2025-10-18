@@ -1,0 +1,30 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_BodyCombatxp",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_monster",
+    "condition": { "and": [ "u_is_avatar", { "math": [ "u_gamb_bodycombatxpg > 0" ] } ] },
+    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "u_gamb_bodycombatxpg " ] }, { "u_message": "Melee", "type": "good" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_BodyPassive",
+    "recurrence": [ "1 s", "1 s" ],
+    "condition": { "math": [ "u_gamb_bodyxpg > 0" ] },
+    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "u_gamb_bodyxpg " ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_bodyxp_low",
+    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "0.01" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_BodyAwakening",
+    "recurrence": [ "1 h", "1 h" ],
+    "deactivate_condition": { "u_has_trait": "Gamb_Iron_Body" },
+    "condition": { "and": [ { "not": { "u_has_trait": "Gamb_Iron_Body" } }, { "math": [ "u_gamb_bodyxp > 100" ] } ] },
+    "effect": [ { "run_eocs": [ "EOC_Gamb_Awaken_Body" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] } ]
+  }
+]

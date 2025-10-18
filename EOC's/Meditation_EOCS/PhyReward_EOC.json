@@ -11,23 +11,33 @@
       "weighted_list_eocs": [
         [
           {
+            "id": "Gamb_learn_breinforce",
+            "effect": [
+              { "math": [ "(u_spell_level('gamb_breinforce'))", "=", "0" ] },
+              { "u_message": "You gain a new understanding of your ki use. (Body Reinforcement)", "type": "good" }
+            ]
+          },
+          { "math": [ "u_spell_level('gamb_gamb_breinforce') * -1 " ] }
+        ],
+        [
+          {
             "id": "Gamb_learn_ironscale",
             "effect": [
               { "math": [ "(u_spell_level('gamb_ironscale'))", "=", "0" ] },
-              { "u_message": "You gain a new understanding of your ki use. (ironscale)", "type": "good" }
+              { "u_message": "You gain a new understanding of your ki use. (Ironscale)", "type": "good" }
             ]
           },
-          { "math": [ "u_spell_level('gamb_ironscale') * -1 " ] }
+          { "math": [ "u_spell_level('gamb_ironscale') * -1  * (1 + u_spell_level('gamb_breinforce'))" ] }
         ],
         [
           {
             "id": "Gamb_learn_overload",
             "effect": [
               { "math": [ "(u_spell_level('gamb_overload'))", "=", "0" ] },
-              { "u_message": "You gain a new understanding of your ki use. (overload)", "type": "good" }
+              { "u_message": "You gain a new understanding of your ki use. (Overload)", "type": "good" }
             ]
           },
-          { "math": [ "u_spell_level('gamb_overload') * -1" ] }
+          { "math": [ "u_spell_level('gamb_overload') * -1  * (1 + u_spell_level('gamb_breinforce'))" ] }
         ],
         [
           {

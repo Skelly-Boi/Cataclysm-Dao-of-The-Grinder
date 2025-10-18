@@ -5,13 +5,15 @@
     "effect": [
       { "u_message": "You turn off all of your spells.", "type": "bad" },
       { "run_eocs": [ "EOC_Gamb_KiOff" ] },
-      { "math": [ "u_gamb_phyxpg", "=", "0" ] },
-      { "math": [ "u_gamb_phytoken", "+=", "(u_gamb_phyxp/10)*u_gamb_talent" ] },
+      { "math": [ "u_gamb_phytoken", "+=", "(u_gamb_phyxp/10)*u_gamb_talent*u_gamb_phytalent" ] },
       { "math": [ "u_gamb_phytokentemp", "+=", "(u_gamb_phyxp/10)" ] },
       { "math": [ "u_gamb_phyxp", "=", "0" ] },
-      { "math": [ "u_gamb_woodtoken", "+=", "(u_gamb_woodxp/10)*u_gamb_talent" ] },
+      { "math": [ "u_gamb_woodtoken", "+=", "(u_gamb_woodxp/10)*u_gamb_talent*u_gamb_woodtalent" ] },
       { "math": [ "u_gamb_woodtokentemp", "+=", "(u_gamb_woodxp/10)" ] },
       { "math": [ "u_gamb_woodxp", "=", "0" ] },
+      { "math": [ "u_gamb_bodytoken", "+=", "(u_gamb_bodyxp/10)*u_gamb_talent*u_gamb_bodytalent" ] },
+      { "math": [ "u_gamb_bodytokentemp", "+=", "(u_gamb_bodyxp/10)" ] },
+      { "math": [ "u_gamb_bodyxp", "=", "0" ] },
       { "u_message": "Ki:<u_val:gamb_ki>  Ki Capacity:<u_val:gamb_kicap> \n", "type": "good" },
       {
         "if": { "math": [ "u_gamb_kiwoodcap", ">", "0" ] },
@@ -49,6 +51,20 @@
             ]
           },
           { "math": [ "u_gamb_woodtokentemp", "=", "0" ] }
+        ]
+      },
+      {
+        "if": { "math": [ "u_gamb_bodytokentemp", ">=", "1" ] },
+        "then": [
+          {
+            "switch": { "math": [ "rand(100)+u_gamb_bodytokentemp+(u_gamb_bodytoken^0.3)+(u_gamb_stage*10)" ] },
+            "cases": [
+              { "case": 0, "effect": [ { "run_eocs": [ "EOC_Gamb_BodyReward1" ] } ] },
+              { "case": 60, "effect": [ { "run_eocs": [ "EOC_Gamb_BodyReward2" ] } ] },
+              { "case": 100, "effect": [ { "run_eocs": [ "EOC_Gamb_BodyReward3" ] } ] }
+            ]
+          },
+          { "math": [ "u_gamb_bodytokentemp", "=", "0" ] }
         ]
       }
     ]

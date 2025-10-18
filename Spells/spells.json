@@ -3,7 +3,7 @@
     "type": "SPELL",
     "id": "gamb_meditate",
     "name": "Meditation",
-    "description": "Ponder upon the lessons learned while using your ki.",
+    "description": "Ponder upon the lessons learned while using your ki. It is reccomended to meditate after an average day of training, for optimum enlightenment use. Too much or too little may lead to waste.",
     "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
     "valid_targets": [ "self" ],
     "base_casting_time": 5000,

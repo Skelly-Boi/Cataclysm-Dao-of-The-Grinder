@@ -1,0 +1,26 @@
+[
+  {
+    "type": "ITEM",
+    "id": "spear_steel_weightedL",
+    "subtypes": [ "ARTIFACT" ],
+    "name": { "str": "weighted steel spear" },
+    "description": "A spear commonly used by cultivators. It is mundane in nature, but ",
+    "weight": "2500 g",
+    "price_postapoc": "20 USD",
+    "color": "light_gray",
+    "symbol": "/",
+    "looks_like": "spear_steel",
+    "material": [ "steel", "wood" ],
+    "techniques": [ "WBLOCK_1", "PENETRATE" ],
+    "volume": "1350 ml",
+    "longest_side": "180 cm",
+    "to_hit": { "grip": "weapon", "length": "long", "surface": "point", "balance": "good" },
+    "flags": [ "DURABLE_MELEE", "SPEAR", "REACH_ATTACK", "NONCONDUCTIVE", "SHEATH_SPEAR" ],
+    "weapon_category": [ "SPEARS" ],
+    "price": "160 USD",
+    "qualities": [ [ "COOK", 1 ] ],
+    "use_action": [ "HEAT_SOLID_ITEMS" ],
+    "melee_damage": { "bash": 9, "stab": 41 },
+    "passive_effects": [ { "id": "ench_gamb_bodycombatxp" } ]
+  }
+]
