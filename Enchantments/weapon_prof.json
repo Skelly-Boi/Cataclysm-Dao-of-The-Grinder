@@ -1,0 +1,8 @@
+[
+  {
+    "id": "ench_gamb_spear_dao",
+    "type": "enchantment",
+    "condition": { "u_has_wielded_with_weapon_category": "SPEARS" },
+    "melee_damage_bonus": [ { "type": "stab", "multiply": { "math": [ "u_gamb_speardao" ] } } ]
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "type": "effect_type",
+    "id": "effect_speardao",
+    "rating": "good",
+    "name": [ "Spear Dao" ],
+    "desc": [ "You hold a fragment of the Spear Dao. Your existence is taking the shape of a spear." ],
+    "part_descs": true,
+    "main_parts_only": true,
+    "apply_message": "You are enlightened.",
+    "enchantments": [ "ench_gamb_spear_dao" ]
+  }
+]

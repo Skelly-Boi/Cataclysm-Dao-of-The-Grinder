@@ -1,0 +1,19 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Weapon_Profficiency",
+    "eoc_type": "EVENT",
+    "required_event": "gains_proficiency",
+    "condition": "u_is_avatar",
+    "effect": [
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_spears_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 0.5" ] },
+          { "math": [ "u_gamb_speardao += .1" ] },
+          { "u_add_effect": "effect_speardao", "duration": "PERMANENT" }
+        ]
+      }
+    ]
+  }
+]

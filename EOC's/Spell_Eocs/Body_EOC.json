@@ -21,6 +21,11 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "EOC_Gamb_bodyxp_verylow",
+    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "0.0001" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_Gamb_BodyAwakening",
     "recurrence": [ "1 h", "1 h" ],
     "deactivate_condition": { "u_has_trait": "Gamb_Iron_Body" },

@@ -15,18 +15,15 @@
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "result": "spear_steel_weightedL",
-    "category": "CC_CULTIVATION",
-    "subcategory": "CSC_CULTIVATION_TRAINING",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
     "skill_used": "tailor",
     "skills_required": [ [ "stabbing", 1 ], [ "tailor", 1 ] ],
     "autolearn": [ [ "stabbing", 2 ], [ "fabrication", 1 ], [ "tailor", 2 ] ],
     "difficulty": 1,
     "time": "15 m",
     "reversible": { "time": "120 s" },
-    "proficiencies": [
-      { "proficiency": "prof_fibers", "required": false, "time_multiplier": 1.5 },
-      { "proficiency": "prof_knitting", "required": false, "time_multiplier": 2 }
-    ],
+    "proficiencies": [ { "proficiency": "prof_fibers", "required": false, "time_multiplier": 1.5 } ],
     "using": [ [ "cordage", 4 ], [ "mixed_steel", 1 ] ],
     "components": [ [ [ "spear_steel", 1 ] ] ]
   }

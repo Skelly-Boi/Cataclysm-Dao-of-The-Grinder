@@ -1,19 +1,24 @@
-{
-  "type": "SPELL",
-  "id": "gamb_bodyxp_spelllow",
-  "name": "Overload",
-  "description": "Gives 0.01 bodyxp. Shouldn't see this.",
-  "flags": [
-    "SILENT",
-    "NO_FAIL",
-    "NON_MAGICAL",
-    "NO_HANDS",
-    "NO_LEGS"
-  ],
-  "valid_targets": [
-    "self"
-  ],
-  "shape": "blast",
-  "effect": "effect_on_condition",
-  "effect_str": "EOC_Gamb_bodyxp_low"
-}
+[
+  {
+    "type": "SPELL",
+    "id": "gamb_bodyxp_spelllow",
+    "name": "Misc_lowxp",
+    "description": "Gives 0.01 bodyxp. Shouldn't see this.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_bodyxp_low"
+  },
+  {
+    "type": "SPELL",
+    "id": "gamb_bodyxp_spellverrylow",
+    "name": "Misc_verylowxp",
+    "description": "Gives 0.0001 bodyxp. Shouldn't see this.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_bodyxp_verylow"
+  }
+]
