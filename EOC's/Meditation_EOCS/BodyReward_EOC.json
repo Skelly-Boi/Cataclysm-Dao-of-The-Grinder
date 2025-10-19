@@ -83,6 +83,16 @@
             ]
           },
           1
+        ],
+        [
+          {
+            "id": "Gamb_BodyReward_carry1",
+            "effect": [
+              { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
+              { "math": [ "u_gamb_carry += (max(0, (u_gamb_bodytoken^0.2)-rand(5))*0.1)" ] }
+            ]
+          },
+          1
         ]
       ]
     }
