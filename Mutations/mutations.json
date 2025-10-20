@@ -56,7 +56,8 @@
           { "value": "REGEN_HP_AWAKE", "multiply": { "math": [ "u_gamb_hpregaw * 1" ] } },
           { "value": "RECOIL_MODIFIER", "add": { "math": [ "u_gamb_recoil * -1" ] } },
           { "value": "MAX_HP", "add": { "math": [ "u_gamb_maxhp * 1" ] } },
-          { "value": "MELEE_TO_HIT", "add": { "math": [ "u_gamb_mhit + 1" ] } }
+          { "value": "MELEE_TO_HIT", "add": { "math": [ "u_gamb_mhit + 1" ] } },
+          { "value": "LEARNING_FOCUS", "multiply": { "math": [ "u_gamb_learning + 0.01" ] } }
         ]
       }
     ]

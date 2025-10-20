@@ -3,6 +3,20 @@
     "id": "ench_gamb_spear_dao",
     "type": "enchantment",
     "condition": { "u_has_wielded_with_weapon_category": "SPEARS" },
-    "melee_damage_bonus": [ { "type": "stab", "multiply": { "math": [ "u_gamb_speardao" ] } } ]
+    "melee_damage_bonus": [ { "type": "stab", "multiply": { "math": [ "u_gamb_speardao" ] } } ],
+    "values": [
+      { "value": "SPEED", "add": { "math": [ "u_gamb_speardao * 2" ] } },
+      { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_speardao * 4" ] } }
+    ]
+  },
+  {
+    "id": "ench_gamb_unarmed_dao",
+    "type": "enchantment",
+    "condition": { "not": "u_has_weapon" },
+    "melee_damage_bonus": [ { "type": "bash", "multiply": { "math": [ "u_gamb_unarmeddao" ] } } ],
+    "values": [
+      { "value": "SPEED", "add": { "math": [ "u_gamb_unarmeddao * 5" ] } },
+      { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_unarmeddao * 3" ] } }
+    ]
   }
 ]

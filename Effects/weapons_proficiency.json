@@ -9,5 +9,16 @@
     "main_parts_only": true,
     "apply_message": "You are enlightened.",
     "enchantments": [ "ench_gamb_spear_dao" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_unarmeddao",
+    "rating": "good",
+    "name": [ "Unarmed Dao" ],
+    "desc": [ "You hold a fragment of the Unarmed Dao. Your existence is taking the shape of a fist." ],
+    "part_descs": true,
+    "main_parts_only": true,
+    "apply_message": "You are enlightened.",
+    "enchantments": [ "ench_gamb_unarmed_dao" ]
   }
 ]

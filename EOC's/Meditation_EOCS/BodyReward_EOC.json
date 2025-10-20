@@ -9,7 +9,9 @@
             "id": "Gamb_BodyReward_bashdamage1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_bashd += (max(0, (u_gamb_bodytoken^0.2)-rand(20))*0.01)" ] }
+              {
+                "math": [ "u_gamb_bashd += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(20))*0.01)" ]
+              }
             ]
           },
           1
@@ -19,7 +21,9 @@
             "id": "Gamb_BodyReward_basharmor1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_basha += (max(0, (u_gamb_bodytoken^0.2)-rand(10))*0.01)" ] }
+              {
+                "math": [ "u_gamb_basha += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(10))*0.01)" ]
+              }
             ]
           },
           1
@@ -29,7 +33,9 @@
             "id": "Gamb_BodyReward_cutarmor1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_cuta += (max(0, (u_gamb_bodytoken^0.2)-rand(15))*0.01)" ] }
+              {
+                "math": [ "u_gamb_cuta += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(15))*0.01)" ]
+              }
             ]
           },
           1
@@ -39,7 +45,9 @@
             "id": "Gamb_BodyReward_stabarmor1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_staba += (max(0, (u_gamb_bodytoken^0.2)-rand(18))*0.01)" ] }
+              {
+                "math": [ "u_gamb_staba += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(18))*0.01)" ]
+              }
             ]
           },
           1
@@ -49,7 +57,9 @@
             "id": "Gamb_BodyReward_speed1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_speed += (max(0, (u_gamb_bodytoken^0.2)-rand(30))*0.01)" ] }
+              {
+                "math": [ "u_gamb_speed += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(30))*0.01)" ]
+              }
             ]
           },
           1
@@ -59,7 +69,9 @@
             "id": "Gamb_BodyReward_maxhp1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_maxhp += (max(0, (u_gamb_bodytoken^0.2)-rand(10))*0.1)" ] }
+              {
+                "math": [ "u_gamb_maxhp += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(10))*0.1)" ]
+              }
             ]
           },
           1
@@ -69,7 +81,9 @@
             "id": "Gamb_BodyReward_hpreg1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_hpreg += (max(0, (u_gamb_bodytoken^0.2)-rand(40))*0.0001)" ] }
+              {
+                "math": [ "u_gamb_hpreg += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(40))*0.0001)" ]
+              }
             ]
           },
           1
@@ -79,7 +93,9 @@
             "id": "Gamb_BodyReward_hpregaw1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_hpregaw += (max(0, (u_gamb_bodytoken^0.2)-rand(40))*0.00005)" ] }
+              {
+                "math": [ "u_gamb_hpregaw += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(40))*0.00005)" ]
+              }
             ]
           },
           1
@@ -89,7 +105,9 @@
             "id": "Gamb_BodyReward_carry1",
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
-              { "math": [ "u_gamb_carry += (max(0, (u_gamb_bodytoken^0.2)-rand(5))*0.1)" ] }
+              {
+                "math": [ "u_gamb_carry += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(5))*0.1)" ]
+              }
             ]
           },
           1

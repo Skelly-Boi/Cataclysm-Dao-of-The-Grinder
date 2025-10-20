@@ -3,7 +3,27 @@
     "type": "weapon_category",
     "id": "SPEARS",
     "name": "SPEARS",
-    "proficiencies": [ "prof_spears_familiar", "prof_spears_pro", "prof_spears_master", "prof_spears_gamb_low_mortal" ]
+    "proficiencies": [
+      "prof_spears_familiar",
+      "prof_spears_pro",
+      "prof_spears_master",
+      "prof_spears_gamb_low_mortal",
+      "prof_spears_gamb_medium_mortal",
+      "prof_spears_gamb_high_mortal"
+    ]
+  },
+  {
+    "type": "weapon_category",
+    "id": "UNARMED",
+    "name": "UNARMED",
+    "proficiencies": [
+      "prof_unarmed_familiar",
+      "prof_unarmed_pro",
+      "prof_unarmed_master",
+      "prof_unarmed_gamb_low_mortal",
+      "prof_unarmed_gamb_medium_mortal",
+      "prof_unarmed_gamb_high_mortal"
+    ]
   },
   {
     "type": "proficiency",
@@ -16,15 +36,86 @@
     "default_skill_penalty": 0.2,
     "bonuses": { "melee_attack": [ { "type": "stamina", "value": 0.065 } ] },
     "//": "Code assumes each attack is 1s",
-    "time_to_learn": "4000 s",
+    "time_to_learn": "4500 s",
     "required_proficiencies": [ "prof_spears_master" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_spears_gamb_medium_mortal",
+    "category": "prof_combat",
+    "name": { "str": "Spear Transcendence - Medium Mortal" },
+    "description": "Your spear skill has evolved, and you hold the lowest levels of the Spear Dao.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_skill_penalty": 0.2,
+    "bonuses": { "melee_attack": [ { "type": "stamina", "value": 0.075 } ] },
+    "//": "Code assumes each attack is 1s",
+    "time_to_learn": "5000 s",
+    "required_proficiencies": [ "prof_spears_gamb_low_mortal" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_spears_gamb_high_mortal",
+    "category": "prof_combat",
+    "name": { "str": "Spear Transcendence - High Mortal" },
+    "description": "Your spear skill has evolved, and you hold the lowest levels of the Spear Dao.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_skill_penalty": 0.2,
+    "bonuses": { "melee_attack": [ { "type": "stamina", "value": 0.085 } ] },
+    "//": "Code assumes each attack is 1s",
+    "time_to_learn": "5500 s",
+    "required_proficiencies": [ "prof_spears_gamb_medium_mortal" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_unarmed_gamb_low_mortal",
+    "category": "prof_combat",
+    "name": { "str": "Unarmed Transcendence - Low Mortal" },
+    "description": "Your unarmed skill has evolved, and you hold the lowest levels of the Spear Dao.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_skill_penalty": 0.2,
+    "bonuses": { "melee_attack": [ { "type": "stamina", "value": 0.065 } ] },
+    "//": "Code assumes each attack is 1s",
+    "time_to_learn": "4500 s",
+    "required_proficiencies": [ "prof_unarmed_master" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_unarmed_gamb_medium_mortal",
+    "category": "prof_combat",
+    "name": { "str": "Unarmed Transcendence - Medium Mortal" },
+    "description": "Your unarmed skill has evolved, and you hold the lowest levels of the Spear Dao.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_skill_penalty": 0.2,
+    "bonuses": { "melee_attack": [ { "type": "stamina", "value": 0.075 } ] },
+    "//": "Code assumes each attack is 1s",
+    "time_to_learn": "5000 s",
+    "required_proficiencies": [ "prof_unarmed_gamb_low_mortal" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_unarmed_gamb_high_mortal",
+    "category": "prof_combat",
+    "name": { "str": "Unarmed Transcendence - High Mortal" },
+    "description": "Your unarmed skill has evolved, and you hold the lowest levels of the Spear Dao.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_skill_penalty": 0.2,
+    "bonuses": { "melee_attack": [ { "type": "stamina", "value": 0.085 } ] },
+    "//": "Code assumes each attack is 1s",
+    "time_to_learn": "5500 s",
+    "required_proficiencies": [ "prof_unarmed_gamb_medium_mortal" ]
   },
   {
     "id": "ench_gamb_bodycombatxp",
     "type": "enchantment",
     "has": "WIELD",
     "condition": "ALWAYS",
-    "hit_you_effect": [ { "id": "gamb_bodyxp_spelllow", "hit_self": true } ]
+    "hit_you_effect": [ { "id": "gamb_bodyxp_spelllow", "hit_self": true } ],
+    "values": [ { "value": "SPEED", "add": -3 }, { "value": "ATTACK_SPEED", "add": -10 } ]
   },
   {
     "id": "ench_gamb_bodycombatxphit",
@@ -32,6 +123,6 @@
     "has": "WORN",
     "condition": "ALWAYS",
     "hit_me_effect": [ { "id": "gamb_bodyxp_spelllow", "hit_self": true } ],
-    "values": [ { "value": "SPEED", "add": -5 } ]
+    "values": [ { "value": "SPEED", "add": -5 }, { "value": "ATTACK_SPEED", "add": -2 } ]
   }
 ]
