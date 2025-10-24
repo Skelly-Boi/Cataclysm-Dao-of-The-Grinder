@@ -3,5 +3,11 @@
     "id": "meat_red_raw",
     "type": "requirement",
     "extend": { "components": [ [ [ "gamb_ki_meatweak", 1 ] ] ] }
+  },
+  {
+    "id": "real_spears",
+    "type": "requirement",
+    "//": "Any weapon that features a long pole with a pointed tip at the end.  Reserved for quality weapons.",
+    "extend": { "tools": [ [ [ "spear_steel_weightedL", -1 ] ] ] }
   }
 ]

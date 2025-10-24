@@ -18,5 +18,223 @@
       { "value": "SPEED", "add": { "math": [ "u_gamb_unarmeddao * 5" ] } },
       { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_unarmeddao * 3" ] } }
     ]
-  }
+  },
+  {
+    "id": "ench_gamb_knives_dao",
+    "type": "enchantment",
+    "condition": { "u_has_wielded_with_weapon_category": "KNIVES" },
+    "melee_damage_bonus": [ { "type": "stab", "multiply": { "math": [ "u_gamb_knivesdao" ] } } ],
+    "values": [
+      { "value": "SPEED", "add": { "math": [ "u_gamb_knivesdao * 3" ] } },
+      { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_knivesdao * 5" ] } }
+    ]
+  },
+  [
+    {
+      "id": "ench_gamb_batons_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "BATONS" },
+      "melee_damage_bonus": [ { "type": "bash", "multiply": { "math": [ "u_gamb_batonsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_batonsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_batonsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_flails_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "FLAILS" },
+      "melee_damage_bonus": [ { "type": "bash", "multiply": { "math": [ "u_gamb_flailsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_flailsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_flailsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_maces_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "MACES" },
+      "melee_damage_bonus": [ { "type": "bash", "multiply": { "math": [ "u_gamb_macesdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_macesdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_macesdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_mswords_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_mswordsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_mswordsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_mswordsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_lswords_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "LONG_SWORDS" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_lswordsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_lswordsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_lswordsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_sswords_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_sswordsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_sswordsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_sswordsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_qstaves_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" },
+      "melee_damage_bonus": [ { "type": "bash", "multiply": { "math": [ "u_gamb_qstavesdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_qstavesdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_qstavesdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_claws_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "CLAWS" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_clawsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_clawsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_clawsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_shivs_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "SHIVS" },
+      "melee_damage_bonus": [ { "type": "stab", "multiply": { "math": [ "u_gamb_shivsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_shivsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_shivsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_hooking_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "HOOKING_WEAPONRY" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_hookingdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_hookingdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_hookingdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_polearms_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "POLEARMS" },
+      "melee_damage_bonus": [ { "type": "bash", "multiply": { "math": [ "u_gamb_polearmsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_polearmsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_polearmsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_fencing_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "FENCING_WEAPONRY" },
+      "melee_damage_bonus": [ { "type": "stab", "multiply": { "math": [ "u_gamb_fencingdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_fencingdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_fencingdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_tswords_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "LONG_THRUSTING_SWORDS" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_tswordsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_tswordsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_tswordsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_bionics_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "BIONIC_WEAPONRY" },
+      "melee_damage_bonus": [
+        [ { "type": "cut", "multiply": { "math": [ "u_gamb_bionicsdao * 0.5" ] } } ],
+        [ { "type": "stab", "multiply": { "math": [ "u_gamb_bionicsdao * 0.5" ] } } ]
+      ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_bionicsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_bionicsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_bswords_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_bswordsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_bswordsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_bswordsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_gswords_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" },
+      "melee_damage_bonus": [
+        [ { "type": "cut", "multiply": { "math": [ "u_gamb_gswordsdao * 0.5" ] } } ],
+        [ { "type": "bash", "multiply": { "math": [ "u_gamb_gswordsdao * 0.5" ] } } ]
+      ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_gswordsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_gswordsdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_ghammers_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "GREAT_HAMMERS" },
+      "melee_damage_bonus": [ { "type": "bash", "multiply": { "math": [ "u_gamb_ghammersdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_ghammersdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_ghammersdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_gaxes_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "GREAT_AXES" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_gaxesdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_gaxesdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_gaxesdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_haxes_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "HAND_AXES" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_haxesdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_haxesdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_haxesdao * 5" ] } }
+      ]
+    },
+    {
+      "id": "ench_gamb_whips_dao",
+      "type": "enchantment",
+      "condition": { "u_has_wielded_with_weapon_category": "WHIPS" },
+      "melee_damage_bonus": [ { "type": "cut", "multiply": { "math": [ "u_gamb_whipsdao" ] } } ],
+      "values": [
+        { "value": "SPEED", "add": { "math": [ "u_gamb_whipsdao * 3" ] } },
+        { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_whipsdao * 5" ] } }
+      ]
+    }
+  ]
 ]

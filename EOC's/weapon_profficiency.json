@@ -16,7 +16,7 @@
           { "math": [ "u_gamb_bodytalent += 0.01" ] },
           { "math": [ "u_gamb_talent += 0.002" ] },
           { "math": [ "u_gamb_speardao += 0.1" ] },
-          { "math": [ "u_gamb_bodyxp += 5" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
           { "u_add_effect": "effect_speardao", "duration": "PERMANENT" }
         ]
       },
@@ -30,7 +30,7 @@
           { "math": [ "u_gamb_bodytalent += 0.01" ] },
           { "math": [ "u_gamb_talent += 0.002" ] },
           { "math": [ "u_gamb_speardao += 0.1" ] },
-          { "math": [ "u_gamb_bodyxp += 10" ] }
+          { "math": [ "u_gamb_bodyxp += 30" ] }
         ]
       },
       {
@@ -43,7 +43,7 @@
           { "math": [ "u_gamb_bodytalent += 0.01" ] },
           { "math": [ "u_gamb_talent += 0.002" ] },
           { "math": [ "u_gamb_speardao += 0.1" ] },
-          { "math": [ "u_gamb_bodyxp += 15" ] }
+          { "math": [ "u_gamb_bodyxp += 50" ] }
         ]
       },
       {
@@ -57,7 +57,7 @@
           { "math": [ "u_gamb_bodytalent += 0.012" ] },
           { "math": [ "u_gamb_talent += 0.002" ] },
           { "math": [ "u_gamb_unarmeddao += 0.1" ] },
-          { "math": [ "u_gamb_bodyxp += 5" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
           { "u_add_effect": "effect_unarmeddao", "duration": "PERMANENT" }
         ]
       },
@@ -72,7 +72,7 @@
           { "math": [ "u_gamb_bodytalent += 0.013" ] },
           { "math": [ "u_gamb_talent += 0.002" ] },
           { "math": [ "u_gamb_unarmeddao += 0.1" ] },
-          { "math": [ "u_gamb_bodyxp += 10" ] }
+          { "math": [ "u_gamb_bodyxp += 30" ] }
         ]
       },
       {
@@ -86,7 +86,910 @@
           { "math": [ "u_gamb_bodytalent += 0.015" ] },
           { "math": [ "u_gamb_talent += 0.002" ] },
           { "math": [ "u_gamb_unarmeddao += 0.1" ] },
-          { "math": [ "u_gamb_bodyxp += 15" ] }
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_knives_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 0.6" ] },
+          { "math": [ "u_gamb_stba += 0.4" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.3" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_knivesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_knivesdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_knives_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 0.8" ] },
+          { "math": [ "u_gamb_stba += 0.5" ] },
+          { "math": [ "u_gamb_speed += 0.5" ] },
+          { "math": [ "u_gamb_atkspd += 0.4" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_knivesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_knives_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 1" ] },
+          { "math": [ "u_gamb_stba += 0.7" ] },
+          { "math": [ "u_gamb_speed += 0.6" ] },
+          { "math": [ "u_gamb_atkspd += 0.4" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_knivesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_batons_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.6" ] },
+          { "math": [ "u_gamb_basha += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_batonsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_batonsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_batons_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.7" ] },
+          { "math": [ "u_gamb_basha += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_batonsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_batons_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.8" ] },
+          { "math": [ "u_gamb_basha += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_batonsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_flails_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.6" ] },
+          { "math": [ "u_gamb_cuha += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_flailsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_flailsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_flails_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.7" ] },
+          { "math": [ "u_gamb_cuta += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_flailsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_flails_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.8" ] },
+          { "math": [ "u_gamb_cuta += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_flailsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_maces_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.9" ] },
+          { "math": [ "u_gamb_basha += 0.6" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_macesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_macesdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_maces_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 1.3" ] },
+          { "math": [ "u_gamb_basha += 0.8" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_macesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_maces_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 1.8" ] },
+          { "math": [ "u_gamb_basha += 1.1" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_macesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_medium_swords_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.6" ] },
+          { "math": [ "u_gamb_cuta += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_mswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_mswordsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_medium_swords_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.7" ] },
+          { "math": [ "u_gamb_cuta += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_mswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_medium_swords_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.8" ] },
+          { "math": [ "u_gamb_cuta += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_mswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_long_swords_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.6" ] },
+          { "math": [ "u_gamb_cuta += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_lswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_lswordsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_long_swords_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.7" ] },
+          { "math": [ "u_gamb_cuta += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_lswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_long_swords_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.8" ] },
+          { "math": [ "u_gamb_cuta += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_lswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_short_swords_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.6" ] },
+          { "math": [ "u_gamb_cuta += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_sswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_sswordsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_short_swords_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.7" ] },
+          { "math": [ "u_gamb_cuta += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_sswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_short_swords_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.8" ] },
+          { "math": [ "u_gamb_cuta += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_sswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_quarterstaves_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.6" ] },
+          { "math": [ "u_gamb_basha += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_qstavesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_qstavesdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_quarterstaves_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.7" ] },
+          { "math": [ "u_gamb_basha += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_qstavesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_quarterstaves_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.8" ] },
+          { "math": [ "u_gamb_basha += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_qstavesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_claws_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.6" ] },
+          { "math": [ "u_gamb_cuta += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_clawsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_clawsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_claws_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.7" ] },
+          { "math": [ "u_gamb_cuta += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_clawsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_claws_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.8" ] },
+          { "math": [ "u_gamb_cuta += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_clawsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_shivs_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 0.5" ] },
+          { "math": [ "u_gamb_stba += 0.2" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_shivsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_shivsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_shivs_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 0.8" ] },
+          { "math": [ "u_gamb_stba += 0.4" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_shivsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_shivs_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 1.1" ] },
+          { "math": [ "u_gamb_stba += 0.6" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_shivsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_hooking_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.6" ] },
+          { "math": [ "u_gamb_cuta += 0.6" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_hookingdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_hookingdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_hooking_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.8" ] },
+          { "math": [ "u_gamb_cuta += 0.8" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_hookingdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_hooking_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 1" ] },
+          { "math": [ "u_gamb_cuta += 1" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_hookingdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_polearms_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.6" ] },
+          { "math": [ "u_gamb_basha += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_polearmsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_polearmsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_polearms_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.7" ] },
+          { "math": [ "u_gamb_basha += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_polearmsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_polearms_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.8" ] },
+          { "math": [ "u_gamb_basha += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_polearmsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_fencing_weapons_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 0.9" ] },
+          { "math": [ "u_gamb_stba += 0.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_fencingdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_fencing_weaponsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_fencing_weapons_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 1.5" ] },
+          { "math": [ "u_gamb_stba += 0.5" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_fencingdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_fencing_weapons_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 2" ] },
+          { "math": [ "u_gamb_stba += 0.6" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_fencingdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_thrusting_swords_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 0.7" ] },
+          { "math": [ "u_gamb_stba += 0.4" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_tswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_thrusting_swordsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_thrusting_swords_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 1.2" ] },
+          { "math": [ "u_gamb_stba += 0.8" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_tswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_thrusting_swords_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_stbd += 1.5" ] },
+          { "math": [ "u_gamb_stba += 1" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_tswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_bionics_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.6" ] },
+          { "math": [ "u_gamb_basha += 1.5" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_bionicsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_bionicsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_bionics_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.7" ] },
+          { "math": [ "u_gamb_basha += 2" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_bionicsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_bionics_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.8" ] },
+          { "math": [ "u_gamb_basha += 2.5" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_bionicsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_bionic_swords_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.6" ] },
+          { "math": [ "u_gamb_cuta += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_bionic_swordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_bswordsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_bionic_swords_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.7" ] },
+          { "math": [ "u_gamb_cuta += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_bswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_bionic_swords_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.8" ] },
+          { "math": [ "u_gamb_cuta += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_bswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_swords_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.6" ] },
+          { "math": [ "u_gamb_basha += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_gswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_gswordsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_swords_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.7" ] },
+          { "math": [ "u_gamb_basha += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_gswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_swords_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.8" ] },
+          { "math": [ "u_gamb_basha += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_gswordsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_hammers_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.6" ] },
+          { "math": [ "u_gamb_basha += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_ghammersdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_ghammersdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_hammers_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.7" ] },
+          { "math": [ "u_gamb_basha += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_ghammersdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_hammers_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_bashd += 0.8" ] },
+          { "math": [ "u_gamb_basha += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_ghammersdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_axes_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 1.1" ] },
+          { "math": [ "u_gamb_cuta += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_gaxesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_gaxesdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_axes_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 1.6" ] },
+          { "math": [ "u_gamb_cuta += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_gaxesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_great_axes_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 2" ] },
+          { "math": [ "u_gamb_cuta += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_gaxesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_hand_axes_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.4" ] },
+          { "math": [ "u_gamb_cuta += 0.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_haxesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_haxesdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_hand_axes_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.7" ] },
+          { "math": [ "u_gamb_cuta += 0.5" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_haxesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_hand_axes_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 1" ] },
+          { "math": [ "u_gamb_cuta += 0.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_haxesdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_whips_gamb_low_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.6" ] },
+          { "math": [ "u_gamb_cuta += 0.9" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.012" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_whipsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 15" ] },
+          { "u_add_effect": "effect_whipsdao", "duration": "PERMANENT" }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_whips_gamb_medium_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.7" ] },
+          { "math": [ "u_gamb_cuta += 1.3" ] },
+          { "math": [ "u_gamb_speed += 0.2" ] },
+          { "math": [ "u_gamb_atkspd += 0.1" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.013" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_whipsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 30" ] }
+        ]
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "proficiency" }, "prof_whips_gamb_high_mortal" ] },
+        "then": [
+          { "math": [ "u_gamb_cutd += 0.8" ] },
+          { "math": [ "u_gamb_cuta += 1.7" ] },
+          { "math": [ "u_gamb_speed += 0.3" ] },
+          { "math": [ "u_gamb_atkspd += 0.2" ] },
+          { "math": [ "u_gamb_learning += 0.01" ] },
+          { "math": [ "u_gamb_bodytalent += 0.015" ] },
+          { "math": [ "u_gamb_talent += 0.002" ] },
+          { "math": [ "u_gamb_whipsdao += 0.1" ] },
+          { "math": [ "u_gamb_bodyxp += 50" ] }
         ]
       }
     ]

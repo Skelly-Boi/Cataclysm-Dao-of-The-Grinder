@@ -1,0 +1,33 @@
+[
+  {
+    "id": "prac_gamb_basic",
+    "name": "basic body training",
+    "description": "You train your body, slowly but firmly advancing on the path of body cultivation",
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result_eocs": [ "EOC_Gamb_bodyxp_Traininglow" ],
+    "time": "1 h",
+    "proficiencies": [
+      { "proficiency": "prof_athlete_basic", "time_multiplier": 2, "skill_penalty": 0, "learning_time_multiplier": 4 },
+      {
+        "proficiency": "prof_athlete_expert",
+        "time_multiplier": 1.5,
+        "skill_penalty": 0,
+        "learning_time_multiplier": 6
+      },
+      {
+        "proficiency": "prof_athlete_master",
+        "time_multiplier": 1.5,
+        "skill_penalty": 0,
+        "learning_time_multiplier": 8
+      }
+    ],
+    "skill_used": "swimming",
+    "skills_required": [ [ "swimming", 4 ] ],
+    "autolearn": [ [ "swimming", 4 ] ],
+    "difficulty": 0,
+    "tools": [ [ [ "low_arm_weights", -1 ] ], [ [ "low_leg_weights", -1 ] ] ],
+    "category": "CC_CULTIVATION",
+    "subcategory": "CSC_CULTIVATION_PRACTICE"
+  }
+]

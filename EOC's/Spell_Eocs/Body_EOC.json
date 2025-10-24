@@ -16,6 +16,11 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "EOC_Gamb_bodyxp_Traininglow",
+    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "1" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_Gamb_bodyxp_low",
     "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "0.01" ] } ]
   },
