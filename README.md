@@ -8,14 +8,16 @@ Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted
 ## Current features (and spoilers, but you can't play the game blind as is):
 
 ### 'Boss' monster drops, that awaken you on the path of cultivation, and strengthen your body.
-### 3 Pure Ki and 1 Wood spell.
+### 3 Pure Ki and 2 Wood spell.
 ### Spell growth and 'research' system (through meditation)
+### Body cultivation and training equipment
+### Weapon dao, allowing your skill and mastery in melee weapons to transcend mortal limits.
 
 ## To be added:
 
 #### Many more cultivation routes, non-exclusive so you can dabble in all of them, with a few conditions and exceptions. Elemental KI types that interact with each other, which you can develop further. (ex. fire ki grows on its own by burning ki and melts ice ki, and turns water ki into steam)
 #### Monsters and bosses. Much more powerful than anything vanilla has to offer.
-#### Unique custom locations, such as clan headquarters... and Mt. Tai.
+#### Spirit realms where you can fight extremely powerful monsters and plunder for treasures.
 #### Item and mutation descriptions, filled with lore!
 #### Cultivator weapons and items. Storage rings, runes, etc.
 #### Spells, and transformations to increase your power for a short duration, or summon powerful elemental attacks.
