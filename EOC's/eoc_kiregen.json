@@ -90,7 +90,7 @@
       },
       {
         "if": { "math": [ "u_gamb_kiweak > u_gamb_kiweakbase+0.01" ] },
-        "then": { "math": [ "u_gamb_kiweak", "-=", "0.01" ] },
+        "then": { "math": [ "u_gamb_kiweak", "-=", "0.01 * (u_gamb_stage +1)" ] },
         "else": {
           "if": { "math": [ "u_gamb_kiweak < u_gamb_kiweakbase-0.01" ] },
           "then": { "math": [ "u_gamb_kiweak", "+=", "0.01" ] }

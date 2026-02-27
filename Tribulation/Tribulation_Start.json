@@ -1,0 +1,77 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "Gamb_Ki_Tribulation",
+    "recurrence": [ "1 hour", "1 hour" ],
+    "condition": { "u_has_trait": "Gamb_Iron_Body" },
+    "effect": [
+      {
+        "if": {
+          "and": [
+            { "math": [ "u_gamb_kicap >= 15 * (u_gamb_stage + 1)" ] },
+            { "math": [ "u_spell_level('gamb_tribulation') != 0" ] },
+            { "math": [ "u_gamb_tribactive != 1" ] }
+          ]
+        },
+        "then": [
+          { "math": [ "u_spell_level('gamb_tribulation') = 0" ] },
+          { "u_message": "You have caught Heaven's gaze.", "popup": true }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_TribulationCheck",
+    "effect": [
+      { "math": [ "gamb_ki_tribdif = (u_gamb_kicap / (15 * (u_gamb_stage +1)))" ] },
+      { "u_message": "Your Tribulation is currently <global_val:gamb_ki_tribdif> times as difficult", "popup": true },
+      {
+        "run_eoc_selector": [ "EOC_start_Tribulation", "EOC_NONE" ],
+        "names": [ "Proceed", "Wait Longer" ],
+        "title": "Challenge the Heavens?",
+        "keys": [ "1", "2" ],
+        "descriptions": [
+          "The Heavens begin their trial. You either die, or step closer to immortality.",
+          "The Heavens look the other way for now. You can delay your tribulation as much as you wish. \nBe aware, for that path leads to stagnation, the path to immortality growing further and further away."
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_start_Tribulation",
+    "effect": [
+      { "math": [ "u_gamb_tribactive = 1" ] },
+      { "math": [ "u_spell_level('gamb_tribulation') = -1" ] },
+      {
+        "switch": { "math": [ "u_gamb_stage" ] },
+        "cases": [
+          {
+            "case": 0,
+            "effect": { "u_message": "Tribulation started at <global_val:gamb_ki_tribdif> difficulty(TEST)", "type": "good" }
+          },
+          { "case": 1, "effect": { "run_eocs": [ "EOC_NONE" ] } },
+          { "case": 2, "effect": { "run_eocs": [ "EOC_NONE" ] } },
+          { "case": 3, "effect": { "run_eocs": [ "EOC_NONE" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_trib1_teleport",
+    "global": true,
+    "effect": [
+      {
+        "u_travel_to_dimension": "Tribulation1",
+        "npc_travel_radius": 0,
+        "region_type": "dream_realm",
+        "npc_travel_filter": "none",
+        "fail_message": "Nothing happens.",
+        "success_message": "Your fate is in your own hands."
+      },
+      { "run_eocs": "EOC_Gamb_Trib1_Colloseum" }
+    ]
+  }
+]

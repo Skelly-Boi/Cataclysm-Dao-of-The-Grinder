@@ -3,8 +3,9 @@
     "type": "profession",
     "id": "survivor_shard",
     "name": "Lucky Survivor",
-    "description": "Some would say the heavens favor you, for you have stumbled upon the first step to immortality by sheer luck. Yet, will that be enough to face the coming apocalypse?",
+    "description": "Some would say the heavens favor you, for you have stumbled upon the first step to immortality by sheer luck.  Yet, will that be enough to face the coming apocalypse?",
     "points": 3,
+    "chargen_allow_npc": false,
     "items": {
       "both": {
         "entries": [
@@ -16,6 +17,46 @@
           { "item": "martial_shard_def" },
           { "group": "charged_smart_phone" },
           { "group": "starter_wallet_full" }
+        ]
+      },
+      "male": { "entries": [ { "item": "boxer_shorts" } ] },
+      "female": { "entries": [ { "item": "bra" }, { "item": "panties" } ] }
+    }
+  },
+  {
+    "type": "profession",
+    "id": "sword_cultivator",
+    "name": "Sword Cultivator",
+    "description": "Since birth, you have trained in the art of swordplay, yet faced stagnation before glimpsing at the Dao.  Your sect elders have decided to send you to the mortal world to open your mind, not wanting to artificially open your Spirit Root and ruin your potential.  Little did they know of the challenges that awaited you.",
+    "points": 6,
+    "//": "to add a small space ring and some healing/nutrition pills, gold coins? and some sword art/manual",
+    "chargen_allow_npc": false,
+    "proficiencies": [
+      "prof_medium_swords_familiar",
+      "prof_medium_swords_pro",
+      "prof_medium_swords_master",
+      "prof_long_swords_familiar",
+      "prof_short_swords_familiar",
+      "prof_fencing_weapons_familiar",
+      "prof_fencing_weapons_pro"
+    ],
+    "skills": [
+      { "level": 5, "name": "melee" },
+      { "level": 5, "name": "cutting" },
+      { "level": 3, "name": "dodge" },
+      { "level": 3, "name": "swimming" },
+      { "level": 3, "name": "stabbing" }
+    ],
+    "items": {
+      "both": {
+        "entries": [
+          { "item": "jeans" },
+          { "item": "silver_storage_ring_p" },
+          { "item": "longshirt" },
+          { "item": "socks" },
+          { "item": "sneakers" },
+          { "item": "water_clean" },
+          { "item": "qt_jian", "custom-flags": [ "auto_wield" ] }
         ]
       },
       "male": { "entries": [ { "item": "boxer_shorts" } ] },

@@ -127,6 +127,11 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "Gamb_Ki_kicapplus",
+    "effect": [ { "math": [ "u_gamb_kicap", "+=", "10" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "Gamb_spells",
     "effect": [
       { "math": [ "(u_spell_level('gamb_woodshed'))", "=", "0" ] },
