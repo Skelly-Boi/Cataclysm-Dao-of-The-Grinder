@@ -10,7 +10,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_bashd += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(20))*0.01)" ]
+                "math": [
+                  "u_gamb_bashd_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(20))*0.01*(0.95^u_gamb_bashd_training))"
+                ]
               }
             ]
           },
@@ -22,7 +24,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_basha += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(10))*0.01)" ]
+                "math": [
+                  "u_gamb_basha_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(10))*0.01*(0.95^u_gamb_basha_training))"
+                ]
               }
             ]
           },
@@ -34,7 +38,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_cuta += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(15))*0.01)" ]
+                "math": [
+                  "u_gamb_cuta_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(15))*0.01*(0.95^u_gamb_cuta_training))"
+                ]
               }
             ]
           },
@@ -46,7 +52,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_staba += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(18))*0.01)" ]
+                "math": [
+                  "u_gamb_staba_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(18))*0.01*(0.95^u_gamb_staba_training))"
+                ]
               }
             ]
           },
@@ -58,7 +66,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_speed += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(30))*0.01)" ]
+                "math": [
+                  "u_gamb_speed_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(30))*0.01*(0.90^u_gamb_speed_training))"
+                ]
               }
             ]
           },
@@ -70,7 +80,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_maxhp += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(10))*0.1)" ]
+                "math": [
+                  "u_gamb_maxhp_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(10))*0.1*(0.97^u_gamb_maxhp_training))"
+                ]
               }
             ]
           },
@@ -82,7 +94,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_hpreg += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(40))*0.0001)" ]
+                "math": [
+                  "u_gamb_hpreg_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(40))*0.0001*(0.9^(u_gamb_hpreg_training*1000)))"
+                ]
               }
             ]
           },
@@ -94,7 +108,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_hpregaw += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(40))*0.00005)" ]
+                "math": [
+                  "u_gamb_hpregaw_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(40))*0.00005*(0.9^(u_gamb_hpregaw_training*20000)))"
+                ]
               }
             ]
           },
@@ -106,7 +122,9 @@
             "effect": [
               { "math": [ "u_gamb_bodytoken += ((rand(8)*0.02)+0.05)*u_gamb_bodytokentemp" ] },
               {
-                "math": [ "u_gamb_carry += (max(0, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(5))*0.05)" ]
+                "math": [
+                  "u_gamb_carry_training += (max(0.1, ((u_gamb_bodytoken^0.2)+(u_gamb_bodytokentemp^0.5))-rand(5))*0.05*(0.95^(u_gamb_carry_training*2)))"
+                ]
               }
             ]
           },

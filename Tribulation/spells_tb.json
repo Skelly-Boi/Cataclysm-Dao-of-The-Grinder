@@ -1,0 +1,82 @@
+[
+  {
+    "type": "SPELL",
+    "id": "gamb_tribulation",
+    "name": "Tribulation",
+    "description": "The Heavens see you.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "STAMINA",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_TribulationCheck"
+  },
+  {
+    "type": "SPELL",
+    "id": "gamb_tribulation_exit",
+    "name": "Leave Tribulation",
+    "description": "Congratulations, you have survived.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "STAMINA",
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_TribulationExit"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_TribulationExit",
+    "effect": [
+      {
+        "if": { "current_dimension": { "u_val": "trib_dimension_clear" } },
+        "then": [
+          { "u_travel_to_dimension": { "u_val": "pre_trib_dimension" } },
+          { "u_teleport": { "u_val": "pre_trib_loc" }, "force": true },
+          { "math": [ "u_spell_level('gamb_tribulation_exit') = -1" ] },
+          { "clear_dimension": { "u_val": "trib_dimension_clear" } },
+          { "math": [ "u_gamb_stage", "+=", "1" ] },
+          { "math": [ "u_gamb_kireg", "=", "min(u_gamb_kireg,u_gamb_stage/10)" ] },
+          { "math": [ "u_gamb_kicap", "=", "u_gamb_stage*15" ] },
+          { "math": [ "u_gamb_talent_gained", "=", "max(0.1,gamb_ki_tribdif-1)" ] },
+          { "math": [ "u_gamb_talent", "+=", "max(0.1,gamb_ki_tribdif-1)/3" ] },
+          { "math": [ "u_gamb_phytalent", "+=", "max(0,(gamb_ki_tribdif-3)/4)" ] },
+          { "math": [ "u_gamb_bodytalent", "+=", "max(0,(gamb_ki_tribdif-2)/3)" ] },
+          { "math": [ "u_gamb_maxhp_true", "+=", "max(0,(gamb_ki_tribdif-1)/2)" ] },
+          { "math": [ "u_gamb_speed_true", "+=", "max(0,(gamb_ki_tribdif-2)/4)" ] },
+          { "math": [ "u_gamb_phytalent", "+=", "max(0,(gamb_ki_tribdif-2)/3)" ] },
+          { "u_message": "You have gained <u_val:gamb_talent_gained> talent." }
+        ],
+        "else": { "u_message": "Go back to the tribulation dimension." }
+      },
+      {
+        "if": { "not": { "u_has_trait": "Cultivator_Gamb" } },
+        "then": { "u_add_trait": "Cultivator_Gamb", "variant": "Qi_Gathering1" }
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "Cultivator_Gamb",
+    "name": { "str": "Cultivator" },
+    "points": 4,
+    "visibility": 0,
+    "ugliness": 0,
+    "description": "Your limits have been shattered.",
+    "purifiable": false,
+    "variants": [
+      {
+        "id": "Qi_Gathering1",
+        "name": { "str": "*Qi Gathering I" },
+        "description": "Your Mortal limits are no more, your soul can handle more ki than before."
+      },
+      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering II" }, "description": "To do." },
+      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering III" }, "description": "To do." },
+      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering IV" }, "description": "To do." },
+      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering V" }, "description": "To do." }
+    ]
+  }
+]

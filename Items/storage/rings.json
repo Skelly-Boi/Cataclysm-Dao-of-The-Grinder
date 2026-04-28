@@ -1,0 +1,38 @@
+[
+  {
+    "id": "silver_storage_ring_p",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str": "perpetual storage ring - small" },
+    "description": "A storage ring made out of silver. It is inscribed with a stable perpetual runic array that allows it to hold a 50x50x50cm spatial dimension, allowing you to store items inside it.  The weight of the items inside it is only at 50%, however.",
+    "weight": "10 g",
+    "volume": "1 ml",
+    "price": "50 USD",
+    "price_postapoc": "10 cent",
+    "material": [ "silver" ],
+    "symbol": "[",
+    "color": "light_gray",
+    "sided": true,
+    "pocket_data": [
+      {
+        "rigid": true,
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "125 L",
+        "max_contains_weight": "10000 kg",
+        "moves": 1,
+        "max_item_length": "50 cm",
+        "weight_multiplier": 0.5,
+        "volume_multiplier": 1
+      }
+    ],
+    "armor": [
+      {
+        "coverage": 0,
+        "covers": [ "hand_l", "hand_r" ],
+        "specifically_covers": [ "hand_fingers_l", "hand_fingers_r" ],
+        "rigid_layer_only": true
+      }
+    ],
+    "flags": [ "NO_WEAR_EFFECT", "TARDIS", "OVERSIZE", "SKINTIGHT" ]
+  }
+]

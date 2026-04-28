@@ -13,51 +13,117 @@
     "enchantments": [
       {
         "melee_damage_bonus": [
-          { "type": "bash", "add": { "math": [ "u_gamb_bashd * 1" ] } },
-          { "type": "cut", "add": { "math": [ "u_gamb_cutd * 1" ] } },
-          { "type": "stab", "add": { "math": [ "u_gamb_stbd * 1" ] } },
-          { "type": "bullet", "add": { "math": [ "u_gamb_bulld * 1" ] } }
+          { "type": "bash", "add": { "math": [ "(u_gamb_bashd+u_gamb_bashd_training+u_gamb_bashd_true) * 1" ] } },
+          { "type": "cut", "add": { "math": [ "(u_gamb_cutd+u_gamb_cutd_training+u_gamb_cutd_true) * 1" ] } },
+          { "type": "stab", "add": { "math": [ "(u_gamb_stabd+u_gamb_stabd_training+u_gamb_stabd_true) * 1" ] } },
+          { "type": "bullet", "add": { "math": [ "(u_gamb_bulld+u_gamb_bulld_training+u_gamb_bulld_true) * 1" ] } }
         ],
         "incoming_damage_mod": [
-          { "type": "bash", "add": { "math": [ "u_gamb_basha * -1" ] } },
-          { "type": "cut", "add": { "math": [ "u_gamb_cuta  * -1" ] } },
-          { "type": "stab", "add": { "math": [ "u_gamb_staba  * -1" ] } },
-          { "type": "bullet", "add": { "math": [ "u_gamb_bulla  * -1" ] } },
-          { "type": "cold", "add": { "math": [ "u_gamb_colda  * -1" ] } },
-          { "type": "heat", "add": { "math": [ "u_gamb_heata  * -1" ] } },
-          { "type": "electric", "add": { "math": [ "u_gamb_eleca  * -1" ] } },
-          { "type": "acid", "add": { "math": [ "u_gamb_acida  * -1" ] } },
-          { "type": "biologicl", "add": { "math": [ "u_gamb_bioa  * -1" ] } }
+          { "type": "bash", "add": { "math": [ "(u_gamb_basha+u_gamb_basha_training+u_gamb_basha_true) * -1" ] } },
+          { "type": "cut", "add": { "math": [ "(u_gamb_cuta+u_gamb_cuta_training+u_gamb_cuta_true)  * -1" ] } },
+          { "type": "stab", "add": { "math": [ "(u_gamb_staba+u_gamb_staba_training+u_gamb_staba_true)  * -1" ] } },
+          { "type": "bullet", "add": { "math": [ "(u_gamb_bulla+u_gamb_bulla_training+u_gamb_bulla_true)  * -1" ] } },
+          { "type": "cold", "add": { "math": [ "(u_gamb_colda+u_gamb_colda_training+u_gamb_colda_true)  * -1" ] } },
+          { "type": "heat", "add": { "math": [ "(u_gamb_heata+u_gamb_heata_training+u_gamb_heata_true)  * -1" ] } },
+          {
+            "type": "electric",
+            "add": { "math": [ "(u_gamb_eleca+u_gamb_eleca_training+u_gamb_eleca_true)  * -1" ] }
+          },
+          { "type": "acid", "add": { "math": [ "(u_gamb_acida+u_gamb_acida_training+u_gamb_acida_true)  * -1" ] } },
+          { "type": "biologicl", "add": { "math": [ "(u_gamb_bioa+u_gamb_bioa_training+u_gamb_bioa_true)  * -1" ] } }
         ]
       },
       {
         "values": [
-          { "value": "STRENGTH", "add": { "math": [ "u_gamb_str + 1" ] } },
-          { "value": "DEXTERITY", "add": { "math": [ "u_gamb_dex * 1" ] } },
-          { "value": "ATTACK_SPEED", "add": { "math": [ "u_gamb_atkspd * -1" ] } },
-          { "value": "NIGHT_VIS", "add": { "math": [ "u_gamb_nvis * 1" ] } },
-          { "value": "PAIN", "add": { "math": [ "(u_gamb_painres * -1) - 1" ] } },
-          { "value": "PAIN_REMOVE", "add": { "math": [ "u_gamb_painrem * 1" ] } },
-          { "value": "CARDIO_MULTIPLIER", "multiply": { "math": [ "u_gamb_cardiom * 1" ] } },
-          { "value": "BONUS_BLOCK", "add": { "math": [ "u_gamb_blckamm * 1" ] } },
-          { "value": "BONUS_DODGE", "add": { "math": [ "u_gamb_dogamm * 1" ] } },
-          { "value": "CRAFTING_SPEED_MULTIPLIER", "multiply": { "math": [ "u_gamb_crftspd * 1" ] } },
-          { "value": "SPEED", "add": { "math": [ "u_gamb_speed * 1" ] } },
-          { "value": "MENDING_MODIFIER", "multiply": { "math": [ "u_gamb_mendmod * 1" ] } },
-          { "value": "MELEE_STAMINA_CONSUMPTION", "add": { "math": [ "u_gamb_meleestam * 1" ] } },
-          { "value": "KNOCKBACK_RESIST", "add": { "math": [ "u_gamb_knkres * 1" ] } },
-          { "value": "CLIMATE_CONTROL_HEAT", "add": { "math": [ "u_gamb_climate * 1" ] } },
-          { "value": "CLIMATE_CONTROL_CHILL", "add": { "math": [ "u_gamb_climate * 1" ] } },
-          { "value": "CONSUME_TIME_MOD", "multiply": { "math": [ "max(-0.50,(u_gamb_consume * -0.01))" ] } },
-          { "value": "CARRY_WEIGHT", "add": { "math": [ "u_gamb_carry * 1" ] } },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "add": { "math": [ "u_gamb_stomach * 1" ] } },
-          { "value": "STAMINA_REGEN_MOD", "add": { "math": [ "u_gamb_staminareg * 1" ] } },
-          { "value": "REGEN_HP", "multiply": { "math": [ "u_gamb_hpreg * 1" ] } },
-          { "value": "REGEN_HP_AWAKE", "multiply": { "math": [ "u_gamb_hpregaw * 1" ] } },
-          { "value": "RECOIL_MODIFIER", "add": { "math": [ "u_gamb_recoil * -1" ] } },
-          { "value": "MAX_HP", "add": { "math": [ "u_gamb_maxhp * 1" ] } },
-          { "value": "MELEE_TO_HIT", "add": { "math": [ "u_gamb_mhit + 1" ] } },
-          { "value": "LEARNING_FOCUS", "multiply": { "math": [ "u_gamb_learning + 0.01" ] } }
+          { "value": "STRENGTH", "add": { "math": [ "u_gamb_str+u_gamb_str_training+u_gamb_str_true + 1" ] } },
+          { "value": "DEXTERITY", "add": { "math": [ "u_gamb_dex+u_gamb_dex_training+u_gamb_dex_true + 1" ] } },
+          {
+            "value": "ATTACK_SPEED",
+            "add": { "math": [ "(u_gamb_atkspd+u_gamb_atkspd_training+u_gamb_atkspd_true) * -1" ] }
+          },
+          { "value": "NIGHT_VIS", "add": { "math": [ "(u_gamb_nvis+u_gamb_nvis_training+u_gamb_nvis_true) * 1" ] } },
+          {
+            "value": "PAIN",
+            "add": { "math": [ "((u_gamb_painres+u_gamb_painres_training+u_gamb_painres_true) * -1) - 1" ] }
+          },
+          {
+            "value": "PAIN_REMOVE",
+            "add": { "math": [ "(u_gamb_painrem+u_gamb_painrem_training+u_gamb_painrem_true) * 1" ] }
+          },
+          {
+            "value": "CARDIO_MULTIPLIER",
+            "multiply": { "math": [ "(u_gamb_cardiom+u_gamb_cardiom_training+u_gamb_cardiom_true) * 1" ] }
+          },
+          {
+            "value": "BONUS_BLOCK",
+            "add": { "math": [ "(u_gamb_blckamm+u_gamb_blckamm_training+u_gamb_blckamm_true) * 1" ] }
+          },
+          {
+            "value": "BONUS_DODGE",
+            "add": { "math": [ "(u_gamb_dogamm+u_gamb_dogamm_training+u_gamb_dogamm_true) * 1" ] }
+          },
+          {
+            "value": "CRAFTING_SPEED_MULTIPLIER",
+            "multiply": { "math": [ "(u_gamb_crftspd+u_gamb_crftspd_training+u_gamb_crftspd_true) * 1" ] }
+          },
+          { "value": "SPEED", "add": { "math": [ "(u_gamb_speed+u_gamb_speed_training+u_gamb_speed_true) * 1" ] } },
+          {
+            "value": "MENDING_MODIFIER",
+            "multiply": { "math": [ "(u_gamb_mendmod+u_gamb_mendmod_training+u_gamb_mendmod_true) * 1" ] }
+          },
+          {
+            "value": "MELEE_STAMINA_CONSUMPTION",
+            "add": { "math": [ "(u_gamb_meleestam+u_gamb_meleestam_training+u_gamb_meleestam_true) * 1" ] }
+          },
+          {
+            "value": "KNOCKBACK_RESIST",
+            "add": { "math": [ "(u_gamb_knkres+u_gamb_knkres_training+u_gamb_knkres_true) * 1" ] }
+          },
+          {
+            "value": "CLIMATE_CONTROL_HEAT",
+            "add": { "math": [ "(u_gamb_climate+u_gamb_climate_training+u_gamb_climate_true) * 1" ] }
+          },
+          {
+            "value": "CLIMATE_CONTROL_CHILL",
+            "add": { "math": [ "(u_gamb_climate+u_gamb_climate_training+u_gamb_climate_true) * 1" ] }
+          },
+          {
+            "value": "CONSUME_TIME_MOD",
+            "multiply": { "math": [ "max(-0.50,((u_gamb_consume+u_gamb_consume_training+u_gamb_consume_true) * -0.01))" ] }
+          },
+          {
+            "value": "CARRY_WEIGHT",
+            "add": { "math": [ "(u_gamb_carry+u_gamb_carry_training+u_gamb_carry_true) * 1" ] }
+          },
+          {
+            "value": "STOMACH_SIZE_MULTIPLIER",
+            "add": { "math": [ "(u_gamb_stomach+u_gamb_stomach_training+u_gamb_stomach_true) * 1" ] }
+          },
+          {
+            "value": "STAMINA_REGEN_MOD",
+            "add": { "math": [ "(u_gamb_staminareg+u_gamb_staminareg_training+u_gamb_staminareg_true) * 1" ] }
+          },
+          {
+            "value": "REGEN_HP",
+            "multiply": { "math": [ "(u_gamb_hpreg+u_gamb_hpreg_training+u_gamb_hpreg_true) * 1" ] }
+          },
+          {
+            "value": "REGEN_HP_AWAKE",
+            "multiply": { "math": [ "(u_gamb_hpregaw+u_gamb_hpregaw_training+u_gamb_hpregaw_true) * 1" ] }
+          },
+          {
+            "value": "RECOIL_MODIFIER",
+            "add": { "math": [ "(u_gamb_recoil+u_gamb_recoil_training+u_gamb_recoil_true) * -1" ] }
+          },
+          { "value": "MAX_HP", "add": { "math": [ "(u_gamb_maxhp+u_gamb_maxhp_training+u_gamb_maxhp_true) * 1" ] } },
+          {
+            "value": "MELEE_TO_HIT",
+            "add": { "math": [ "(u_gamb_mhit+u_gamb_mhit_training+u_gamb_mhit_true) + 1" ] }
+          },
+          {
+            "value": "LEARNING_FOCUS",
+            "multiply": { "math": [ "(u_gamb_learning+u_gamb_learning_training+u_gamb_learning_true) + 0.01" ] }
+          }
         ]
       }
     ]

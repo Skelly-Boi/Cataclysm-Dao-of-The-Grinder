@@ -12,6 +12,7 @@ Have you ever wanted to be a martial artist? The cool kind. Have you ever wanted
 ### Spell growth and 'research' system (through meditation)
 ### Body cultivation and training equipment
 ### Weapon dao, allowing your skill and mastery in melee weapons to transcend mortal limits.
+### The first tribulation, allowing you to ascend* past your mortality**
 
 ## To be added:
 

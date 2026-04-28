@@ -1,0 +1,25 @@
+[
+  {
+    "type": "terrain",
+    "name": "old marble pillar",
+    "description": "An ancient marble column, time has taken its toll on it, its edges falling apart.",
+    "color": "white",
+    "symbol": "1",
+    "move_cost": 0,
+    "coverage": 70,
+    "connect_groups": "WALL",
+    "connects_to": "WALL",
+    "flags": [ "WALL", "PERMEABLE", "MINEABLE" ],
+    "id": "t_marbleo_pillar",
+    "copy-from": "t_column",
+    "looks_like": "t_rock_wall",
+    "bash": {
+      "str_min": 80,
+      "str_max": 160,
+      "sound": "crash!",
+      "sound_fail": "whump!",
+      "ter_set": "t_marble_floor",
+      "items": [ { "item": "marble", "count": [ 5, 12 ] } ]
+    }
+  }
+]

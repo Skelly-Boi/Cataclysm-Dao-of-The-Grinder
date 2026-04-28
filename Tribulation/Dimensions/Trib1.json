@@ -1,0 +1,241 @@
+[
+  {
+    "type": "region_settings",
+    "id": "dream_realm",
+    "rivers": null,
+    "lakes": null,
+    "ocean": null,
+    "ravines": null,
+    "forests": null,
+    "forest_trails": null,
+    "highways": null,
+    "cities": "no_cities",
+    "forest_composition": "no_forests",
+    "map_extras": "Marble_dimension",
+    "terrain_furniture": "default",
+    "weather": "default",
+    "place_roads": false,
+    "place_specials": false,
+    "neighbor_connections": false,
+    "default_oter": [
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "marble_plain",
+      "solid_earth",
+      "empty_rock",
+      "empty_rock",
+      "deep_rock",
+      "deep_rock",
+      "deep_rock",
+      "deep_rock",
+      "deep_rock",
+      "deep_rock",
+      "deep_rock"
+    ],
+    "default_groundcover": [ [ "t_marble_floor", 1 ] ],
+    "feature_flag_settings": { "blacklist": [  ], "whitelist": [ "MARBLE_DIMENSION" ] },
+    "//": "ignored",
+    "connections": {
+      "intra_city_road_connection": "local_road",
+      "inter_city_road_connection": "local_road",
+      "trail_connection": "forest_trail",
+      "sewer_connection": "sewer_tunnel",
+      "subway_connection": "subway_tunnel",
+      "rail_connection": "local_railroad"
+    }
+  },
+  {
+    "id": "marble_plain",
+    "type": "map_extra",
+    "name": { "str": "Marble Plain" },
+    "description": "An endless expanse of marble pillars and statues.",
+    "generator": { "generator_method": "mapgen", "generator_id": "marble_plain" },
+    "min_max_zlevel": [ -5, 0 ],
+    "sym": "~",
+    "color": "white",
+    "flags": [ "MARBLE_DIMENSION" ]
+  },
+  {
+    "type": "region_settings_map_extras",
+    "id": "Marble_dimension",
+    "extras": [ "marble_plain" ]
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "gamb_statue_trial_transform",
+    "furniture": [
+      {
+        "result": "f_null",
+        "valid_furniture": [ "f_marbleo_statue_trial" ],
+        "message": "prepare thyself",
+        "message_good": true
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "trib_defeated_EOC",
+    "effect": [
+      {
+        "u_message": "You have vanquished the tribulation. You may now return at any time by activating the tribulation spell.",
+        "popup": true
+      },
+      { "math": [ "u_spell_level('gamb_tribulation_exit') = 0" ] }
+    ]
+  },
+  {
+    "id": "mon_trib1_boss",
+    "type": "MONSTER",
+    "name": { "str": "Mortality" },
+    "description": "It is all that Heaven thinks you are. Pure, of marble, a pile of rocks for fate to toy with, cracking and shattering upon the weight of Heaven. Prove yourself beyond the strength of Earth, and ascend. Slay your Mortality, so you may begin your path towards Immortality.",
+    "default_faction": "zombie",
+    "looks_like": "f_statue",
+    "regenerates": 2,
+    "bodytype": "human",
+    "species": [ "ZOMBIE", "HUMAN" ],
+    "volume": "62500 ml",
+    "weight": "181500 g",
+    "hp": 300,
+    "speed": 90,
+    "material": [ "stone" ],
+    "symbol": "@",
+    "color": "white",
+    "aggression": 100,
+    "morale": 100,
+    "dodge": 7,
+    "attack_cost": 90,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 5,
+    "melee_damage": [ { "damage_type": "bash", "amount": 6 } ],
+    "vision_night": 9,
+    "weakpoint_sets": [ "wps_humanoid_body" ],
+    "special_attacks": [
+      {
+        "type": "leap",
+        "prefer_leap": true,
+        "min_range": 2,
+        "move_cost": 70,
+        "max_range": 3,
+        "allow_no_target": false,
+        "cooldown": 15
+      },
+      { "id": "smash", "throw_strength": 34, "cooldown": 25 },
+      { "id": "staggering_blow", "cooldown": 50, "min_mul": 0.75, "max_mul": 1.5, "move_cost": 200 }
+    ],
+    "armor": { "bash": 15, "cut": 10, "stab": 8, "acid": 50, "bullet": 20, "electric": 50 },
+    "flags": [ "SEES", "HEARS", "POISON", "BASHES", "NO_BREATHE", "PUSH_MON", "UNBREAKABLE_MORALE" ],
+    "death_drops": "elite_weak_martial",
+    "death_function": { "eoc": "trib_defeated_EOC" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_trib1_spawn",
+    "effect": [
+      { "u_transform_radius": 5, "ter_furn_transform": "gamb_statue_trial_transform" },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "location_variable_adjust": { "context_val": "loc" }, "y_adjust": -9 },
+      { "u_cast_spell": { "id": "spell_tribspawn", "message": "Spawn!" }, "loc": { "context_val": "loc" } },
+      { "u_cast_spell": { "id": "spell_tribenchant", "message": "BOOM!" }, "loc": { "context_val": "loc" } }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_tribspawn",
+    "name": "Tribulation",
+    "description": "The Heavens see you.",
+    "flags": [
+      "SILENT",
+      "NO_FAIL",
+      "NON_MAGICAL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "NO_PROJECTILE",
+      "SPAWN_WITH_DEATH_DROPS"
+    ],
+    "valid_targets": [ "ground" ],
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "summon",
+    "effect_str": "mon_trib1_boss"
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_tribenchant",
+    "name": "Tribulation",
+    "description": "The Heavens see you.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
+    "valid_targets": [ "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_Tribulationenchant"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Tribulationenchant",
+    "effect": { "u_add_effect": "tribulation_dif_stage1", "duration": "PERMANENT" }
+  },
+  {
+    "id": "tribulation_dif_stage1",
+    "type": "effect_type",
+    "name": [ { "str": "SWOLE", "//~": "NO_I18N" } ],
+    "desc": [ { "str": "If you see this description it is a bug.", "//~": "NO_I18N" } ],
+    "rating": "bad",
+    "show_intensity": false,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "melee_damage_bonus": [ { "type": "bash", "add": { "math": [ "gamb_ki_tribdif * 4" ] } } ],
+        "incoming_damage_mod": [
+          { "type": "bash", "add": { "math": [ "(gamb_ki_tribdif *5 ) * -1" ] } },
+          { "type": "stab", "add": { "math": [ "(gamb_ki_tribdif * 5) * -1" ] } },
+          { "type": "cut", "add": { "math": [ "(gamb_ki_tribdif * 5) * -1" ] } },
+          { "type": "bullet", "add": { "math": [ "(gamb_ki_tribdif * 5) * -1" ] } }
+        ],
+        "values": [ { "value": "SPEED", "multiply": { "math": [ "(gamb_ki_tribdif * 6) * 0.01" ] } } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_Trib1_Colloseum",
+    "effect": [
+      { "u_location_variable": { "global_val": "colloseum_loc" } },
+      { "mapgen_update": "marble_plain_simple", "target_var": { "global_val": "colloseum_loc" } },
+      { "location_variable_adjust": { "global_val": "colloseum_loc" }, "overmap_tile": true, "y_adjust": -1 },
+      { "mapgen_update": "marble_plain_entrance", "target_var": { "global_val": "colloseum_loc" } },
+      { "location_variable_adjust": { "global_val": "colloseum_loc" }, "overmap_tile": true, "x_adjust": -1 },
+      { "mapgen_update": "marble_plain_cornerentranceL", "target_var": { "global_val": "colloseum_loc" } },
+      { "location_variable_adjust": { "global_val": "colloseum_loc" }, "overmap_tile": true, "y_adjust": -1 },
+      { "mapgen_update": "marble_plain_sidestatue_west", "target_var": { "global_val": "colloseum_loc" } },
+      { "location_variable_adjust": { "global_val": "colloseum_loc" }, "overmap_tile": true, "y_adjust": -1 },
+      { "mapgen_update": "marble_plain_corner_south", "target_var": { "global_val": "colloseum_loc" } },
+      { "location_variable_adjust": { "global_val": "colloseum_loc" }, "overmap_tile": true, "x_adjust": 1 },
+      { "mapgen_update": "marble_plain_side_north", "target_var": { "global_val": "colloseum_loc" } },
+      { "location_variable_adjust": { "global_val": "colloseum_loc" }, "overmap_tile": true, "x_adjust": 1 },
+      { "mapgen_update": "marble_plain_corner_west", "target_var": { "global_val": "colloseum_loc" } },
+      { "location_variable_adjust": { "global_val": "colloseum_loc" }, "overmap_tile": true, "y_adjust": 1 },
+      { "mapgen_update": "marble_plain_sidestatue_east", "target_var": { "global_val": "colloseum_loc" } },
+      { "location_variable_adjust": { "global_val": "colloseum_loc" }, "overmap_tile": true, "y_adjust": 1 },
+      { "mapgen_update": "marble_plain_cornerentranceR", "target_var": { "global_val": "colloseum_loc" } },
+      {
+        "location_variable_adjust": { "global_val": "colloseum_loc" },
+        "overmap_tile": true,
+        "y_adjust": -1,
+        "x_adjust": -1
+      },
+      { "mapgen_update": "marble_plain_colcenter", "target_var": { "global_val": "colloseum_loc" } }
+    ]
+  }
+]
