@@ -52,10 +52,8 @@
         ],
         "else": { "u_message": "Go back to the tribulation dimension." }
       },
-      {
-        "if": { "not": { "u_has_trait": "Cultivator_Gamb" } },
-        "then": { "u_add_trait": "Cultivator_Gamb", "variant": "Qi_Gathering1" }
-      }
+      { "u_lose_trait": "Gamb_Iron_Body" },
+      { "u_add_trait": "Gamb_Iron_Body", "variant": "Qi_Gathering1" }
     ]
   },
   {
