@@ -35,6 +35,6 @@
     "recurrence": [ "1 h", "1 h" ],
     "deactivate_condition": { "u_has_trait": "Gamb_Iron_Body" },
     "condition": { "and": [ { "not": { "u_has_trait": "Gamb_Iron_Body" } }, { "math": [ "u_gamb_bodyxp > 100" ] } ] },
-    "effect": [ { "run_eocs": [ "EOC_Gamb_Awaken_Body" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] } ]
+    "effect": [ { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Body" ] } ]
   }
 ]

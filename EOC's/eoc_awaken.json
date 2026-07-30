@@ -15,7 +15,29 @@
       { "math": [ "u_gamb_woodtalent", "+=", "1" ] },
       { "math": [ "u_gamb_bodytalent", "+=", "1" ] },
       { "math": [ "u_gamb_woodkicaptrue", "=", "0" ] },
-      { "math": [ "u_gamb_stage", "=", "0" ] }
+      { "math": [ "u_gamb_stage", "=", "0" ] },
+      {
+        "if": { "u_has_trait": "REALLYBADKNEES" },
+        "then": [ { "u_lose_trait": "REALLYBADKNEES" }, { "u_add_trait": "BADKNEES" } ],
+        "else": { "if": { "u_has_trait": "BADKNEES" }, "then": { "u_lose_trait": "BADKNEES" } }
+      },
+      {
+        "if": { "u_has_trait": "FLIMSY3" },
+        "then": [ { "u_lose_trait": "FLIMSY3" }, { "u_add_trait": "FLIMSY2" } ],
+        "else": { "if": { "u_has_trait": "FLIMSY2" }, "then": [ { "u_lose_trait": "FLIMSY2" }, { "u_add_trait": "FLIMSY" } ] }
+      },
+      {
+        "if": { "u_has_trait": "SLOWHEALER3" },
+        "then": [ { "u_lose_trait": "SLOWHEALER3" }, { "u_add_trait": "SLOWHEALER2" } ],
+        "else": {
+          "if": { "u_has_trait": "SLOWHEALER2" },
+          "then": [ { "u_lose_trait": "SLOWHEALER2" }, { "u_add_trait": "SLOWHEALER" } ]
+        }
+      },
+      { "u_lose_trait": "ASTHMA" },
+      { "u_lose_trait": "JITTERY" },
+      { "u_lose_trait": "NO_CBM_INSTALLATION" },
+      { "u_lose_trait": "CHEMIMBALANCE" }
     ]
   },
   {
@@ -82,7 +104,36 @@
       {
         "u_message": "You feel your body and soul drastically change. Your body has been refined, and your soul has touched a new type of energy.",
         "type": "good"
-      }
+      },
+      {
+        "if": { "u_has_trait": "REALLYBADKNEES" },
+        "then": [ { "u_lose_trait": "REALLYBADKNEES" }, { "u_add_trait": "BADKNEES" } ],
+        "else": { "if": { "u_has_trait": "BADKNEES" }, "then": { "u_lose_trait": "BADKNEES" } }
+      },
+      {
+        "if": { "u_has_trait": "FLIMSY3" },
+        "then": [ { "u_lose_trait": "FLIMSY3" }, { "u_add_trait": "FLIMSY2" } ],
+        "else": {
+          "if": { "u_has_trait": "FLIMSY2" },
+          "then": [ { "u_lose_trait": "FLIMSY2" }, { "u_add_trait": "FLIMSY" } ],
+          "else": { "if": { "u_has_trait": "FLIMSY" }, "then": { "u_lose_trait": "FLIMSY" } }
+        }
+      },
+      {
+        "if": { "u_has_trait": "SLOWHEALER3" },
+        "then": [ { "u_lose_trait": "SLOWHEALER3" }, { "u_add_trait": "SLOWHEALER2" } ],
+        "else": {
+          "if": { "u_has_trait": "SLOWHEALER2" },
+          "then": [ { "u_lose_trait": "SLOWHEALER2" }, { "u_add_trait": "SLOWHEALER" } ],
+          "else": { "if": { "u_has_trait": "SLOWHEALER" }, "then": { "u_lose_trait": "SLOWHEALER" } }
+        }
+      },
+      { "u_lose_trait": "BADBACK" },
+      { "u_lose_trait": "GLASSJAW" },
+      { "u_lose_trait": "CLUMSY" },
+      { "u_lose_trait": "BADCARDIO" },
+      { "u_lose_trait": "SLOWRUNNER" },
+      { "u_lose_trait": "WEAKSTOMACH" }
     ]
   },
   {

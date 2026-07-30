@@ -14,11 +14,12 @@
       { "math": [ "u_gamb_bodytoken", "+=", "(u_gamb_bodyxp/10)*u_gamb_talent*u_gamb_bodytalent" ] },
       { "math": [ "u_gamb_bodytokentemp", "+=", "(u_gamb_bodyxp/10)" ] },
       { "math": [ "u_gamb_bodyxp", "=", "0" ] },
-      { "u_message": "Ki:<u_val:gamb_ki>  Ki Capacity:<u_val:gamb_kicap> \n", "type": "good" },
+      { "math": [ "u_gamb_kicaptrue", "=", "u_gamb_kicap*(u_gamb_stage+1)" ] },
+      { "u_message": "Ki:<u_val:gamb_ki>  Ki Capacity:<u_val:gamb_kicaptrue> \n", "type": "good" },
       {
         "if": { "math": [ "u_gamb_kiwoodcap", ">", "0" ] },
         "then": [
-          { "math": [ "u_gamb_kiwoodcaptrue", "=", "u_gamb_kicap*u_gamb_kiwoodcap" ] },
+          { "math": [ "u_gamb_kiwoodcaptrue", "=", "u_gamb_kicap*u_gamb_kiwoodcap*(u_gamb_stage+1)" ] },
           {
             "u_message": "Wood Ki:<u_val:gamb_kiwood>  Wood Ki Capacity:<u_val:gamb_kiwoodcaptrue> \n",
             "type": "good"

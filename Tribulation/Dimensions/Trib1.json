@@ -53,6 +53,17 @@
     }
   },
   {
+    "type": "dimension_region_layout",
+    "id": "dream_realmla",
+    "generation_mode": "UNIFORM",
+    "uniform_region": "dream_realm"
+  },
+  {
+    "type": "dimension",
+    "id": "Tribulation1",
+    "region_layout": "dream_realmla"
+  },
+  {
     "id": "marble_plain",
     "type": "map_extra",
     "name": { "str": "Marble Plain" },

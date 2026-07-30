@@ -127,7 +127,12 @@
         { "item": "spear_bronze", "x": [ 3, 21 ], "y": [ 3, 21 ], "repeat": [ -9, 1 ], "chance": 1 },
         { "item": "sword_bronze", "x": [ 3, 21 ], "y": [ 3, 21 ], "repeat": [ -9, 1 ], "chance": 1 },
         { "item": "sword_xiphos", "x": [ 3, 21 ], "y": [ 3, 21 ], "repeat": [ -9, 1 ], "chance": 1 },
-        { "item": "khopesh", "x": [ 3, 21 ], "y": [ 3, 21 ], "repeat": [ -9, 1 ], "chance": 1 }
+        { "item": "khopesh", "x": [ 3, 21 ], "y": [ 3, 21 ], "repeat": [ -9, 1 ], "chance": 1 },
+        { "item": "marble", "x": [ 3, 21 ], "y": [ 3, 21 ], "chance": 2 },
+        { "item": "rock", "x": [ 3, 21 ], "y": [ 3, 21 ], "chance": 12 },
+        { "item": "sheet", "x": [ 3, 21 ], "y": [ 3, 21 ], "chance": 4 },
+        { "item": "long_pole", "x": [ 3, 21 ], "y": [ 3, 21 ], "chance": 2 },
+        { "item": "poleaxe", "x": [ 3, 21 ], "y": [ 3, 21 ], "repeat": [ -9, 1 ], "chance": 1 }
       ]
     }
   },
