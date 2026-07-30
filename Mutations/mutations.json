@@ -10,17 +10,6 @@
     "purifiable": false,
     "flags": [ "MEND_ALL" ],
     "spells_learned": [ [ "gamb_meditate", 0 ] ],
-    "variants": [
-      {
-        "id": "Qi_Gathering1",
-        "name": { "str": "*Qi Gathering I" },
-        "description": "Your Mortal limits are no more, your soul can handle more ki than before."
-      },
-      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering II" }, "description": "To do." },
-      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering III" }, "description": "To do." },
-      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering IV" }, "description": "To do." },
-      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering V" }, "description": "To do." }
-    ],
     "enchantments": [
       {
         "melee_damage_bonus": [

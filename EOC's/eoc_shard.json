@@ -5,7 +5,7 @@
     "effect": [
       {
         "if": { "not": { "u_has_trait": "Gamb_Iron_Body" } },
-        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] } ],
+        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] }, { "run_eocs": [ "EOC_Gamb_Awaken" ] } ],
         "else": [
           { "math": [ "u_gamb_bashd", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_bashd)*5)))" ] },
           { "math": [ "u_gamb_str", "+=", "max(0, 1-rand(20+(u_gamb_str^1.5)))" ] },
@@ -56,7 +56,7 @@
     "effect": [
       {
         "if": { "not": { "u_has_trait": "Gamb_Iron_Body" } },
-        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken_Wood" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] } ],
+        "then": [ { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Wood" ] } ],
         "else": [
           { "math": [ "u_gamb_cardiom", "+=", "0.0001 * max(0, 8-rand(1+((u_gamb_cardiom*10000)^.3)))" ] },
           { "math": [ "u_gamb_basha", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_basha)*11)))" ] },

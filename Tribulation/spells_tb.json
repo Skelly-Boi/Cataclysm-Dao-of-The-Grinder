@@ -39,8 +39,9 @@
           { "math": [ "u_spell_level('gamb_tribulation_exit') = -1" ] },
           { "clear_dimension": { "u_val": "trib_dimension_clear" } },
           { "math": [ "u_gamb_stage", "+=", "1" ] },
+          { "math": [ "u_gamb_tribactive = 0" ] },
           { "math": [ "u_gamb_kireg", "=", "min(u_gamb_kireg,u_gamb_stage/10)" ] },
-          { "math": [ "u_gamb_kicap", "=", "u_gamb_stage*15" ] },
+          { "math": [ "u_gamb_kicap", "=", "min(u_gamb_kicap,u_gamb_stage*15)" ] },
           { "math": [ "u_gamb_talent_gained", "=", "max(0.1,gamb_ki_tribdif-1)" ] },
           { "math": [ "u_gamb_talent", "+=", "max(0.1,gamb_ki_tribdif-1)/3" ] },
           { "math": [ "u_gamb_phytalent", "+=", "max(0,(gamb_ki_tribdif-3)/4)" ] },
@@ -52,8 +53,52 @@
         ],
         "else": { "u_message": "Go back to the tribulation dimension." }
       },
-      { "u_lose_trait": "Gamb_Iron_Body" },
-      { "u_add_trait": "Gamb_Iron_Body", "variant": "Qi_Gathering1" }
+      { "u_lose_trait": "Cultivator_Gamb" },
+      {
+        "switch": { "math": [ "u_gamb_stage" ] },
+        "cases": [
+          { "case": 0, "effect": [ { "u_message": "Cultivation Stage 0 (Bug)", "type": "bad" } ] },
+          {
+            "case": 1,
+            "effect": [
+              { "u_add_trait": "Cultivator_Gamb", "variant": "Qi_Gathering1" },
+              {
+                "if": { "u_has_trait": "REALLYBADKNEES" },
+                "then": [ { "u_lose_trait": "REALLYBADKNEES" }, { "u_add_trait": "BADKNEES" } ],
+                "else": { "if": { "u_has_trait": "BADKNEES" }, "then": { "u_lose_trait": "BADKNEES" } }
+              },
+              {
+                "if": { "u_has_trait": "FLIMSY3" },
+                "then": [ { "u_lose_trait": "FLIMSY3" }, { "u_add_trait": "FLIMSY2" } ],
+                "else": {
+                  "if": { "u_has_trait": "FLIMSY2" },
+                  "then": [ { "u_lose_trait": "FLIMSY2" }, { "u_add_trait": "FLIMSY" } ],
+                  "else": { "if": { "u_has_trait": "FLIMSY" }, "then": { "u_lose_trait": "FLIMSY" } }
+                }
+              },
+              {
+                "if": { "u_has_trait": "SLOWHEALER3" },
+                "then": [ { "u_lose_trait": "SLOWHEALER3" }, { "u_add_trait": "SLOWHEALER2" } ],
+                "else": {
+                  "if": { "u_has_trait": "SLOWHEALER2" },
+                  "then": [ { "u_lose_trait": "SLOWHEALER2" }, { "u_add_trait": "SLOWHEALER" } ],
+                  "else": { "if": { "u_has_trait": "SLOWHEALER" }, "then": { "u_lose_trait": "SLOWHEALER" } }
+                }
+              },
+              { "u_lose_trait": "NOHEAL" },
+              { "u_lose_trait": "BADBACK" },
+              { "u_lose_trait": "GLASSJAW" },
+              { "u_lose_trait": "CLUMSY" },
+              { "u_lose_trait": "BADCARDIO" },
+              { "u_lose_trait": "SLOWRUNNER" },
+              { "u_lose_trait": "WEAKSTOMACH" },
+              { "u_lose_trait": "CHAOTIC_BAD" }
+            ]
+          },
+          { "case": 2, "effect": { "u_add_trait": "Cultivator_Gamb", "variant": "Qi_Gathering2" } },
+          { "case": 3, "effect": { "u_add_trait": "Cultivator_Gamb", "variant": "Qi_Gathering3" } }
+        ]
+      }
     ]
   },
   {
@@ -71,10 +116,11 @@
         "name": { "str": "*Qi Gathering I" },
         "description": "Your Mortal limits are no more, your soul can handle more ki than before."
       },
-      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering II" }, "description": "To do." },
-      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering III" }, "description": "To do." },
-      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering IV" }, "description": "To do." },
-      { "id": "Qi_Gathering1", "name": { "str": "*Qi Gathering V" }, "description": "To do." }
-    ]
+      { "id": "Qi_Gathering2", "name": { "str": "*Qi Gathering II" }, "description": "To do." },
+      { "id": "Qi_Gathering3", "name": { "str": "*Qi Gathering III" }, "description": "To do." },
+      { "id": "Qi_Gathering4", "name": { "str": "*Qi Gathering IV" }, "description": "To do." },
+      { "id": "Qi_Gathering5", "name": { "str": "*Qi Gathering V" }, "description": "To do." }
+    ],
+    "//": "do some case stuff in tribulationexit to switch between these or smt idk. Also add some clothes to the tribulations, or crafting materials(!). Also the first tribulation (and awakening(depending on type) and higher tier realms) should remove bad traits/make them go 1 rank higher(???)"
   }
 ]

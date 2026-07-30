@@ -1,7 +1,7 @@
 [
   {
     "type": "profession",
-    "id": "survivor_shard",
+    "id": "gamb_survivor_shard",
     "name": "Lucky Survivor",
     "description": "Some would say the heavens favor you, for you have stumbled upon the first step to immortality by sheer luck.  Yet, will that be enough to face the coming apocalypse?",
     "points": 3,
@@ -25,7 +25,7 @@
   },
   {
     "type": "profession",
-    "id": "sword_cultivator",
+    "id": "gamb_sword_cultivator",
     "name": "Sword Cultivator",
     "description": "Since birth, you have trained in the art of swordplay, yet faced stagnation before glimpsing at the Dao.  Your sect elders have decided to send you to the mortal world to open your mind, not wanting to artificially open your Spirit Root and ruin your potential.  Little did they know of the challenges that awaited you.",
     "points": 6,
