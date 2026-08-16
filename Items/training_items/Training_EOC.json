@@ -2,7 +2,11 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_Gamb_bodyxp_Traininglow",
-    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "1" ] } ]
+    "effect": [
+      { "math": [ "u_gamb_bodyxp", "+=", "1" ] },
+      { "math": [ "u_gamb_cardiom_training", "+=", "0.001" ] },
+      { "math": [ "u_gamb_maxhp_training", "+=", "0.01" ] }
+    ]
   },
   {
     "type": "effect_on_condition",

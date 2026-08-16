@@ -10,7 +10,7 @@
           { "math": [ "u_gamb_bashd", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_bashd)*5)))" ] },
           { "math": [ "u_gamb_str", "+=", "max(0, 1-rand(20+(u_gamb_str^1.5)))" ] },
           { "math": [ "u_gamb_dex", "+=", "max(0, 1-rand(25+(u_gamb_str^1.5)))" ] },
-          { "math": [ "u_gamb_cardiom", "+=", "0.0001 * max(0, 5-rand(1+((u_gamb_cardiom*10000)^.3)))" ] },
+          { "math": [ "u_gamb_cardiom", "+=", "0.001 * max(0, 25-rand(1+((u_gamb_cardiom*10000)^.3)))" ] },
           { "math": [ "u_gamb_basha", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_basha)*4)))" ] },
           { "math": [ "u_gamb_cuta", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_cuta)*8)))" ] },
           { "math": [ "u_gamb_staba", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_staba)*10)))" ] },
@@ -58,7 +58,7 @@
         "if": { "not": { "u_has_trait": "Gamb_Iron_Body" } },
         "then": [ { "run_eocs": [ "EOC_Gamb_Awaken_Universal" ] }, { "run_eocs": [ "EOC_Gamb_Awaken_Wood" ] } ],
         "else": [
-          { "math": [ "u_gamb_cardiom", "+=", "0.0001 * max(0, 8-rand(1+((u_gamb_cardiom*10000)^.3)))" ] },
+          { "math": [ "u_gamb_cardiom", "+=", "0.001 * max(0, 40-rand(1+((u_gamb_cardiom*10000)^.3)))" ] },
           { "math": [ "u_gamb_basha", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_basha)*11)))" ] },
           { "math": [ "u_gamb_cuta", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_cuta)*14)))" ] },
           { "math": [ "u_gamb_staba", "+=", "max(0, 1-rand(1+(sqrt(u_gamb_staba)*18)))" ] },
