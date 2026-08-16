@@ -1,0 +1,79 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_bodyxp_Traininglow",
+    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "1" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_bodyxp_verylow",
+    "effect": [ { "math": [ "u_gamb_bodyxp", "+=", "0.0001" ] } ]
+  },
+  {
+    "id": "ench_gamb_bodycombatxp",
+    "type": "enchantment",
+    "has": "WIELD",
+    "condition": "ALWAYS",
+    "hit_you_effect": [ { "id": "gamb_bodyxp_spelllow_weapon", "hit_self": true } ],
+    "values": [ { "value": "SPEED", "add": -5 }, { "value": "ATTACK_SPEED", "add": 20 } ]
+  },
+  {
+    "type": "SPELL",
+    "id": "gamb_bodyxp_spelllow_weapon",
+    "name": "Misc_lowxp",
+    "description": "Gives 0.01 bodyxp. Shouldn't see this.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_bodyxp_low_weapon"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_bodyxp_low_weapon",
+    "effect": [
+      { "math": [ "u_gamb_bodyxp", "+=", "0.01" ] },
+      { "math": [ "u_gamb_atkspd_training", "+=", "0.0001" ] },
+      { "math": [ "u_gamb_speed_training", "+=", "0.0001" ] }
+    ]
+  },
+  {
+    "id": "ench_gamb_bodycombatxphit",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "hit_me_effect": [ { "id": "gamb_bodyxp_spelllow", "hit_self": true } ],
+    "values": [ { "value": "SPEED", "add": -8 }, { "value": "ATTACK_SPEED", "add": 4 } ]
+  },
+  {
+    "type": "SPELL",
+    "id": "gamb_bodyxp_spelllow",
+    "name": "Misc_lowxp",
+    "description": "Gives 0.01 bodyxp. Shouldn't see this.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_bodyxp_low"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Gamb_bodyxp_low",
+    "effect": [
+      { "math": [ "u_gamb_bodyxp", "+=", "0.01" ] },
+      { "math": [ "u_gamb_speed_training", "+=", "0.0001" ] },
+      { "math": [ "u_gamb_carry_training", "+=", "0.0005" ] }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "gamb_bodyxp_spellverrylow",
+    "name": "Misc_verylowxp",
+    "description": "Gives 0.0001 bodyxp. Shouldn't see this.",
+    "flags": [ "SILENT", "NO_FAIL", "NON_MAGICAL", "NO_HANDS", "NO_LEGS" ],
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_Gamb_bodyxp_verylow"
+  }
+]

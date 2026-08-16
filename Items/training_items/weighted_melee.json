@@ -4,7 +4,7 @@
     "id": "spear_steel_weightedL",
     "subtypes": [ "ARTIFACT" ],
     "name": { "str": "weighted steel spear" },
-    "description": "A spear commonly used by cultivators. It is mundane in nature, but ",
+    "description": "A spear weighted down with metal in order to slow down your attack speed. Over time it will increase the speed of your strikes and movement.",
     "weight": "2500 g",
     "price_postapoc": "20 USD",
     "color": "light_gray",
@@ -20,7 +20,7 @@
     "price": "160 USD",
     "qualities": [ [ "COOK", 1 ] ],
     "use_action": [ "HEAT_SOLID_ITEMS" ],
-    "melee_damage": { "bash": 9, "stab": 41 },
+    "melee_damage": { "bash": 9, "stab": 36 },
     "passive_effects": [ { "id": "ench_gamb_bodycombatxp" } ]
   }
 ]

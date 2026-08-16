@@ -1263,28 +1263,5 @@
     "//": "Code assumes each attack is 1s",
     "time_to_learn": "5500 s",
     "required_proficiencies": [ "prof_whips_gamb_medium_mortal" ]
-  },
-  {
-    "id": "ench_gamb_bodycombatxp",
-    "type": "enchantment",
-    "has": "WIELD",
-    "condition": "ALWAYS",
-    "hit_you_effect": [ { "id": "gamb_bodyxp_spelllow", "hit_self": true } ],
-    "values": [ { "value": "SPEED", "add": -3 }, { "value": "ATTACK_SPEED", "add": -10 } ]
-  },
-  {
-    "id": "ench_gamb_bodycombatxpblade",
-    "type": "enchantment",
-    "has": "WIELD",
-    "condition": "ALWAYS",
-    "hit_you_effect": [ { "id": "gamb_bodyxp_spelllow", "hit_self": true } ]
-  },
-  {
-    "id": "ench_gamb_bodycombatxphit",
-    "type": "enchantment",
-    "has": "WORN",
-    "condition": "ALWAYS",
-    "hit_me_effect": [ { "id": "gamb_bodyxp_spelllow", "hit_self": true } ],
-    "values": [ { "value": "SPEED", "add": -5 }, { "value": "ATTACK_SPEED", "add": -2 } ]
   }
 ]

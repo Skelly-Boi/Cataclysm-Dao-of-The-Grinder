@@ -25,6 +25,14 @@
     "reversible": { "time": "120 s" },
     "proficiencies": [ { "proficiency": "prof_fibers", "required": false, "time_multiplier": 1.5 } ],
     "using": [ [ "cordage", 4 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "spear_steel", 1 ] ] ]
+    "components": [
+      [
+        [ "spear_steel", 1 ],
+        [ "lc_spear_steel", 1 ],
+        [ "hc_spear_steel", 1 ],
+        [ "qt_spear_steel", 1 ],
+        [ "ch_spear_steel", 1 ]
+      ]
+    ]
   }
 ]
